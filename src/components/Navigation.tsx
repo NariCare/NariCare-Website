@@ -17,13 +17,13 @@ const Navigation = () => {
     <nav className="bg-card/80 backdrop-blur-md border-b border-border sticky top-0 z-50 shadow-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-warm rounded-full flex items-center justify-center">
+        {/* Logo */}
+        <div className="flex items-center space-x-2">
+          <div className="w-8 h-8 bg-gradient-warm rounded-lg flex items-center justify-center">
             <Heart className="w-5 h-5 text-white" />
           </div>
           <span className="font-display font-bold text-xl text-foreground">Naricare</span>
-          </div>
+        </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">

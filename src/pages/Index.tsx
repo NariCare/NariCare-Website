@@ -4,6 +4,7 @@ import FeatureCard from '@/components/FeatureCard';
 import PlanCard from '@/components/PlanCard';
 import FounderSection from '@/components/FounderSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import Footer from '@/components/Footer';
 import { 
   Heart, 
   MessageCircle, 
@@ -270,19 +271,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 bg-card border-t border-border">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="w-8 h-8 bg-gradient-warm rounded-full flex items-center justify-center">
-              <Heart className="w-5 h-5 text-white" />
-            </div>
-            <span className="font-display font-bold text-xl text-foreground">Naricare</span>
-          </div>
-          <p className="text-muted-foreground">
-            Supporting mothers and babies with expert guidance and community care.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
