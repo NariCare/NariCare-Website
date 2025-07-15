@@ -2,6 +2,8 @@ import { Button } from '@/components/ui/button';
 import Navigation from '@/components/Navigation';
 import FeatureCard from '@/components/FeatureCard';
 import PlanCard from '@/components/PlanCard';
+import FounderSection from '@/components/FounderSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
 import { 
   Heart, 
   MessageCircle, 
@@ -204,6 +206,12 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Meet the Founder */}
+      <FounderSection />
+
+      {/* Testimonials */}
+      <TestimonialsSection />
 
       {/* Trust Indicators */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card/30 backdrop-blur-sm">
