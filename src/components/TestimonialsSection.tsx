@@ -5,7 +5,7 @@ const TestimonialsSection = () => {
     {
       name: "Priya Sharma",
       role: "New Mom",
-      content: "NariCare saved my breastfeeding journey. The 24/7 AI support helped me through those difficult 3 AM questions, and the expert consultations gave me the confidence I needed.",
+      content: "Naricare saved my breastfeeding journey. The 24/7 AI support helped me through those difficult 3 AM questions, and the expert consultations gave me the confidence I needed.",
       rating: 5,
       program: "3-Month Program"
     },
@@ -33,7 +33,7 @@ const TestimonialsSection = () => {
             What Mothers Are Saying
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Real stories from real mothers who have transformed their breastfeeding journey with NariCare
+            Real stories from real mothers who have transformed their breastfeeding journey with Naricare
           </p>
         </div>
         

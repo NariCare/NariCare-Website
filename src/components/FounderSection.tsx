@@ -1,4 +1,5 @@
-import { Heart, Quote } from 'lucide-react';
+import { Quote } from 'lucide-react';
+import founderImage from '@/assets/founder-gayathri.webp';
 
 const FounderSection = () => {
   return (
@@ -12,22 +13,24 @@ const FounderSection = () => {
         
         <div className="bg-card rounded-soft shadow-card border border-border/50 p-8 md:p-12">
           <div className="flex flex-col md:flex-row gap-8 items-start">
-            <div className="w-32 h-32 md:w-40 md:h-40 bg-gradient-warm rounded-full flex items-center justify-center mx-auto md:mx-0 flex-shrink-0">
-              <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-full flex items-center justify-center">
-                <Heart className="w-12 h-12 md:w-16 md:h-16 text-primary" />
-              </div>
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mx-auto md:mx-0 flex-shrink-0 shadow-warm">
+              <img 
+                src={founderImage} 
+                alt="Gayathri Kanumuri, Founder of Naricare" 
+                className="w-full h-full object-cover"
+              />
             </div>
             
             <div className="flex-1">
               <div className="relative">
                 <Quote className="w-8 h-8 text-primary/20 absolute -top-2 -left-2" />
                 <h3 className="font-display font-semibold text-xl text-foreground mb-4">
-                  Gayathri Kanumuri, Founder of NariCare
+                  Gayathri Kanumuri, Founder of Naricare
                 </h3>
                 
                 <div className="text-muted-foreground leading-relaxed space-y-4">
                   <p>
-                    My journey to creating NariCare was born from my own struggles with breastfeeding and the overwhelming misinformation that surrounded me as a new mom. I faced countless myths and challenges, but when I finally received the right support and guidance, my entire experience transformed.
+                    My journey to creating Naricare was born from my own struggles with breastfeeding and the overwhelming misinformation that surrounded me as a new mom. I faced countless myths and challenges, but when I finally received the right support and guidance, my entire experience transformed.
                   </p>
                   
                   <p>
@@ -43,7 +46,7 @@ const FounderSection = () => {
                   </p>
                   
                   <p>
-                    At NariCare, we are committed to transforming the breastfeeding experience for every mother. Our mission is to break through the myths, provide the right support, and empower moms with the knowledge they need to succeed. Together, we can make a powerful impact and ensure that every mom and baby thrive.
+                    At Naricare, we are committed to transforming the breastfeeding experience for every mother. Our mission is to break through the myths, provide the right support, and empower moms with the knowledge they need to succeed. Together, we can make a powerful impact and ensure that every mom and baby thrive.
                   </p>
                 </div>
               </div>

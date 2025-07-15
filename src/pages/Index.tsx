@@ -276,7 +276,7 @@ const Index = () => {
             <div className="w-8 h-8 bg-gradient-warm rounded-full flex items-center justify-center">
               <Heart className="w-5 h-5 text-white" />
             </div>
-            <span className="font-display font-bold text-xl text-foreground">NurtureLink</span>
+            <span className="font-display font-bold text-xl text-foreground">Naricare</span>
           </div>
           <p className="text-muted-foreground">
             Supporting mothers and babies with expert guidance and community care.
