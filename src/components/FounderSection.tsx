@@ -25,7 +25,7 @@ const FounderSection = () => {
               <div className="relative">
                 <Quote className="w-8 h-8 text-primary/20 absolute -top-2 -left-2" />
                 <h3 className="font-display font-semibold text-xl text-foreground mb-4">
-                  Gayathri Kanumuri, Founder of Naricare
+                  Gayathri Kanumuri
                 </h3>
                 
                 <div className="text-muted-foreground leading-relaxed space-y-4">
