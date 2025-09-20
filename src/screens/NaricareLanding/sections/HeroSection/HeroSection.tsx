@@ -107,41 +107,6 @@ export const HeroSection = (): JSX.Element => {
         </div>
       </div>
 
-      <Card className="w-full max-w-4xl mx-4 lg:mx-0 mt-8 lg:mt-0 lg:absolute lg:top-[725px] lg:left-[calc(50.00%_-_549px)] bg-[#ffffff] rounded-2xl shadow-[0px_4px_4px_#00000026]">
-        <CardContent className="flex flex-col lg:flex-row items-center gap-4 lg:gap-6 p-6 lg:p-0 lg:px-12 lg:py-6">
-          {statsData.map((stat, index) => (
-            <React.Fragment key={index}>
-              <div className="flex w-full lg:w-[302px] items-center justify-between relative">
-                <div className="flex flex-col flex-1 lg:w-[179px] items-start relative">
-                  <div className="relative self-stretch [font-family:'Merriweather',Helvetica] font-semibold text-black text-3xl lg:text-5xl tracking-[-0.96px] leading-tight lg:leading-[72px]">
-                    {stat.number}
-                  </div>
-                  <div className="relative self-stretch [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-sm lg:text-base tracking-[-0.32px] leading-5 lg:leading-6">
-                    {stat.description}
-                  </div>
-                </div>
-                <img
-                  className="relative w-12 h-12 lg:w-14 lg:h-14 ml-4"
-                  alt={stat.alt}
-                  src={stat.icon}
-                />
-              </div>
-              {index < statsData.length - 1 && (
-                <Separator
-                  orientation="horizontal"
-                  className="relative w-full h-px lg:hidden"
-                />
-              )}
-              {index < statsData.length - 1 && (
-                <Separator
-                  orientation="vertical"
-                  className="relative self-stretch w-px hidden lg:block"
-                />
-              )}
-            </React.Fragment>
-          ))}
-        </CardContent>
-      </Card>
     </section>
   );
 };
