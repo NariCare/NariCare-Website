@@ -264,7 +264,7 @@ export const PricingSection = (): JSX.Element => {
         />
 
         <img
-          className="absolute top-[47px] left-[22%] w-[1079px] h-[1352px] -z-10 opacity-10 pointer-events-none"
+          className="absolute top-[-2%] left-[10%] w-[80%] h-[52%] pointer-events-none"
           alt="Group"
           src="/group-36699.png"
         />
