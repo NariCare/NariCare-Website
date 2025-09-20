@@ -98,7 +98,7 @@ const privatePlans = [
 
 export const PricingSection = (): JSX.Element => {
   return (
-    <section className="w-full bg-[#f7f5ff] py-24 px-8 relative">
+    <section id="pricing" className="w-full bg-[#f7f5ff] py-24 px-8 relative">
       <div className="max-w-screen-xl mx-auto flex flex-col gap-16 relative">
         <div className="flex flex-col items-center gap-8">
           <div className="max-w-screen-md text-center">

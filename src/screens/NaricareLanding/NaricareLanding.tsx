@@ -24,11 +24,26 @@ import { TestimonialSection } from "./sections/TestimonialSection/TestimonialSec
 import { TestimonialWrapperSection } from "./sections/TestimonialWrapperSection/TestimonialWrapperSection";
 
 const navigationItems = [
-  { label: "Home", hasDropdown: false },
-  { label: "Products", hasDropdown: true },
-  { label: "Resources", hasDropdown: true },
-  { label: "Pricing", hasDropdown: false },
+  { label: "Home", hasDropdown: false, action: "reload" },
+  { label: "Products", hasDropdown: false, href: "#products" },
+  { label: "Resources", hasDropdown: false, href: "#resources" },
+  { label: "Pricing", hasDropdown: false, href: "#pricing" },
 ];
+
+const scrollToSection = (href: string) => {
+  const element = document.querySelector(href);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
+
+const handleNavigation = (item: any) => {
+  if (item.action === "reload") {
+    window.location.reload();
+  } else if (item.href) {
+    scrollToSection(item.href);
+  }
+};
 
 const mediaLogos = [
   {
@@ -83,7 +98,10 @@ export const NaricareLanding = (): JSX.Element => {
                           </div>
                         </NavigationMenuTrigger>
                       ) : (
-                        <div className="inline-flex gap-2 flex-[0_0_auto] items-center justify-center relative">
+                        <div 
+                          className="inline-flex gap-2 flex-[0_0_auto] items-center justify-center relative cursor-pointer"
+                          onClick={() => handleNavigation(item)}
+                        >
                           <div className="relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-semibold text-gray-600 text-base tracking-[0] leading-6 whitespace-nowrap">
                             {item.label}
                           </div>
@@ -96,7 +114,9 @@ export const NaricareLanding = (): JSX.Element => {
             </div>
 
             <div className="inline-flex items-center gap-2 lg:gap-3 relative flex-[0_0_auto]">
-              <Button className="inline-flex h-10 lg:h-12 gap-2 lg:gap-3 px-4 lg:px-6 py-2 lg:py-4 flex-[0_0_auto] bg-[#8383ed] rounded-[10px] overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-[10px] before:[background:linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none hover:bg-[#8383ed]">
+              <Button 
+                onClick={() => window.open('https://api.whatsapp.com/send/?phone=918142144762&text&type=phone_number&app_absent=0', '_blank')}
+                className="inline-flex h-10 lg:h-12 gap-2 lg:gap-3 px-4 lg:px-6 py-2 lg:py-4 flex-[0_0_auto] bg-[#8383ed] rounded-[10px] overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-[10px] before:[background:linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none hover:bg-[#8383ed]">
                 <div className="relative w-fit [font-family:'Poppins',Helvetica] font-semibold text-white text-sm lg:text-base tracking-[0] leading-5 lg:leading-7 whitespace-nowrap">
                   Contact us
                 </div>

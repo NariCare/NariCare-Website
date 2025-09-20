@@ -67,7 +67,7 @@ export const FeaturesWrapperSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="flex flex-col w-full items-center gap-16 px-0 py-24 relative bg-basewhite">
+    <section id="products" className="flex flex-col w-full items-center gap-16 px-0 py-24 relative bg-basewhite">
       <div className="flex flex-col max-w-screen-xl items-start gap-8 px-8 py-0 relative w-full">
         <div className="flex flex-col items-center gap-8 relative w-full">
           <div className="flex flex-col max-w-screen-md items-center gap-5 relative w-full">
