@@ -1,4 +1,3 @@
-import { CheckIcon } from "lucide-react";
 import React from "react";
 
 const challenges = [
@@ -42,7 +41,11 @@ export const FeaturesSection = (): JSX.Element => {
                   key={index}
                   className="flex items-start gap-3 self-stretch w-full flex-[0_0_auto]"
                 >
-                  <CheckIcon className="w-5 h-5 md:w-6 md:h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                  <img 
+                    src="/check-icon-new.svg" 
+                    alt="Check" 
+                    className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0 mt-0.5" 
+                  />
                   <span className="flex-1 mt-[-1.00px] [font-family:'Poppins',Helvetica] font-medium text-[#475467] text-base md:text-lg lg:text-xl tracking-[0] leading-[24px] md:leading-[28px] lg:leading-[30px]">
                     {challenge}
                   </span>
