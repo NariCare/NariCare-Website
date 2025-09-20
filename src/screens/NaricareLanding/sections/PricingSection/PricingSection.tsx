@@ -99,7 +99,7 @@ const privatePlans = [
 export const PricingSection = (): JSX.Element => {
   return (
     <section className="w-full bg-[#f7f5ff] py-24 px-8 relative">
-      <div className="max-w-screen-xl mx-auto flex flex-col gap-16">
+      <div className="max-w-screen-xl mx-auto flex flex-col gap-16 relative">
         <div className="flex flex-col items-center gap-8">
           <div className="max-w-screen-md text-center">
             <h2 className="[font-family:'Merriweather',Helvetica] text-[#0f1728] text-5xl font-semibold leading-normal mb-5">
@@ -249,25 +249,26 @@ export const PricingSection = (): JSX.Element => {
             ))}
           </div>
         </div>
+
+        {/* Decorative elements positioned relative to content container */}
+        <img
+          className="absolute top-[-1%] left-[24%] w-[59px] h-[65px] pointer-events-none"
+          alt="Hand drawn accents"
+          src="/hand-drawn-accents.svg"
+        />
+
+        <img
+          className="absolute top-[-1%] left-[72%] w-[65px] h-[59px] pointer-events-none"
+          alt="Hand drawn accents"
+          src="/hand-drawn-accents-1.svg"
+        />
+
+        <img
+          className="absolute top-[47px] left-[22%] w-[1079px] h-[1352px] -z-10 opacity-10 pointer-events-none"
+          alt="Group"
+          src="/group-36699.png"
+        />
       </div>
-
-      <img
-        className="absolute top-[60px] left-[32%] w-[59px] h-[65px]"
-        alt="Hand drawn accents"
-        src="/hand-drawn-accents.svg"
-      />
-
-      <img
-        className="absolute top-[72px] left-[64%] w-[65px] h-[59px]"
-        alt="Hand drawn accents"
-        src="/hand-drawn-accents-1.svg"
-      />
-
-      <img
-        className="absolute top-[47px] left-[22%] w-[1079px] h-[1352px]"
-        alt="Group"
-        src="/group-36699.png"
-      />
     </section>
   );
 };
