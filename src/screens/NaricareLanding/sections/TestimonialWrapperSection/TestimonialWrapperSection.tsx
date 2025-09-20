@@ -28,15 +28,30 @@ export const TestimonialWrapperSection = (): JSX.Element => {
   ];
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
-  // Auto-rotate testimonials every 5 seconds
+  // Auto-rotate testimonials every 5 seconds with fade transition
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+      setIsVisible(false); // Start fade out
+      setTimeout(() => {
+        setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+        setIsVisible(true); // Start fade in
+      }, 300); // Wait 300ms for fade out to complete
     }, 5000);
 
     return () => clearInterval(interval);
   }, [testimonials.length]);
+
+  const handleTestimonialChange = (index: number) => {
+    if (index !== currentTestimonial) {
+      setIsVisible(false); // Start fade out
+      setTimeout(() => {
+        setCurrentTestimonial(index);
+        setIsVisible(true); // Start fade in
+      }, 300); // Wait 300ms for fade out to complete
+    }
+  };
   const testimonialCards = [
     {
       backgroundImage: "bg-[url(/image-23.png)]",
@@ -152,7 +167,7 @@ export const TestimonialWrapperSection = (): JSX.Element => {
       <div className="pt-0 pb-24 px-0 flex flex-col w-full items-center gap-16 bg-[#fffcf9]">
         <div className="flex flex-col max-w-screen-xl items-start gap-8 px-8 py-0 w-full">
           <div className="flex flex-col items-center gap-10 w-full">
-            <div className="flex flex-col max-w-screen-lg items-center gap-8 w-full">
+            <div className={`flex flex-col max-w-screen-lg items-center gap-8 w-full transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
               <blockquote className="[font-family:'Poppins',Helvetica] text-[#475467] text-2xl tracking-[-0.48px] leading-[44px] font-medium text-center">
                 {testimonials[currentTestimonial].text}
               </blockquote>
@@ -183,7 +198,7 @@ export const TestimonialWrapperSection = (): JSX.Element => {
               {testimonials.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentTestimonial(index)}
+                  onClick={() => handleTestimonialChange(index)}
                   className={`w-2.5 h-2.5 rounded-md transition-colors duration-200 ${
                     index === currentTestimonial ? 'bg-[#ff9e88]' : 'bg-gray-200 hover:bg-gray-300'
                   }`}
