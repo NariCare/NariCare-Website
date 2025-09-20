@@ -53,11 +53,22 @@ export const NaricareLanding = (): JSX.Element => {
         <div className="flex h-16 lg:h-[120px] flex-1 relative flex-col w-full items-center justify-center">
           <div className="w-full max-w-[1280px] items-center justify-between px-4 lg:px-8 py-0 flex">
             <div className="inline-flex items-center gap-4 lg:gap-10 relative flex-[0_0_auto]">
-              <img
-                className="relative flex-[0_0_auto] h-8 lg:h-12 w-auto"
-                alt="Logo"
-                src="/logo.svg"
-              />
+              <div className="inline-flex items-center relative flex-[0_0_auto]">
+                <img
+                  className="relative flex-[0_0_auto] h-8 lg:h-12 w-auto -mr-2"
+                  alt="NariCare Logo"
+                  src="/logo.svg"
+                />
+                <div className="flex flex-col items-start relative" style={{ marginLeft: '-1.5rem' }}>
+                  <div className="relative [font-family:'Merriweather',Helvetica] font-medium text-lg lg:text-xl tracking-[0] leading-tight">
+                    <span className="text-[#8383ed]">Nari</span>
+                    <span className="text-[#ff9e88]">Care</span>
+                  </div>
+                  <div className="relative [font-family:'Poppins',Helvetica] font-normal text-[#8383ed] text-xs lg:text-sm tracking-[0] leading-tight">
+                    Your breast friend
+                  </div>
+                </div>
+              </div>
 
               <NavigationMenu className="hidden lg:block absolute top-1 left-[calc(50.00%_+_162px)]">
                 <NavigationMenuList className="inline-flex items-center gap-8">
@@ -102,13 +113,6 @@ export const NaricareLanding = (): JSX.Element => {
 
       <main className="flex flex-col w-full items-start relative">
         <HeroSection />
-
-        <img
-          className="hidden lg:block absolute top-[45px] left-[180px] w-[129px] h-[42px] z-10"
-          alt="Group"
-          src="/group.png"
-        />
-
         <section className="flex w-full items-start justify-center pt-16 lg:pt-[142px] pb-12 lg:pb-24 px-4 lg:px-0 relative bg-gray-50">
           <div className="flex-col max-w-screen-xl items-center gap-6 lg:gap-8 px-4 lg:px-8 py-0 flex-1 grow flex relative">
             <div className="relative w-fit [font-family:'Merriweather',Helvetica] font-medium text-gray-600 text-lg lg:text-2xl text-center tracking-[0] leading-6 lg:leading-[30px] px-4">
