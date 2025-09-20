@@ -139,7 +139,7 @@ export const MetricsSection = (): JSX.Element => {
   ) => {
     if (!highlights.length) {
       return (
-        <span className="[font-family:'Poppins',Helvetica] font-normal text-[#475467] text-base tracking-[0] leading-[28.8px]">
+        <span className="[font-family:'Poppins',Helvetica] font-normal text-[#475467] text-sm md:text-base tracking-[0] leading-[20px] md:leading-[28.8px]">
           {text}
         </span>
       );
@@ -178,7 +178,7 @@ export const MetricsSection = (): JSX.Element => {
           typeof part === "string" ? (
             <span
               key={index}
-              className="[font-family:'Poppins',Helvetica] font-normal text-[#475467] text-base tracking-[0] leading-[28.8px]"
+              className="[font-family:'Poppins',Helvetica] font-normal text-[#475467] text-sm md:text-base tracking-[0] leading-[20px] md:leading-[28.8px]"
             >
               {part}
             </span>
@@ -191,11 +191,11 @@ export const MetricsSection = (): JSX.Element => {
   };
 
   return (
-    <section className="flex flex-col w-full items-center justify-center gap-16 px-0 py-24 relative bg-basewhite">
-      <div className="flex flex-col max-w-screen-xl items-start gap-8 px-8 py-0 relative w-full">
-        <div className="flex flex-col items-center gap-8 relative self-stretch w-full">
-          <div className="inline-flex max-w-screen-md items-center gap-5 flex-col relative">
-            <h2 className="max-w-[864px] [font-family:'Merriweather',Helvetica] text-transparent text-5xl text-center leading-[normal] relative font-semibold tracking-[0]">
+    <section className="flex flex-col w-full items-center justify-center gap-8 md:gap-16 px-0 py-12 md:py-24 relative bg-basewhite">
+      <div className="flex flex-col max-w-screen-xl items-start gap-6 md:gap-8 px-4 md:px-8 py-0 relative w-full">
+        <div className="flex flex-col items-center gap-6 md:gap-8 relative self-stretch w-full">
+          <div className="inline-flex max-w-screen-md items-center gap-4 md:gap-5 flex-col relative">
+            <h2 className="max-w-[864px] [font-family:'Merriweather',Helvetica] text-transparent text-2xl md:text-3xl lg:text-5xl text-center leading-tight lg:leading-[normal] relative font-semibold tracking-[0]">
               <span className="text-[#0f1728]">
                 Google gives answers. A consult gives advice.{" "}
               </span>
@@ -204,7 +204,7 @@ export const MetricsSection = (): JSX.Element => {
               <span className="text-[#0f1728]"> gives you a path.</span>
             </h2>
 
-            <p className="relative self-stretch font-text-xl-regular font-[number:var(--text-xl-regular-font-weight)] text-gray-600 text-[length:var(--text-xl-regular-font-size)] text-center tracking-[var(--text-xl-regular-letter-spacing)] leading-[var(--text-xl-regular-line-height)] [font-style:var(--text-xl-regular-font-style)]">
+            <p className="relative self-stretch [font-family:'Poppins',Helvetica] font-normal text-gray-600 text-base md:text-lg lg:text-xl text-center tracking-[0] leading-6 md:leading-7 lg:leading-[30px]">
               Not a one-time fix - a health companion that checks in, adapts,
               and helps you reach real goals.
             </p>
@@ -212,106 +212,112 @@ export const MetricsSection = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="inline-flex flex-col items-start relative">
-        <div className="inline-flex items-start relative bg-[linear-gradient(351deg,rgba(227,226,255,1)_0%,rgba(246,237,255,1)_56%)]">
-          <div className="flex w-[287px] h-[130px] items-center justify-center gap-6 p-6 relative bg-[#ffffff] border-r border-b border-[#d7d7d7]" />
+      <div className="w-full max-w-screen-xl px-4 md:px-8">
+        <div className="overflow-x-auto">
+          <div className="inline-flex flex-col items-start relative min-w-[800px]">
+            <div className="inline-flex items-start relative bg-[linear-gradient(351deg,rgba(227,226,255,1)_0%,rgba(246,237,255,1)_56%)]">
+              <div className="flex w-[287px] h-[130px] items-center justify-center gap-6 p-6 relative bg-[#ffffff] border-r border-b border-[#d7d7d7]" />
 
-          <img
-            className="relative w-[319px] h-[130px]"
-            alt="Property cell"
-            src="/property-cell.svg"
-          />
+              <img
+                className="relative w-[319px] h-[130px]"
+                alt="Property cell"
+                src="/property-cell.svg"
+              />
 
-          <div className="flex w-80 h-[130px] items-center justify-center gap-6 p-6 relative border-r border-b border-[#d7d7d7] bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(66,133,244,0.2)_100%)]">
-            <img
-              className="relative w-[124px] h-[42px] object-cover"
-              alt="Image"
-              src="/image-39.svg"
-            />
-          </div>
+              <div className="flex w-80 h-[130px] items-center justify-center gap-6 p-6 relative border-r border-b border-[#d7d7d7] bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(66,133,244,0.2)_100%)]">
+                <img
+                  className="relative w-[124px] h-[42px] object-cover"
+                  alt="Image"
+                  src="/image-39.svg"
+                />
+              </div>
 
-          <div className="flex w-80 h-[130px] items-center justify-center gap-6 p-6 relative border-b border-[#d7d7d7] bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(252,255,213,1)_100%)]">
-            <div className="relative flex items-center justify-center flex-1 [font-family:'Poppins',Helvetica] font-normal text-[#353535] text-xl text-center tracking-[0.60px] leading-8">
-              One-time consults
+              <div className="flex w-80 h-[130px] items-center justify-center gap-6 p-6 relative border-b border-[#d7d7d7] bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(252,255,213,1)_100%)]">
+                <div className="relative flex items-center justify-center flex-1 [font-family:'Poppins',Helvetica] font-normal text-[#353535] text-lg md:text-xl text-center tracking-[0.60px] leading-6 md:leading-8">
+                  One-time consults
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div className="flex items-start relative self-stretch w-full">
-          <div className="flex flex-col w-[287px] items-start relative">
-            {tableData.map((row, index) => (
-              <div
-                key={index}
-                className="flex h-[90px] items-center justify-center gap-6 px-6 py-4 relative self-stretch w-full bg-[#ffffff] border-r border-b border-[#d7d7d7]"
-              >
-                <div className="relative flex items-center justify-center flex-1 [font-family:'Poppins',Helvetica] font-medium text-[#4b4b4b] text-base tracking-[0] leading-[28.8px]">
-                  {row.category}
-                </div>
+            <div className="flex items-start relative self-stretch w-full">
+              <div className="flex flex-col w-[287px] items-start relative">
+                {tableData.map((row, index) => (
+                  <div
+                    key={index}
+                    className="flex h-[90px] items-center justify-center gap-6 px-6 py-4 relative self-stretch w-full bg-[#ffffff] border-r border-b border-[#d7d7d7]"
+                  >
+                    <div className="relative flex items-center justify-center flex-1 [font-family:'Poppins',Helvetica] font-medium text-[#4b4b4b] text-sm md:text-base tracking-[0] leading-[20px] md:leading-[28.8px]">
+                      {row.category}
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
 
-          <div className="flex flex-col w-[319px] items-start relative">
-            {tableData.map((row, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center gap-6 px-6 py-4 relative self-stretch w-full bg-[#ffffff] border-r border-b border-[#d7d7d7] min-h-[90px]"
-              >
-                <div className="flex items-start gap-6 relative flex-1 grow">
-                  <div className="inline-flex items-center gap-2.5 pt-2 pb-0 px-0 relative flex-[0_0_auto]">
-                    <CheckIcon className="relative w-6 h-6 text-green-600" />
+              <div className="flex flex-col w-[319px] items-start relative">
+                {tableData.map((row, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center justify-center gap-6 px-6 py-4 relative self-stretch w-full bg-[#ffffff] border-r border-b border-[#d7d7d7] min-h-[90px]"
+                  >
+                    <div className="flex items-start gap-6 relative flex-1 grow">
+                      <div className="inline-flex items-center gap-2.5 pt-2 pb-0 px-0 relative flex-[0_0_auto]">
+                        <CheckIcon className="relative w-5 h-5 md:w-6 md:h-6 text-green-600" />
+                      </div>
+                      <div className="relative flex items-center justify-center flex-1 mt-[-1.00px]">
+                        <span className="[font-family:'Poppins',Helvetica] font-normal text-[#475467] text-sm md:text-base tracking-[0] leading-[20px] md:leading-[28.8px]">
+                          {renderTextWithHighlights(
+                            row.naricare.text,
+                            row.naricare.highlights,
+                          )}
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="relative flex items-center justify-center flex-1 mt-[-1.00px]">
-                    {renderTextWithHighlights(
-                      row.naricare.text,
-                      row.naricare.highlights,
-                    )}
-                  </div>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
 
-          <div className="flex flex-col w-80 items-start relative">
-            {tableData.map((row, index) => (
-              <div
-                key={index}
-                className="flex h-[90px] items-center justify-center gap-6 px-6 py-4 relative self-stretch w-full bg-[#ffffff] border-r border-b border-[#d7d7d7]"
-              >
-                <div className="flex items-start gap-6 relative flex-1 grow">
-                  <div className="inline-flex items-center gap-2.5 pt-2 pb-0 px-0 relative flex-[0_0_auto]">
-                    <XIcon className="relative w-6 h-6 text-red-500" />
+              <div className="flex flex-col w-80 items-start relative">
+                {tableData.map((row, index) => (
+                  <div
+                    key={index}
+                    className="flex h-[90px] items-center justify-center gap-6 px-6 py-4 relative self-stretch w-full bg-[#ffffff] border-r border-b border-[#d7d7d7]"
+                  >
+                    <div className="flex items-start gap-6 relative flex-1 grow">
+                      <div className="inline-flex items-center gap-2.5 pt-2 pb-0 px-0 relative flex-[0_0_auto]">
+                        <XIcon className="relative w-5 h-5 md:w-6 md:h-6 text-red-500" />
+                      </div>
+                      <div className="relative flex items-center justify-center flex-1 mt-[-1.00px] [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-sm md:text-base tracking-[0] leading-[20px] md:leading-[28.8px]">
+                        {row.google.text}
+                      </div>
+                    </div>
                   </div>
-                  <div className="relative flex items-center justify-center flex-1 mt-[-1.00px] [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-base tracking-[0] leading-[28.8px]">
-                    {row.google.text}
-                  </div>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
 
-          <div className="flex flex-col w-80 items-start relative">
-            {tableData.map((row, index) => (
-              <div
-                key={index}
-                className={`flex h-[90px] items-center justify-center gap-6 px-6 py-4 relative self-stretch w-full bg-[#ffffff] ${index === tableData.length - 1 ? "border-0 border-none" : "border-b border-[#d7d7d7]"}`}
-              >
-                <div className="flex items-start gap-6 relative flex-1 grow">
-                  <div className="inline-flex items-center gap-2.5 pt-2 pb-0 px-0 relative flex-[0_0_auto]">
-                    <XIcon className="relative w-6 h-6 text-red-500" />
+              <div className="flex flex-col w-80 items-start relative">
+                {tableData.map((row, index) => (
+                  <div
+                    key={index}
+                    className={`flex h-[90px] items-center justify-center gap-6 px-6 py-4 relative self-stretch w-full bg-[#ffffff] ${index === tableData.length - 1 ? "border-0 border-none" : "border-b border-[#d7d7d7]"}`}
+                  >
+                    <div className="flex items-start gap-6 relative flex-1 grow">
+                      <div className="inline-flex items-center gap-2.5 pt-2 pb-0 px-0 relative flex-[0_0_auto]">
+                        <XIcon className="relative w-5 h-5 md:w-6 md:h-6 text-red-500" />
+                      </div>
+                      <div className="relative flex items-center justify-center flex-1 mt-[-1.00px] [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-sm md:text-base tracking-[0] leading-[20px] md:leading-[28.8px]">
+                        {row.consults.text}
+                      </div>
+                    </div>
                   </div>
-                  <div className="relative flex items-center justify-center flex-1 mt-[-1.00px] [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-base tracking-[0] leading-[28.8px]">
-                    {row.consults.text}
-                  </div>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>
 
       <img
-        className="absolute left-0 bottom-[967px] w-[250px] h-80"
+        className="absolute left-0 bottom-[967px] w-[250px] h-80 hidden lg:block"
         alt="Line pattern"
         src="/line-pattern.svg"
       />

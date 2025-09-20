@@ -26,45 +26,45 @@ const blogPosts = [
 
 export const BlogSection = (): JSX.Element => {
   return (
-    <section className="flex flex-col w-full items-center gap-16 px-0 py-24 relative bg-gray-50">
-      <div className="flex flex-col max-w-screen-xl items-start gap-8 px-8 py-0 relative w-full">
-        <div className="flex flex-col items-center gap-8 relative self-stretch w-full">
-          <div className="flex flex-col max-w-screen-md items-center gap-5 relative w-full">
+    <section className="flex flex-col w-full items-center gap-8 md:gap-16 px-0 py-12 md:py-24 relative bg-gray-50">
+      <div className="flex flex-col max-w-screen-xl items-start gap-6 md:gap-8 px-4 md:px-8 py-0 relative w-full">
+        <div className="flex flex-col items-center gap-6 md:gap-8 relative self-stretch w-full">
+          <div className="flex flex-col max-w-screen-md items-center gap-4 md:gap-5 relative w-full">
             <div className="flex flex-col items-start gap-3 relative self-stretch w-full">
-              <h2 className="self-stretch [font-family:'Merriweather',Helvetica] text-[#0f1728] text-5xl text-center leading-[normal] relative mt-[-1.00px] font-semibold tracking-[0]">
+              <h2 className="self-stretch [font-family:'Merriweather',Helvetica] text-[#0f1728] text-2xl md:text-3xl lg:text-5xl text-center leading-tight lg:leading-[normal] relative mt-[-1.00px] font-semibold tracking-[0]">
                 Our latest articles
               </h2>
             </div>
 
-            <p className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-xl text-center tracking-[0] leading-[30px] relative self-stretch">
+            <p className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-base md:text-lg lg:text-xl text-center tracking-[0] leading-6 md:leading-7 lg:leading-[30px] relative self-stretch">
               Interviews, tips, guides, industry best practices, and news.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="flex-col max-w-screen-xl items-start gap-16 px-8 py-0 w-full flex relative">
-        <div className="flex flex-wrap items-start justify-center gap-[48px_32px] relative self-stretch w-full">
+      <div className="flex-col max-w-screen-xl items-start gap-8 md:gap-16 px-4 md:px-8 py-0 w-full flex relative">
+        <div className="flex flex-col md:flex-row md:flex-wrap items-start justify-center gap-8 md:gap-[48px_32px] relative self-stretch w-full">
           {blogPosts.map((post, index) => (
             <Card
               key={index}
-              className="flex flex-col min-w-80 items-start gap-5 relative flex-1 grow border-none shadow-none bg-transparent"
+              className="flex flex-col w-full md:min-w-80 items-start gap-5 relative md:flex-1 md:grow border-none shadow-none bg-transparent"
             >
               <CardContent className="p-0 w-full">
                 <img
-                  className="relative w-96 h-60"
+                  className="relative w-full h-48 md:h-60 object-cover rounded-lg"
                   alt="Blog post image"
                   src={post.image}
                 />
 
-                <div className="flex flex-col items-start gap-2 relative self-stretch w-full flex-[0_0_auto] mt-5">
+                <div className="flex flex-col items-start gap-2 relative self-stretch w-full flex-[0_0_auto] mt-4 md:mt-5">
                   <div className="flex-col gap-2 flex items-start relative self-stretch w-full flex-[0_0_auto]">
-                    <div className="relative self-stretch mt-[-1.00px] [font-family:'Poppins',Helvetica] font-medium text-brand-700 text-sm tracking-[0] leading-5">
+                    <div className="relative self-stretch mt-[-1.00px] [font-family:'Poppins',Helvetica] font-medium text-brand-700 text-xs md:text-sm tracking-[0] leading-4 md:leading-5">
                       {post.category}
                     </div>
 
                     <div className="gap-4 flex items-start relative self-stretch w-full flex-[0_0_auto]">
-                      <h3 className="relative flex-1 mt-[-1.00px] [font-family:'Poppins',Helvetica] font-semibold text-gray-900 text-2xl tracking-[0] leading-8">
+                      <h3 className="relative flex-1 mt-[-1.00px] [font-family:'Poppins',Helvetica] font-semibold text-gray-900 text-xl md:text-2xl tracking-[0] leading-7 md:leading-8">
                         {post.title}
                       </h3>
                     </div>
@@ -74,11 +74,11 @@ export const BlogSection = (): JSX.Element => {
                     href={post.link}
                     className="inline-flex gap-2 flex-[0_0_auto] items-center justify-center relative cursor-pointer"
                   >
-                    <span className="relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-medium text-brand-700 text-base tracking-[0] leading-6 whitespace-nowrap">
+                    <span className="relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-medium text-brand-700 text-sm md:text-base tracking-[0] leading-5 md:leading-6 whitespace-nowrap">
                       Read post
                     </span>
 
-                    <ArrowUpRightIcon className="relative w-5 h-5 text-brand-700" />
+                    <ArrowUpRightIcon className="relative w-4 h-4 md:w-5 md:h-5 text-brand-700" />
                   </a>
                 </div>
               </CardContent>
@@ -90,7 +90,7 @@ export const BlogSection = (): JSX.Element => {
           <div className="inline-flex items-start gap-3 relative flex-[0_0_auto]">
             <Button className="h-auto inline-flex gap-1.5 px-[18px] py-3 flex-[0_0_auto] bg-brand-600 rounded-lg overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-lg before:[background:linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none hover:bg-brand-700">
               <div className="inline-flex items-center justify-center px-0.5 py-0 relative flex-[0_0_auto]">
-                <span className="relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-semibold text-basewhite text-base tracking-[0] leading-6 whitespace-nowrap">
+                <span className="relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-semibold text-basewhite text-sm md:text-base tracking-[0] leading-5 md:leading-6 whitespace-nowrap">
                   View all posts
                 </span>
               </div>

@@ -48,18 +48,18 @@ const mediaLogos = [
 
 export const NaricareLanding = (): JSX.Element => {
   return (
-    <div className="bg-[#ffffff] overflow-hidden w-full min-w-[1440px] relative">
-      <header className="w-full h-[120px] flex relative z-10">
-        <div className="flex h-[120px] flex-1 relative flex-col w-full items-center justify-center">
-          <div className="w-full max-w-[1280px] items-center justify-between px-8 py-0 flex">
-            <div className="inline-flex items-center gap-10 relative flex-[0_0_auto]">
+    <div className="bg-[#ffffff] overflow-hidden w-full relative">
+      <header className="w-full h-16 lg:h-[120px] flex relative z-10">
+        <div className="flex h-16 lg:h-[120px] flex-1 relative flex-col w-full items-center justify-center">
+          <div className="w-full max-w-[1280px] items-center justify-between px-4 lg:px-8 py-0 flex">
+            <div className="inline-flex items-center gap-4 lg:gap-10 relative flex-[0_0_auto]">
               <img
-                className="relative flex-[0_0_auto] h-12 w-auto"
+                className="relative flex-[0_0_auto] h-8 lg:h-12 w-auto"
                 alt="Logo"
                 src="/logo.svg"
               />
 
-              <NavigationMenu className="absolute top-1 left-[calc(50.00%_+_162px)]">
+              <NavigationMenu className="hidden lg:block absolute top-1 left-[calc(50.00%_+_162px)]">
                 <NavigationMenuList className="inline-flex items-center gap-8">
                   {navigationItems.map((item, index) => (
                     <NavigationMenuItem key={index}>
@@ -83,14 +83,14 @@ export const NaricareLanding = (): JSX.Element => {
               </NavigationMenu>
             </div>
 
-            <div className="inline-flex items-center gap-3 relative flex-[0_0_auto]">
-              <Button className="inline-flex h-12 gap-3 px-6 py-4 flex-[0_0_auto] bg-[#8383ed] rounded-[10px] overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-[10px] before:[background:linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none hover:bg-[#8383ed]">
-                <div className="relative w-fit mt-[-8.00px] mb-[-4.00px] [font-family:'Poppins',Helvetica] font-semibold text-basewhite text-base tracking-[0] leading-7 whitespace-nowrap">
+            <div className="inline-flex items-center gap-2 lg:gap-3 relative flex-[0_0_auto]">
+              <Button className="inline-flex h-10 lg:h-12 gap-2 lg:gap-3 px-4 lg:px-6 py-2 lg:py-4 flex-[0_0_auto] bg-[#8383ed] rounded-[10px] overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-[10px] before:[background:linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none hover:bg-[#8383ed]">
+                <div className="relative w-fit [font-family:'Poppins',Helvetica] font-semibold text-white text-sm lg:text-base tracking-[0] leading-5 lg:leading-7 whitespace-nowrap">
                   Contact us
                 </div>
 
                 <img
-                  className="relative w-6 h-6 mt-[-4.00px] mb-[-4.00px]"
+                  className="relative w-4 lg:w-6 h-4 lg:h-6"
                   alt="Whatsapp"
                   src="/whatsapp.svg"
                 />
@@ -104,22 +104,22 @@ export const NaricareLanding = (): JSX.Element => {
         <HeroSection />
 
         <img
-          className="absolute top-[45px] left-[180px] w-[129px] h-[42px] z-10"
+          className="hidden lg:block absolute top-[45px] left-[180px] w-[129px] h-[42px] z-10"
           alt="Group"
           src="/group.png"
         />
 
-        <section className="flex w-full items-start justify-center pt-[142px] pb-24 px-0 relative bg-gray-50">
-          <div className="flex-col max-w-screen-xl items-center gap-8 px-8 py-0 flex-1 grow flex relative">
-            <div className="relative w-fit mt-[-1.00px] [font-family:'Merriweather',Helvetica] font-medium text-gray-600 text-2xl text-center tracking-[0] leading-[30px] whitespace-nowrap">
+        <section className="flex w-full items-start justify-center pt-16 lg:pt-[142px] pb-12 lg:pb-24 px-4 lg:px-0 relative bg-gray-50">
+          <div className="flex-col max-w-screen-xl items-center gap-6 lg:gap-8 px-4 lg:px-8 py-0 flex-1 grow flex relative">
+            <div className="relative w-fit [font-family:'Merriweather',Helvetica] font-medium text-gray-600 text-lg lg:text-2xl text-center tracking-[0] leading-6 lg:leading-[30px] px-4">
               Featured in leading publications and media outlets
             </div>
 
-            <div className="inline-flex items-center gap-[123px] relative flex-[0_0_auto]">
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-[123px] relative w-full lg:w-auto">
               {mediaLogos.map((logo, index) => (
                 <img
                   key={index}
-                  className={`relative ${logo.className}`}
+                  className={`relative ${index === 0 ? 'w-32 lg:w-44 h-auto' : index === 1 ? 'w-40 lg:w-[226px] h-auto' : 'w-36 lg:w-[196px] h-auto'}`}
                   alt={logo.alt}
                   src={logo.src}
                 />
@@ -127,7 +127,7 @@ export const NaricareLanding = (): JSX.Element => {
             </div>
 
             <img
-              className="relative w-[946px] flex-[0_0_auto]"
+              className="relative w-full max-w-[946px] flex-[0_0_auto]"
               alt="Frame"
               src="/frame-36722.svg"
             />
@@ -144,7 +144,7 @@ export const NaricareLanding = (): JSX.Element => {
         <PricingSection />
         <BlogSection />
         <img
-          className="relative w-full flex-[0_0_auto]"
+          className="relative w-full flex-[0_0_auto] px-4 lg:px-0"
           alt="Blog section"
           src="/blog-section.svg"
         />

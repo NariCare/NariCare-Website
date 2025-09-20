@@ -39,25 +39,25 @@ export const TeamSection = (): JSX.Element => {
 
   return (
     <section className="relative w-full">
-      <div className="flex flex-col w-full items-center gap-16 px-0 py-24 bg-gray-50">
-        <h2 className="[font-family:'Merriweather',Helvetica] font-semibold text-[#0f1728] text-5xl text-center tracking-[0] leading-[normal]">
+      <div className="flex flex-col w-full items-center gap-8 md:gap-16 px-0 py-12 md:py-24 bg-gray-50">
+        <h2 className="[font-family:'Merriweather',Helvetica] font-semibold text-[#0f1728] text-3xl md:text-4xl lg:text-5xl text-center tracking-[0] leading-tight lg:leading-[normal] px-4">
           Meet the founder
         </h2>
 
-        <div className="max-w-screen-xl items-center gap-16 px-8 py-0 w-full flex">
-          <div className="relative flex-1 h-[560px]">
+        <div className="max-w-screen-xl items-center gap-8 md:gap-12 lg:gap-16 px-4 md:px-8 py-0 w-full flex flex-col lg:flex-row">
+          <div className="relative flex-shrink-0 w-full max-w-sm md:max-w-md lg:flex-1 lg:h-[560px]">
             <img
-              className="absolute top-[6px] left-0 w-[420px] h-[558px]"
+              className="w-full h-auto lg:absolute lg:top-[6px] lg:left-0 lg:w-[420px] lg:h-[558px] object-cover rounded-lg"
               alt="Founder image"
               src="/image-18.png"
             />
           </div>
 
-          <div className="flex flex-col w-[642px] items-start gap-4">
-            <div className="flex flex-col min-w-[480px] max-w-[720px] items-start w-full">
+          <div className="flex flex-col w-full lg:w-[642px] items-start gap-4">
+            <div className="flex flex-col w-full items-start">
               <div className="flex flex-col items-start w-full">
-                <div className="h-[540px] gap-[18px] flex flex-col items-start">
-                  <p className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-lg tracking-[0] leading-7">
+                <div className="gap-4 md:gap-[18px] flex flex-col items-start">
+                  <p className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-base md:text-lg tracking-[0] leading-6 md:leading-7">
                     {textContent.map((segment, index) => (
                       <span
                         key={index}
@@ -72,7 +72,7 @@ export const TeamSection = (): JSX.Element => {
                     ))}
                   </p>
 
-                  <p className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-lg tracking-[0] leading-7">
+                  <p className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-base md:text-lg tracking-[0] leading-6 md:leading-7">
                     <span className="text-[#8383ed]">
                       This experience ignited my passion to address a critical
                       gap: the lack of widespread, accurate information about
@@ -83,7 +83,7 @@ export const TeamSection = (): JSX.Element => {
                     </span>
                   </p>
 
-                  <p className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-lg tracking-[0] leading-7">
+                  <p className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-base md:text-lg tracking-[0] leading-6 md:leading-7">
                     <span className="text-[#475466]">At </span>
                     <span className="font-medium text-[#8383ed]">NariCare</span>
                     <span className="text-[#475466]">
@@ -96,8 +96,6 @@ export const TeamSection = (): JSX.Element => {
                     </span>
                   </p>
                 </div>
-
-                <div className="flex flex-col h-[18px] items-start w-full" />
               </div>
             </div>
           </div>
@@ -106,7 +104,7 @@ export const TeamSection = (): JSX.Element => {
         {decorativeImages.map((image, index) => (
           <img
             key={index}
-            className={image.className}
+            className={`${image.className} hidden lg:block`}
             alt={image.alt}
             src={image.src}
           />

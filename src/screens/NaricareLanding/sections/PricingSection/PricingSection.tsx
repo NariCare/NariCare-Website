@@ -152,19 +152,19 @@ export const PricingSection = (): JSX.Element => {
                     </p>
                   </div>
                 </CardHeader>
-                <CardContent className="flex-1 pt-8 pb-10 px-8">
-                  <div className="flex flex-col gap-4 mb-6">
+                <CardContent className="flex-1 pt-6 md:pt-8 pb-8 md:pb-10 px-6 md:px-8">
+                  <div className="flex flex-col gap-3 md:gap-4 mb-6">
                     {plan.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex gap-3">
-                        <CheckIcon className="w-6 h-6 text-green-500 flex-shrink-0 mt-0" />
-                        <div className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-base leading-6">
+                        <CheckIcon className="w-5 h-5 md:w-6 md:h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                        <div className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-sm md:text-base leading-5 md:leading-6">
                           {feature}
                         </div>
                       </div>
                     ))}
                   </div>
                   <Button className="w-full h-auto bg-[#8383ed] hover:bg-[#7373dd] text-basewhite px-[18px] py-3 rounded-lg shadow-shadows-shadow-xs-skeuomorphic">
-                    <span className="font-text-md-semibold font-[number:var(--text-md-semibold-font-weight)] text-[length:var(--text-md-semibold-font-size)] tracking-[var(--text-md-semibold-letter-spacing)] leading-[var(--text-md-semibold-line-height)] [font-style:var(--text-md-semibold-font-style)]">
+                    <span className="[font-family:'Poppins',Helvetica] font-semibold text-base tracking-[0] leading-6">
                       Get started
                     </span>
                   </Button>
@@ -221,19 +221,19 @@ export const PricingSection = (): JSX.Element => {
                     </p>
                   </div>
                 </CardHeader>
-                <CardContent className="flex-1 pt-8 pb-10 px-8">
-                  <div className="flex flex-col gap-4 mb-6">
+                <CardContent className="flex-1 pt-6 md:pt-8 pb-8 md:pb-10 px-6 md:px-8">
+                  <div className="flex flex-col gap-3 md:gap-4 mb-6">
                     {plan.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex gap-3">
-                        <CheckIcon className="w-6 h-6 text-green-500 flex-shrink-0 mt-0" />
-                        <div className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-base leading-6">
+                        <CheckIcon className="w-5 h-5 md:w-6 md:h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                        <div className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-sm md:text-base leading-5 md:leading-6">
                           {feature}
                         </div>
                       </div>
                     ))}
                   </div>
                   <Button className="w-full h-auto bg-[#8383ed] hover:bg-[#7373dd] text-basewhite px-[18px] py-3 rounded-lg shadow-shadows-shadow-xs-skeuomorphic">
-                    <span className="font-text-md-semibold font-[number:var(--text-md-semibold-font-weight)] text-[length:var(--text-md-semibold-font-size)] tracking-[var(--text-md-semibold-letter-spacing)] leading-[var(--text-md-semibold-line-height)] [font-style:var(--text-md-semibold-font-style)]">
+                    <span className="[font-family:'Poppins',Helvetica] font-semibold text-base tracking-[0] leading-6">
                       Get started
                     </span>
                   </Button>

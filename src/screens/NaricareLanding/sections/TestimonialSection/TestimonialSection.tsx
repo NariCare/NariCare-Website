@@ -3,26 +3,26 @@ import { Button } from "../../../../components/ui/button";
 
 export const TestimonialSection = (): JSX.Element => {
   return (
-    <section className="flex flex-col w-full items-center gap-16 px-0 py-24 relative bg-[#f6f4ff]">
+    <section className="flex flex-col w-full items-center gap-8 md:gap-16 px-0 py-12 md:py-24 relative bg-[#f6f4ff]">
       <img
-        className="absolute top-0 right-[-113px] w-[182px] h-[148px]"
+        className="absolute top-0 right-[-113px] w-[182px] h-[148px] hidden lg:block"
         alt="Line pattern"
         src="/line-pattern-1.svg"
       />
 
-      <div className="flex flex-col max-w-screen-xl items-start gap-8 px-8 py-0 relative w-full flex-[0_0_auto]">
-        <div className="flex flex-col items-center gap-10 relative self-stretch w-full flex-[0_0_auto]">
-          <div className="flex flex-col items-center gap-8 relative self-stretch w-full flex-[0_0_auto]">
-            <h2 className="[font-family:'Merriweather',Helvetica] text-gray-900 text-[44px] tracking-[-0.88px] leading-[60px] relative self-stretch mt-[-1.00px] font-medium text-center">
-              <span className="text-[#0f1728] tracking-[-0.39px]">
+      <div className="flex flex-col max-w-screen-xl items-start gap-6 md:gap-8 px-4 md:px-8 py-0 relative w-full flex-[0_0_auto]">
+        <div className="flex flex-col items-center gap-6 md:gap-10 relative self-stretch w-full flex-[0_0_auto]">
+          <div className="flex flex-col items-center gap-6 md:gap-8 relative self-stretch w-full flex-[0_0_auto]">
+            <h2 className="[font-family:'Merriweather',Helvetica] text-gray-900 text-2xl md:text-3xl lg:text-[44px] tracking-[-0.32px] md:tracking-[-0.66px] lg:tracking-[-0.88px] leading-tight md:leading-[48px] lg:leading-[60px] relative self-stretch mt-[-1.00px] font-medium text-center">
+              <span className="text-[#0f1728] tracking-[-0.24px] md:tracking-[-0.32px] lg:tracking-[-0.39px]">
                 With personalized guidance &amp; continuous support from{" "}
               </span>
 
-              <span className="text-[#8383ed] tracking-[-0.39px]">
+              <span className="text-[#8383ed] tracking-[-0.24px] md:tracking-[-0.32px] lg:tracking-[-0.39px]">
                 NariCare&apos;s Breastfeeding Program,
               </span>
 
-              <span className="text-[#0f1728] tracking-[-0.39px]">
+              <span className="text-[#0f1728] tracking-[-0.24px] md:tracking-[-0.32px] lg:tracking-[-0.39px]">
                 {" "}
                 you&apos;ll prevent or overcome any breastfeeding challenges.
               </span>
@@ -42,7 +42,7 @@ export const TestimonialSection = (): JSX.Element => {
       </div>
 
       <img
-        className="absolute left-0 bottom-[-265px] w-[251px] h-24"
+        className="absolute left-0 bottom-[-265px] w-[251px] h-24 hidden lg:block"
         alt="Line pattern"
         src="/line-pattern-1.svg"
       />
