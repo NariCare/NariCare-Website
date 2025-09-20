@@ -26,109 +26,116 @@ export const HeroSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="flex flex-col w-full items-center justify-center gap-16 pt-16 pb-24 px-0 relative bg-[#fffcf8]">
-      <div className="flex-wrap max-w-screen-xl items-center justify-center gap-[64px_32px] px-8 py-0 w-full flex-[0_0_auto] flex relative">
-        <div className="flex flex-col min-w-[480px] items-start gap-[42px] pl-0 pr-8 py-0 relative flex-1 grow">
+    <section className="flex flex-col w-full items-center justify-center gap-8 lg:gap-16 pt-8 lg:pt-16 pb-16 lg:pb-24 px-4 lg:px-0 relative bg-[#fffcf8]">
+      <div className="flex flex-col lg:flex-row max-w-screen-xl items-center justify-center gap-8 lg:gap-16 px-4 lg:px-8 py-0 w-full relative">
+        <div className="flex flex-col w-full lg:min-w-[480px] items-start gap-6 lg:gap-[42px] pl-0 pr-0 lg:pr-8 py-0 relative flex-1 grow">
           <div className="flex items-start gap-4 self-stretch w-full flex-col relative flex-[0_0_auto]">
-            <h1 className="self-stretch [font-family:'Merriweather',Helvetica] text-gray-900 text-[54px] leading-[54px] relative mt-[-1.00px] font-semibold tracking-[0]">
+            <h1 className="self-stretch [font-family:'Merriweather',Helvetica] text-gray-900 text-3xl sm:text-4xl lg:text-[54px] leading-tight lg:leading-[54px] relative font-semibold tracking-[0]">
               <span className="text-[#0f1728]">Overcome </span>
               <span className="text-[#8383ed]">breastfeeding </span>
               <span className="text-[#0f1728]">challenges with confidence</span>
             </h1>
 
-            <p className="relative [font-family:'Poppins',Helvetica] font-normal text-[#475466] text-xl tracking-[0] leading-[30px]">
+            <p className="relative [font-family:'Poppins',Helvetica] font-normal text-[#475466] text-lg lg:text-xl tracking-[0] leading-relaxed lg:leading-[30px]">
               Expert care + smart AI that remembers your story, tracks what
               matters, and answers your 3AM questions. See your baby thrive with
               real data, not guesswork.
             </p>
           </div>
 
-          <div className="inline-flex items-start gap-3 relative flex-[0_0_auto]">
-            <Button className="inline-flex h-12 gap-3 px-6 py-4 flex-[0_0_auto] bg-[#8383ed] rounded-[10px] overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-[10px] before:[background:linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none hover:bg-[#7373dd]">
-              <span className="relative w-fit mt-[-8.00px] mb-[-4.00px] [font-family:'Poppins',Helvetica] font-semibold text-basewhite text-base tracking-[0] leading-7 whitespace-nowrap">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 relative w-full sm:w-auto">
+            <Button className="w-full sm:w-auto inline-flex h-12 gap-3 px-6 py-4 bg-[#8383ed] rounded-[10px] overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-[10px] before:[background:linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none hover:bg-[#7373dd]">
+              <span className="relative w-fit [font-family:'Poppins',Helvetica] font-semibold text-white text-base tracking-[0] leading-7 whitespace-nowrap">
                 Contact us
               </span>
               <img
-                className="relative w-6 h-6 mt-[-4.00px] mb-[-4.00px]"
+                className="relative w-6 h-6"
                 alt="Whatsapp"
                 src="/whatsapp.svg"
               />
             </Button>
 
-            <Button
-              variant="outline"
-              className="flex w-[158px] h-12 gap-1.5 px-[18px] py-3 bg-[#ffffff] rounded-lg overflow-hidden border border-solid border-[#8383ed] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative hover:bg-gray-50"
-            >
-              <img
-                className="relative w-[99.56px] h-[25.71px] mt-[-0.85px] mb-[-0.85px]"
-                alt="App store"
-                src="/app-store.png"
-              />
-            </Button>
+            <div className="flex flex-row gap-3 w-full sm:w-auto">
+              <Button
+                variant="outline"
+                className="flex flex-1 sm:w-[158px] h-12 gap-1.5 px-3 sm:px-[18px] py-3 bg-[#ffffff] rounded-lg overflow-hidden border border-solid border-[#8383ed] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative hover:bg-gray-50"
+              >
+                <img
+                  className="relative h-6 w-auto"
+                  alt="App store"
+                  src="/app-store.png"
+                />
+              </Button>
 
-            <Button
-              variant="outline"
-              className="flex w-[158px] h-12 gap-1.5 px-[18px] py-3 bg-[#ffffff] rounded-lg overflow-hidden border border-solid border-[#8383ed] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative hover:bg-gray-50"
-            >
-              <img
-                className="relative w-[115.85px] h-[27.99px] mt-[-2.05px] mb-[-1.95px]"
-                alt="Google play"
-                src="/google-play.svg"
-              />
-            </Button>
+              <Button
+                variant="outline"
+                className="flex flex-1 sm:w-[158px] h-12 gap-1.5 px-3 sm:px-[18px] py-3 bg-[#ffffff] rounded-lg overflow-hidden border border-solid border-[#8383ed] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative hover:bg-gray-50"
+              >
+                <img
+                  className="relative h-6 w-auto"
+                  alt="Google play"
+                  src="/google-play.svg"
+                />
+              </Button>
+            </div>
           </div>
 
-          <div className="flex flex-col w-[407px] items-start gap-4 relative flex-[0_0_auto]">
+          <div className="flex flex-col w-full max-w-[407px] items-start gap-4 relative">
             <img
               className="relative w-[150px] h-[50px] object-cover"
               alt="Nsrcel"
               src="/nsrcel.svg"
             />
 
-            <p className="relative self-stretch [font-family:'Poppins',Helvetica] font-normal text-[#475466] text-xl tracking-[0] leading-[30px]">
+            <p className="relative self-stretch [font-family:'Poppins',Helvetica] font-normal text-[#475466] text-lg lg:text-xl tracking-[0] leading-relaxed lg:leading-[30px]">
               Top 15 startups incubated at IIMB NSRCEL
             </p>
           </div>
         </div>
 
-        <div className="relative flex-1 min-w-[480px] grow h-[640px] rounded-[160px_0px_0px_0px]">
+        <div className="relative w-full lg:flex-1 lg:min-w-[480px] h-[300px] sm:h-[400px] lg:h-[640px] flex items-center justify-center lg:block">
           <img
-            className="absolute -top-10 -right-32 w-[282px] h-[408px]"
+            className="absolute top-0 right-0 w-[200px] sm:w-[250px] lg:w-[282px] h-auto lg:-top-10 lg:-right-32 lg:w-[282px] lg:h-[408px] opacity-20 lg:opacity-100"
             alt="Line pattern"
             src="/line-pattern-3.svg"
+          />
+          <img
+            className="relative w-[280px] sm:w-[350px] lg:w-[654px] h-auto object-cover rounded-2xl lg:rounded-none lg:absolute lg:top-[71px] lg:left-[123px]"
+            alt="Mother and baby"
+            src="/image-13.png"
           />
         </div>
       </div>
 
-      <img
-        className="absolute top-[71px] left-[623px] w-[654px] h-[654px] object-cover"
-        alt="Image"
-        src="/image-13.png"
-      />
-
-      <Card className="inline-flex items-center gap-6 px-12 py-6 absolute top-[725px] left-[calc(50.00%_-_549px)] bg-[#ffffff] rounded-2xl shadow-[0px_4px_4px_#00000026]">
-        <CardContent className="flex items-center gap-6 p-0">
+      <Card className="w-full max-w-4xl mx-4 lg:mx-0 mt-8 lg:mt-0 lg:absolute lg:top-[725px] lg:left-[calc(50.00%_-_549px)] bg-[#ffffff] rounded-2xl shadow-[0px_4px_4px_#00000026]">
+        <CardContent className="flex flex-col lg:flex-row items-center gap-4 lg:gap-6 p-6 lg:p-0 lg:px-12 lg:py-6">
           {statsData.map((stat, index) => (
             <React.Fragment key={index}>
-              <div className="flex w-[302px] items-center justify-between relative">
-                <div className="flex flex-col w-[179px] items-start relative">
-                  <div className="relative self-stretch mt-[-1.00px] [font-family:'Merriweather',Helvetica] font-semibold text-black text-5xl tracking-[-0.96px] leading-[72px]">
+              <div className="flex w-full lg:w-[302px] items-center justify-between relative">
+                <div className="flex flex-col flex-1 lg:w-[179px] items-start relative">
+                  <div className="relative self-stretch [font-family:'Merriweather',Helvetica] font-semibold text-black text-3xl lg:text-5xl tracking-[-0.96px] leading-tight lg:leading-[72px]">
                     {stat.number}
                   </div>
-                  <div className="relative self-stretch [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-base tracking-[-0.32px] leading-6">
+                  <div className="relative self-stretch [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-sm lg:text-base tracking-[-0.32px] leading-5 lg:leading-6">
                     {stat.description}
                   </div>
                 </div>
                 <img
-                  className="relative w-14 h-14"
+                  className="relative w-12 h-12 lg:w-14 lg:h-14 ml-4"
                   alt={stat.alt}
                   src={stat.icon}
                 />
               </div>
               {index < statsData.length - 1 && (
                 <Separator
+                  orientation="horizontal"
+                  className="relative w-full h-px lg:hidden"
+                />
+              )}
+              {index < statsData.length - 1 && (
+                <Separator
                   orientation="vertical"
-                  className="relative self-stretch w-px"
+                  className="relative self-stretch w-px hidden lg:block"
                 />
               )}
             </React.Fragment>

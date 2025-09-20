@@ -54,7 +54,7 @@ export const NaricareLanding = (): JSX.Element => {
           <div className="w-full max-w-[1280px] items-center justify-between px-8 py-0 flex">
             <div className="inline-flex items-center gap-10 relative flex-[0_0_auto]">
               <img
-                className="relative flex-[0_0_auto] mt-[-26.86px] mb-[-26.86px]"
+                className="relative flex-[0_0_auto] h-12 w-auto"
                 alt="Logo"
                 src="/logo.svg"
               />
