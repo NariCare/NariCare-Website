@@ -183,18 +183,30 @@ export const NaricareLanding = (): JSX.Element => {
               {mediaLogos.map((logo, index) => (
                 <img
                   key={index}
-                  className={`relative ${index === 0 ? 'w-32 lg:w-44 h-auto' : index === 1 ? 'w-40 lg:w-[226px] h-auto' : 'w-36 lg:w-[196px] h-auto'}`}
+                  className={`relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer ${index === 0 ? 'w-32 lg:w-44 h-auto' : index === 1 ? 'w-40 lg:w-[226px] h-auto' : 'w-36 lg:w-[196px] h-auto'}`}
                   alt={logo.alt}
                   src={logo.src}
                 />
               ))}
             </div>
 
-            <img
-              className="relative w-full max-w-[946px] flex-[0_0_auto]"
-              alt="Frame"
-              src="/frame-36722.svg"
-            />
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-[123px] relative w-full lg:w-auto">
+              <img
+                className="relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer w-40 lg:w-52 h-auto"
+                alt="Eenadu"
+                src="/eenadu.svg"
+              />
+              <img
+                className="relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer w-40 lg:w-52 h-auto"
+                alt="The Hindu"
+                src="/the-hindu.svg"
+              />
+              <img
+                className="relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer w-32 lg:w-40 h-auto"
+                alt="ETV"
+                src="/ETV.svg"
+              />
+            </div>
           </div>
         </section>
 
