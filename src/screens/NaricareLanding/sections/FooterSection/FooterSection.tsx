@@ -28,9 +28,9 @@ export const FooterSection = (): JSX.Element => {
   ];
 
   const contactInfo = [
-    { icon: "/frame-1.svg", text: "support@naricare.com" },
-    { icon: "/frame-2.svg", text: "+91 99999 00000" },
-    { icon: "/frame.svg", text: "Bengaluru, India" },
+    { icon: "/frame-1.svg", text: "support@naricare.com", type: "email" },
+    { icon: "/frame-2.svg", text: "+918142144762", type: "phone" },
+    { icon: "/frame.svg", text: "Bengaluru, India", type: "location" },
   ];
 
   const legalLinks = [
@@ -39,6 +39,14 @@ export const FooterSection = (): JSX.Element => {
     { label: "Cookies" },
     { label: "Refund Policy" },
   ];
+
+  const handleContactClick = (contact: any) => {
+    if (contact.type === "email") {
+      window.open(`mailto:${contact.text}`, '_blank');
+    } else if (contact.type === "phone") {
+      window.open('https://api.whatsapp.com/send/?phone=918142144762&text&type=phone_number&app_absent=0', '_blank');
+    }
+  };
 
   return (
     <footer className="flex flex-col items-start relative self-stretch w-full flex-[0_0_auto] bg-[#8383ed]">
@@ -138,7 +146,8 @@ export const FooterSection = (): JSX.Element => {
                     {contactInfo.map((contact, index) => (
                       <div
                         key={`contact-${index}`}
-                        className="flex h-6 items-center gap-1.5 w-full relative self-stretch"
+                        className={`flex h-6 items-center gap-1.5 w-full relative self-stretch ${contact.type !== "location" ? "cursor-pointer hover:opacity-80 transition-opacity" : ""}`}
+                        onClick={() => handleContactClick(contact)}
                       >
                         <img
                           className="relative w-4 h-4 md:w-5 md:h-5"
