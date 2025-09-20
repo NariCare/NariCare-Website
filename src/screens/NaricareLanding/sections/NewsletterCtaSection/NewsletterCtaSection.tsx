@@ -3,12 +3,12 @@ import { Button } from "../../../../components/ui/button";
 
 const decorativeElements = [
   {
-    className: "absolute left-[21%] bottom-[66px] w-[198px] h-[231px]",
+    className: "absolute left-[21%] bottom-[66px] w-[198px] h-[231px] filter grayscale",
     alt: "Group",
     src: "/group-1.svg",
   },
   {
-    className: "absolute top-[209px] left-[68%] w-[213px] h-[231px]",
+    className: "absolute top-[209px] left-[68%] w-[213px] h-[231px] filter grayscale",
     alt: "Group",
     src: "/group-2.svg",
   },
