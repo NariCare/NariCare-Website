@@ -1,4 +1,3 @@
-import { CheckIcon, XIcon } from "lucide-react";
 import React from "react";
 
 const tableData = [
@@ -261,7 +260,11 @@ export const MetricsSection = (): JSX.Element => {
                   >
                     <div className="flex items-start gap-6 relative flex-1 grow">
                       <div className="inline-flex items-center gap-2.5 pt-2 pb-0 px-0 relative flex-[0_0_auto]">
-                        <CheckIcon className="relative w-5 h-5 md:w-6 md:h-6 text-green-600" />
+                        <img 
+                          src="/tick.svg" 
+                          alt="Tick" 
+                          className="w-5 h-5 md:w-6 md:h-6" 
+                        />
                       </div>
                       <div className="relative flex items-center justify-center flex-1 mt-[-1.00px]">
                         <span className="[font-family:'Poppins',Helvetica] font-normal text-[#475467] text-sm md:text-base tracking-[0] leading-[20px] md:leading-[28.8px]">
@@ -284,7 +287,11 @@ export const MetricsSection = (): JSX.Element => {
                   >
                     <div className="flex items-start gap-6 relative flex-1 grow">
                       <div className="inline-flex items-center gap-2.5 pt-2 pb-0 px-0 relative flex-[0_0_auto]">
-                        <XIcon className="relative w-5 h-5 md:w-6 md:h-6 text-red-500" />
+                        <img 
+                          src="/circle.png" 
+                          alt="Circle" 
+                          className="w-5 h-5 md:w-6 md:h-6" 
+                        />
                       </div>
                       <div className="relative flex items-center justify-center flex-1 mt-[-1.00px] [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-sm md:text-base tracking-[0] leading-[20px] md:leading-[28.8px]">
                         {row.google.text}
@@ -302,7 +309,11 @@ export const MetricsSection = (): JSX.Element => {
                   >
                     <div className="flex items-start gap-6 relative flex-1 grow">
                       <div className="inline-flex items-center gap-2.5 pt-2 pb-0 px-0 relative flex-[0_0_auto]">
-                        <XIcon className="relative w-5 h-5 md:w-6 md:h-6 text-red-500" />
+                        <img 
+                          src="/circle.png" 
+                          alt="Circle" 
+                          className="w-5 h-5 md:w-6 md:h-6" 
+                        />
                       </div>
                       <div className="relative flex items-center justify-center flex-1 mt-[-1.00px] [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-sm md:text-base tracking-[0] leading-[20px] md:leading-[28.8px]">
                         {row.consults.text}

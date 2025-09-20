@@ -1,4 +1,3 @@
-import { CheckIcon } from "lucide-react";
 import React from "react";
 import { Badge } from "../../../../components/ui/badge";
 import { Button } from "../../../../components/ui/button";
@@ -156,7 +155,11 @@ export const PricingSection = (): JSX.Element => {
                   <div className="flex flex-col gap-3 md:gap-4 mb-6 flex-1">
                     {plan.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex gap-3">
-                        <CheckIcon className="w-5 h-5 md:w-6 md:h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                        <img 
+                          src="/check-icon.svg" 
+                          alt="Check" 
+                          className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0 mt-0.5" 
+                        />
                         <div className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-sm md:text-base leading-5 md:leading-6">
                           {feature}
                         </div>
@@ -225,7 +228,11 @@ export const PricingSection = (): JSX.Element => {
                   <div className="flex flex-col gap-3 md:gap-4 mb-6 flex-1">
                     {plan.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex gap-3">
-                        <CheckIcon className="w-5 h-5 md:w-6 md:h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                        <img 
+                          src="/check-icon.svg" 
+                          alt="Check" 
+                          className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0 mt-0.5" 
+                        />
                         <div className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-sm md:text-base leading-5 md:leading-6">
                           {feature}
                         </div>
