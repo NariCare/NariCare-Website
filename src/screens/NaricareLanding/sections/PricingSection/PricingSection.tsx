@@ -120,7 +120,7 @@ export const PricingSection = (): JSX.Element => {
             {groupSupportPlans.map((plan, index) => (
               <Card
                 key={index}
-                className="w-96 bg-basewhite rounded-2xl border border-[#e4e7ec] shadow-shadows-shadow-lg relative"
+                className="w-96 bg-basewhite rounded-2xl border border-[#e4e7ec] shadow-shadows-shadow-lg relative flex flex-col h-full"
               >
                 {plan.isPopular && (
                   <div className="absolute -top-8 -right-16 w-[152px] h-[54px]">
@@ -152,8 +152,8 @@ export const PricingSection = (): JSX.Element => {
                     </p>
                   </div>
                 </CardHeader>
-                <CardContent className="flex-1 pt-6 md:pt-8 pb-8 md:pb-10 px-6 md:px-8">
-                  <div className="flex flex-col gap-3 md:gap-4 mb-6">
+                <CardContent className="flex-1 pt-6 md:pt-8 pb-8 md:pb-10 px-6 md:px-8 flex flex-col">
+                  <div className="flex flex-col gap-3 md:gap-4 mb-6 flex-1">
                     {plan.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex gap-3">
                         <CheckIcon className="w-5 h-5 md:w-6 md:h-6 text-green-500 flex-shrink-0 mt-0.5" />
@@ -163,7 +163,7 @@ export const PricingSection = (): JSX.Element => {
                       </div>
                     ))}
                   </div>
-                  <Button className="w-full h-auto bg-[#8383ed] hover:bg-[#7373dd] text-basewhite px-[18px] py-3 rounded-lg shadow-shadows-shadow-xs-skeuomorphic">
+                  <Button className="w-full h-auto bg-[#8383ed] hover:bg-[#7373dd] text-basewhite px-[18px] py-3 rounded-lg shadow-shadows-shadow-xs-skeuomorphic mt-auto">
                     <span className="[font-family:'Poppins',Helvetica] font-semibold text-base tracking-[0] leading-6">
                       Get started
                     </span>
@@ -189,7 +189,7 @@ export const PricingSection = (): JSX.Element => {
             {privatePlans.map((plan, index) => (
               <Card
                 key={index}
-                className="w-96 bg-basewhite rounded-2xl border border-[#e4e7ec] shadow-shadows-shadow-lg relative"
+                className="w-96 bg-basewhite rounded-2xl border border-[#e4e7ec] shadow-shadows-shadow-lg relative flex flex-col h-full"
               >
                 {plan.isPopular && (
                   <div className="absolute -top-8 -right-16 w-[152px] h-[54px]">
@@ -221,8 +221,8 @@ export const PricingSection = (): JSX.Element => {
                     </p>
                   </div>
                 </CardHeader>
-                <CardContent className="flex-1 pt-6 md:pt-8 pb-8 md:pb-10 px-6 md:px-8">
-                  <div className="flex flex-col gap-3 md:gap-4 mb-6">
+                <CardContent className="flex-1 pt-6 md:pt-8 pb-8 md:pb-10 px-6 md:px-8 flex flex-col">
+                  <div className="flex flex-col gap-3 md:gap-4 mb-6 flex-1">
                     {plan.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex gap-3">
                         <CheckIcon className="w-5 h-5 md:w-6 md:h-6 text-green-500 flex-shrink-0 mt-0.5" />
@@ -232,7 +232,7 @@ export const PricingSection = (): JSX.Element => {
                       </div>
                     ))}
                   </div>
-                  <Button className="w-full h-auto bg-[#8383ed] hover:bg-[#7373dd] text-basewhite px-[18px] py-3 rounded-lg shadow-shadows-shadow-xs-skeuomorphic">
+                  <Button className="w-full h-auto bg-[#8383ed] hover:bg-[#7373dd] text-basewhite px-[18px] py-3 rounded-lg shadow-shadows-shadow-xs-skeuomorphic mt-auto">
                     <span className="[font-family:'Poppins',Helvetica] font-semibold text-base tracking-[0] leading-6">
                       Get started
                     </span>
