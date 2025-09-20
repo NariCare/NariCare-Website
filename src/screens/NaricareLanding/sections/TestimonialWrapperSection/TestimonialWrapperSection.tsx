@@ -4,11 +4,39 @@ import {
   PlayIcon,
   StarIcon,
 } from "lucide-react";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 
 export const TestimonialWrapperSection = (): JSX.Element => {
+  const testimonials = [
+    {
+      text: "My 2 cents on Naricare's breastfeeding webinar - it's absolutely worth it and all women who are expecting as well as new mothers, just go for it. There are lot of myths around breastfeeding and all of them were clarified in a clear and concise way. I have given birth to a baby girl via c-section and I have struggled a lot in the initial few days after my delivery to breastfeed and that's when I came across NariCare and their offerings. Their breastfeeding webinar has helped a lot in my journey to breastfeed. Special thanks to Gayathri who is such a wonderful woman and is so patient to answer each and every silly question during my breastfeeding journey. Kudos to Naricare and the amazing work the team has been doing. PS: I highly recommend to attend the session before delivery itself so that you can apply everything you have learned from day zero !",
+      name: "Rochini Paidisetty",
+      image: "/mask-group-1.png"
+    },
+    {
+      text: "NariCare transformed my breastfeeding journey completely. I was struggling with low milk supply and was almost ready to give up when I found their program. The lactation consultants were incredibly supportive and provided personalized guidance that actually worked. Within just 3 weeks, I was able to exclusively breastfeed my baby. The 24/7 support was a lifesaver during those difficult night feeds. I can't thank the team enough for their expertise and compassion.",
+      name: "Priya Sharma",
+      image: "/mask-group.png"
+    },
+    {
+      text: "As a first-time mom, I had no idea what to expect with breastfeeding. NariCare's comprehensive program not only educated me but also provided ongoing support throughout my journey. The yoga classes helped with my recovery, and the nutrition consultation ensured both my baby and I were getting the right nutrients. The community support group was amazing - connecting with other mothers going through similar experiences was incredibly reassuring.",
+      name: "Anita Desai",
+      image: "/avatar.png"
+    }
+  ];
+
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  // Auto-rotate testimonials every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
   const testimonialCards = [
     {
       backgroundImage: "bg-[url(/image-23.png)]",
@@ -126,20 +154,7 @@ export const TestimonialWrapperSection = (): JSX.Element => {
           <div className="flex flex-col items-center gap-10 w-full">
             <div className="flex flex-col max-w-screen-lg items-center gap-8 w-full">
               <blockquote className="[font-family:'Poppins',Helvetica] text-[#475467] text-2xl tracking-[-0.48px] leading-[44px] font-medium text-center">
-                My 2 cents on Naricare&apos;s breastfeeding webinar - it&apos;s
-                absolutely worth it and all women who are expecting as well as
-                new mothers, just go for it. There are lot of myths around
-                breastfeeding and all of them were clarified in a clear and
-                concise way. I have given birth to a baby girl via c-section and
-                I have struggled a lot in the initial few days after my delivery
-                to breastfeed and that&apos;s when I came across NariCare and
-                their offerings. Their breastfeeding webinar has helped a lot in
-                my journey to breastfeed. Special thanks to Gayathri who is such
-                a wonderful woman and is so patient to answer each and every
-                silly question during my breastfeeding journey. Kudos to
-                Naricare and the amazing work the team has been doing. PS: I
-                highly recommend to attend the session before delivery itself so
-                that you can apply everything you have learned from day zero !
+                {testimonials[currentTestimonial].text}
               </blockquote>
 
               <div className="flex flex-col items-center gap-4 w-full">
@@ -148,14 +163,14 @@ export const TestimonialWrapperSection = (): JSX.Element => {
                     <div className="absolute -top-px -left-px w-[66px] h-[66px] bg-[#d9d9d9] rounded-full border border-neutral-300" />
                     <img
                       className="absolute top-0 left-0 w-16 h-16 rounded-full object-cover"
-                      alt="Rochini Paidisetty"
-                      src="/mask-group-1.png"
+                      alt={testimonials[currentTestimonial].name}
+                      src={testimonials[currentTestimonial].image}
                     />
                   </div>
 
                   <div className="flex flex-col items-center gap-1 w-full">
                     <h4 className="font-text-lg-semibold font-[number:var(--text-lg-semibold-font-weight)] text-gray-900 text-[length:var(--text-lg-semibold-font-size)] text-center tracking-[var(--text-lg-semibold-letter-spacing)] leading-[var(--text-lg-semibold-line-height)] [font-style:var(--text-lg-semibold-font-style)]">
-                      Rochini Paidisetty
+                      {testimonials[currentTestimonial].name}
                     </h4>
                   </div>
                 </div>
@@ -165,9 +180,15 @@ export const TestimonialWrapperSection = (): JSX.Element => {
             </div>
 
             <div className="inline-flex items-center justify-center gap-4">
-              <div className="w-2.5 h-2.5 bg-[#ff9e88] rounded-md" />
-              <div className="w-2.5 h-2.5 bg-gray-200 rounded-md" />
-              <div className="w-2.5 h-2.5 bg-gray-200 rounded-md" />
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTestimonial(index)}
+                  className={`w-2.5 h-2.5 rounded-md transition-colors duration-200 ${
+                    index === currentTestimonial ? 'bg-[#ff9e88]' : 'bg-gray-200 hover:bg-gray-300'
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>
