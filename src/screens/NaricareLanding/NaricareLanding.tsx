@@ -53,7 +53,7 @@ export const NaricareLanding = (): JSX.Element => {
     <div className="bg-[#ffffff] overflow-hidden w-full relative">
       <header className="w-full h-16 lg:h-[120px] flex relative z-10">
         <div className="flex h-16 lg:h-[120px] flex-1 relative flex-col w-full items-center justify-center">
-          <div className="w-full max-w-[1280px] items-center justify-between px-4 lg:px-8 py-0 flex">
+          <div className="w-full max-w-[1280px] items-center justify-between px-4 lg:px-12 py-0 flex">
             <div className="inline-flex items-center gap-4 lg:gap-10 relative flex-[0_0_auto]">
               <div className="inline-flex items-center relative flex-[0_0_auto]">
                 <img
@@ -174,7 +174,7 @@ export const NaricareLanding = (): JSX.Element => {
         </div>
         
         <section className="flex w-full items-start justify-center pt-32 lg:pt-40 pb-12 lg:pb-24 px-4 lg:px-0 relative bg-gray-50">
-          <div className="flex-col max-w-screen-xl items-center gap-6 lg:gap-8 px-4 lg:px-8 py-0 flex-1 grow flex relative">
+          <div className="flex-col max-w-screen-xl items-center gap-6 lg:gap-8 px-4 lg:px-12 py-0 flex-1 grow flex relative">
             <div className="relative w-fit [font-family:'Merriweather',Helvetica] font-medium text-gray-600 text-lg lg:text-2xl text-center tracking-[0] leading-6 lg:leading-[30px] px-4">
               Featured in leading publications and media outlets
             </div>
@@ -215,22 +215,50 @@ export const NaricareLanding = (): JSX.Element => {
         >
           <div className="relative overflow-hidden whitespace-nowrap">
             <div 
-              className="animate-scroll-left inline-block text-6xl lg:text-8xl font-bold text-gray-800 opacity-80"
+              className="animate-scroll-left inline-flex text-6xl lg:text-8xl font-bold text-gray-800 opacity-80"
               style={{
-                animation: 'scroll-left 30s linear infinite'
+                animation: 'scroll-left 40s linear infinite'
               }}
             >
-              <span className="px-8">Naari</span>
-              <span className="px-8">ನಾರಿ</span>
-              <span className="px-8">नारी</span>
-              <span className="px-8">ناری</span>
-              <span className="px-8">நாரி</span>
-              <span className="px-8">নারী</span>
-              <span className="px-8">Naari</span>
-              <span className="px-8">ನಾರಿ</span>
-              <span className="px-8">नारी</span>
-              <span className="px-8">നാരി</span>
-              <span className="px-8">নারী</span>
+              <span className="px-12">Naari</span>
+              <span className="px-12">ನಾರಿ</span>
+              <span className="px-12">नारी</span>
+              <span className="px-12">ناری</span>
+              <span className="px-12">நாரி</span>
+              <span className="px-12">নারী</span>
+              <span className="px-12">Naari</span>
+              <span className="px-12">ನಾರಿ</span>
+              <span className="px-12">नारी</span>
+              <span className="px-12">നാരി</span>
+              <span className="px-12">নারী</span>
+              <span className="px-12">Naari</span>
+              <span className="px-12">ನಾರಿ</span>
+              <span className="px-12">ناری</span>
+              <span className="px-12">নারী</span>
+              <span className="px-12">Naari</span>
+              <span className="px-12">नारी</span>
+              <span className="px-12">ناری</span>
+              <span className="px-12">নারি</span>
+              <span className="px-12">নারী</span>
+              <span className="px-12">Naari</span>
+              <span className="px-12">ನಾರಿ</span>
+              <span className="px-12">नारी</span>
+              <span className="px-12">ناری</span>
+              <span className="px-12">নারী</span>
+              <span className="px-12">Naari</span>
+              <span className="px-12">ನಾರಿ</span>
+              <span className="px-12">नारी</span>
+              <span className="px-12">ناری</span>
+              <span className="px-12">তারি</span>
+              <span className="px-12">നാরি</span>
+              <span className="px-12">নারী</span>
+              <span className="px-12">Naari</span>
+              <span className="px-12">ನಾರಿ</span>
+              <span className="px-12">नारी</span>
+              <span className="px-12">ناری</span>
+              <span className="px-12">তারি</span>
+              <span className="px-12">നാরি</span>
+              <span className="px-12">নারী</span>
             </div>
           </div>
         </section>
