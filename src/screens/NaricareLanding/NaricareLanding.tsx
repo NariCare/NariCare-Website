@@ -79,7 +79,6 @@ export const NaricareLanding = (): JSX.Element => {
                           <div className="relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-semibold text-gray-600 text-base tracking-[0] leading-6 whitespace-nowrap">
                             {item.label}
                           </div>
-                          <ChevronDownIcon className="w-5 h-5" />
                         </NavigationMenuTrigger>
                       ) : (
                         <div className="inline-flex gap-2 flex-[0_0_auto] items-center justify-center relative">
