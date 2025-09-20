@@ -207,11 +207,33 @@ export const NaricareLanding = (): JSX.Element => {
         <TestimonialWrapperSection />
         <PricingSection />
         <BlogSection />
-        <img
-          className="relative w-full flex-[0_0_auto] px-4 lg:px-0"
-          alt="Blog section"
-          src="/blog-section.svg"
-        />
+        <section 
+          className="relative w-full flex-[0_0_auto] px-4 lg:px-0 py-16 overflow-hidden"
+          style={{
+            backgroundColor: '#FFFCF9'
+          }}
+        >
+          <div className="relative overflow-hidden whitespace-nowrap">
+            <div 
+              className="animate-scroll-left inline-block text-6xl lg:text-8xl font-bold text-gray-800 opacity-80"
+              style={{
+                animation: 'scroll-left 30s linear infinite'
+              }}
+            >
+              <span className="px-8">Naari</span>
+              <span className="px-8">ನಾರಿ</span>
+              <span className="px-8">नारी</span>
+              <span className="px-8">ناری</span>
+              <span className="px-8">நாரி</span>
+              <span className="px-8">নারী</span>
+              <span className="px-8">Naari</span>
+              <span className="px-8">ನಾರಿ</span>
+              <span className="px-8">नारी</span>
+              <span className="px-8">നാരി</span>
+              <span className="px-8">নারী</span>
+            </div>
+          </div>
+        </section>
         <FaqSection />
         <NewsletterCtaSection />
         <FooterSection />
