@@ -252,13 +252,13 @@ export const PricingSection = (): JSX.Element => {
       </div>
 
       <img
-        className="absolute top-[60px] left-[386px] w-[59px] h-[65px]"
+        className="absolute top-[60px] left-[32%] w-[59px] h-[65px]"
         alt="Hand drawn accents"
         src="/hand-drawn-accents.svg"
       />
 
       <img
-        className="absolute top-[72px] left-[987px] w-[65px] h-[59px]"
+        className="absolute top-[72px] left-[64%] w-[65px] h-[59px]"
         alt="Hand drawn accents"
         src="/hand-drawn-accents-1.svg"
       />
