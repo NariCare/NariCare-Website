@@ -3,32 +3,22 @@ import { Button } from "../../../../components/ui/button";
 
 const decorativeElements = [
   {
-    className: "absolute left-[167px] bottom-[66px] w-[198px] h-[231px]",
+    className: "absolute left-[21%] bottom-[66px] w-[198px] h-[231px]",
     alt: "Group",
     src: "/group-1.svg",
   },
   {
-    className: "absolute top-[209px] left-[1049px] w-[213px] h-[231px]",
+    className: "absolute top-[209px] left-[68%] w-[213px] h-[231px]",
     alt: "Group",
     src: "/group-2.svg",
   },
   {
-    className: "absolute top-[430px] left-[1195px] w-5 h-3.5",
-    alt: "Vector",
-    src: "/vector-7.svg",
-  },
-  {
-    className: "absolute top-[429px] left-[1087px] w-[18px] h-3.5",
-    alt: "Vector",
-    src: "/vector-5.svg",
-  },
-  {
-    className: "absolute top-[270px] left-[264px] w-[23px] h-8",
+    className: "absolute top-[270px] left-[26%] w-[23px] h-8",
     alt: "Vector",
     src: "/vector-6.svg",
   },
   {
-    className: "absolute top-[196px] left-[1162px] w-[54px] h-[78px]",
+    className: "absolute top-[196px] left-[74%] w-[54px] h-[78px]",
     alt: "Group",
     src: "/group-36696.png",
   },
