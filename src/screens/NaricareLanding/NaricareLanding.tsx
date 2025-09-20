@@ -208,18 +208,19 @@ export const NaricareLanding = (): JSX.Element => {
         <PricingSection />
         <BlogSection />
         <section 
-          className="relative w-full flex-[0_0_auto] px-4 lg:px-0 py-16 overflow-hidden"
+          className="relative w-full flex-[0_0_auto] py-16 overflow-hidden flex items-center justify-center"
           style={{
             backgroundColor: '#FFFCF9'
           }}
         >
-          <div className="relative overflow-hidden whitespace-nowrap">
-            <div 
-              className="animate-scroll-left inline-flex text-6xl lg:text-8xl font-bold text-gray-800 opacity-80"
-              style={{
-                animation: 'scroll-left 40s linear infinite'
-              }}
-            >
+          <div className="max-w-screen-xl w-full px-4 lg:px-8">
+            <div className="relative overflow-hidden whitespace-nowrap">
+              <div 
+                className="animate-scroll-left inline-flex text-6xl lg:text-8xl font-bold text-gray-800 opacity-80"
+                style={{
+                  animation: 'scroll-left 40s linear infinite'
+                }}
+              >
               <span className="px-12">Naari</span>
               <span className="px-12">ನಾರಿ</span>
               <span className="px-12">नारी</span>
@@ -259,6 +260,7 @@ export const NaricareLanding = (): JSX.Element => {
               <span className="px-12">তারি</span>
               <span className="px-12">നാরি</span>
               <span className="px-12">নারী</span>
+            </div>
             </div>
           </div>
         </section>
