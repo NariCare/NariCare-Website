@@ -101,6 +101,7 @@ export const FeaturesWrapperSection = (): JSX.Element => {
             className="w-full h-auto"
             alt="Mom and baby"
             src="/mom-baby.png"
+            loading="lazy"
           />
         </div>
 
@@ -137,6 +138,7 @@ export const FeaturesWrapperSection = (): JSX.Element => {
                 className="relative w-14 h-14 mt-[-4.00px] ml-[-4.00px]"
                 alt="Featured icon"
                 src={feature.icon}
+                loading="lazy"
               />
 
               <div className="gap-2 w-full flex flex-col items-start relative">
@@ -157,6 +159,7 @@ export const FeaturesWrapperSection = (): JSX.Element => {
             className="absolute top-[calc(50.00%_-_240px)] left-[calc(50.00%_-_266px)] w-[532px] h-[480px]"
             alt="Blob"
             src="/blob.svg"
+            loading="lazy"
           />
 
           <div className="absolute top-0 left-[calc(50.00%_-_157px)] w-[314px] h-[640px]">
@@ -166,12 +169,14 @@ export const FeaturesWrapperSection = (): JSX.Element => {
                   className="mt-[12.9px] w-[21.35px] h-[8.33px] ml-[25.1px]"
                   alt="Date"
                   src="/date.png"
+                  loading="lazy"
                 />
 
                 <img
                   className="mt-[13.0px] w-[50.08px] h-[8.51px]"
                   alt="Right"
                   src="/right.png"
+                  loading="lazy"
                 />
               </div>
 
@@ -272,6 +277,7 @@ export const FeaturesWrapperSection = (): JSX.Element => {
                       className="relative w-full h-[100px]"
                       alt="Frame"
                       src={card.image}
+                      loading="lazy"
                     />
 
                     <div className="relative w-full [font-family:'Poppins',Helvetica] font-medium text-[#6868ff] text-xs text-center tracking-[0] leading-6">
@@ -338,6 +344,7 @@ export const FeaturesWrapperSection = (): JSX.Element => {
                 className="relative w-14 h-14 mt-[-4.00px] ml-[-4.00px]"
                 alt="Featured icon"
                 src={feature.icon}
+                loading="lazy"
               />
 
               <div className="gap-2 w-full flex flex-col items-start relative">

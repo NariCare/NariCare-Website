@@ -80,7 +80,7 @@ export const TestimonialWrapperSection = (): JSX.Element => {
   };
   const testimonialCards = [
     {
-      videoUrl: "https://naricare.com/wp-content/uploads/2024/07/Video-501.mp4",
+      videoUrl: "/video/Video-501.mp4",
       poster: "/image-23.png",
       backgroundImage: "bg-[url(/image-23.png)]",
       title: "Preterm Baby to Breastfeeding Success: How This Professor Mom Did It in 10 Days",
@@ -89,7 +89,7 @@ export const TestimonialWrapperSection = (): JSX.Element => {
       hasVideo: true,
     },
     {
-      videoUrl: "https://naricare.com/wp-content/uploads/2024/07/Video-812.mp4",
+      videoUrl: "/video/Video-812.mp4",
       poster: "/image-23-1.png",
       backgroundImage: "bg-[url(/image-23-1.png)]",
       title: "How She Ditched 480ml Daily Formula in Just 40 Days",
@@ -98,7 +98,7 @@ export const TestimonialWrapperSection = (): JSX.Element => {
       hasVideo: true,
     },
     {
-      videoUrl: "https://naricare.com/wp-content/uploads/2024/07/Video-998.mp4",
+      videoUrl: "/video/Video-998.mp4",
       poster: "/image-23-2.png",
       backgroundImage: "bg-[url(/image-23-2.png)]",
       title: "From Breast Rejection and 800ml of Formula daily to Exclusive Breastfeeding",
@@ -107,7 +107,7 @@ export const TestimonialWrapperSection = (): JSX.Element => {
       hasVideo: true,
     },
     {
-      videoUrl: "https://naricare.com/wp-content/uploads/2024/07/Video-164.mp4",
+      videoUrl: "/video/Video-164.mp4",
       poster: "/image-23-3.png",
       backgroundImage: "bg-[url(/image-23-3.png)]",
       title: "How She Fixed Supply Issues and Achieved Exclusive Breastfeeding",
@@ -154,7 +154,6 @@ export const TestimonialWrapperSection = (): JSX.Element => {
                       className="w-full h-full object-cover"
                       controls
                       autoPlay
-                      muted
                       playsInline
                       webkit-playsinline="true"
                       onEnded={handleVideoEnd}
@@ -254,6 +253,7 @@ export const TestimonialWrapperSection = (): JSX.Element => {
                       className="absolute top-0 left-0 w-16 h-16 rounded-full object-cover"
                       alt={testimonials[currentTestimonial].name}
                       src={testimonials[currentTestimonial].image}
+                      loading="lazy"
                     />
                   </div>
 

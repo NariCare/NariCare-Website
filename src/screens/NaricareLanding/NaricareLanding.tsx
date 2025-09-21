@@ -293,6 +293,7 @@ export const NaricareLanding = (): JSX.Element => {
                       className="stat-icon relative w-8 h-8 lg:w-12 lg:h-12 mt-1 lg:mt-0 lg:ml-3 flex-shrink-0"
                       alt={stat.alt}
                       src={stat.icon}
+                      loading="lazy"
                     />
                   </div>
                   {index < 2 && (

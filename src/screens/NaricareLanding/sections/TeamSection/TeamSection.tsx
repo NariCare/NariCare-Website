@@ -50,6 +50,7 @@ export const TeamSection = (): JSX.Element => {
               className="w-full h-auto lg:absolute lg:top-[6px] lg:left-0 lg:w-[420px] lg:h-[558px] object-cover rounded-lg"
               alt="Gayathri Kanumuri, founder and certified lactation consultant of NariCare, smiling confidently"
               src="/image-18.png"
+              loading="lazy"
             />
           </div>
 
@@ -107,6 +108,7 @@ export const TeamSection = (): JSX.Element => {
               className={`${image.className.replace('absolute top-[468px] left-0', 'absolute top-[60%] left-[-15%]').replace('absolute top-0 left-[1229px]', 'absolute top-[-10%] right-[-15%]')} hidden lg:block`}
               alt={image.alt}
               src={image.src}
+              loading="lazy"
             />
           ))}
         </div>

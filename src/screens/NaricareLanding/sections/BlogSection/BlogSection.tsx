@@ -55,6 +55,7 @@ export const BlogSection = (): JSX.Element => {
                   className="relative w-full h-48 md:h-60 object-cover rounded-lg"
                   alt="Blog post image"
                   src={post.image}
+                  loading="lazy"
                 />
 
                 <div className="flex flex-col items-start gap-2 relative self-stretch w-full flex-[0_0_auto] mt-4 md:mt-5">
