@@ -45,7 +45,7 @@ const appStoreButtons = [
 
 export const NewsletterCtaSection = (): JSX.Element => {
   return (
-    <section className="flex items-center justify-center min-h-[300px] md:h-[440px] py-12 md:py-24 relative w-full bg-gray-50 overflow-hidden">
+    <section className="flex items-center justify-center min-h-[300px] md:h-[440px] py-12 lg:py-16 relative w-full bg-gray-50 overflow-hidden">
       <div className="flex flex-col max-w-screen-xl items-center gap-8 md:gap-16 px-4 md:px-8 py-0 relative w-full">
         <div className="flex max-w-screen-md items-center gap-4 w-full flex-col relative flex-[0_0_auto]">
         <h2 className="self-stretch [font-family:'Merriweather',Helvetica] text-[#8383ed] text-2xl md:text-3xl lg:text-5xl text-center leading-tight lg:leading-[normal] relative mt-[-1.00px] font-semibold tracking-[0]">

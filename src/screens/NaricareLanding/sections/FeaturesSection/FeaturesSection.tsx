@@ -11,7 +11,7 @@ const challenges = [
 
 export const FeaturesSection = (): JSX.Element => {
   return (
-    <section className="flex flex-col w-full items-center gap-8 md:gap-16 px-0 py-12 md:py-24 bg-basewhite">
+    <section className="flex flex-col w-full items-center gap-8 md:gap-16 px-0 py-12 lg:py-16 bg-basewhite">
       <div className="max-w-screen-xl items-center gap-8 md:gap-12 px-4 md:px-8 py-0 w-full flex-[0_0_auto] flex flex-col lg:flex-row">
         <img
           className="w-full h-auto max-w-sm md:max-w-md lg:w-[576px] lg:h-[576px] object-cover rounded-lg"

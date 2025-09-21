@@ -39,7 +39,7 @@ export const TeamSection = (): JSX.Element => {
 
   return (
     <section className="relative w-full">
-      <div className="flex flex-col w-full items-center gap-8 md:gap-16 px-0 py-12 md:py-24 bg-gray-50">
+      <div className="flex flex-col w-full items-center gap-8 md:gap-16 px-0 py-12 lg:py-16 bg-gray-50">
         <h2 className="[font-family:'Merriweather',Helvetica] font-semibold text-[#0f1728] text-3xl md:text-4xl lg:text-5xl text-center tracking-[0] leading-tight lg:leading-[normal] px-4">
           Meet the founder
         </h2>

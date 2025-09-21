@@ -94,7 +94,7 @@ export const TestimonialWrapperSection = (): JSX.Element => {
   );
 
   return (
-    <section className="pt-12 lg:pt-24 pb-0 px-0 flex flex-col w-full items-center gap-8 lg:gap-16 bg-[#fffcf9]">
+    <section className="pt-12 lg:pt-16 pb-0 px-0 flex flex-col w-full items-center gap-8 lg:gap-16 bg-[#fffcf9]">
       <div className="flex max-w-screen-md w-full max-w-3xl items-center gap-4 lg:gap-5 flex-col px-4">
         <h2 className="text-center [font-family:'Merriweather',Helvetica] text-[#0f1728] text-2xl lg:text-5xl font-semibold tracking-[0] leading-tight lg:leading-normal">
           Don&apos;t just take our word for it
@@ -164,7 +164,7 @@ export const TestimonialWrapperSection = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="pt-0 pb-12 lg:pb-24 px-0 flex flex-col w-full items-center gap-8 lg:gap-16 bg-[#fffcf9]">
+      <div className="pt-0 pb-12 lg:pb-16 px-0 flex flex-col w-full items-center gap-8 lg:gap-16 bg-[#fffcf9]">
         <div className="flex flex-col max-w-screen-xl items-start gap-6 lg:gap-8 px-4 lg:px-8 py-0 w-full">
           <div className="flex flex-col items-center gap-6 lg:gap-10 w-full">
             <div className={`flex flex-col max-w-screen-lg items-center gap-6 lg:gap-8 w-full transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>

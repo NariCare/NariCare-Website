@@ -24,7 +24,7 @@ export const MainContentSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="flex flex-col w-full items-center gap-8 lg:gap-16 px-4 lg:px-0 py-12 lg:py-24 bg-basewhite">
+    <section className="flex flex-col w-full items-center gap-8 lg:gap-16 px-4 lg:px-0 py-12 lg:py-16 bg-basewhite">
       <div className="max-w-screen-xl items-center gap-8 lg:gap-12 lg:pl-[62px] lg:pr-8 py-0 w-full flex-[0_0_auto] flex flex-col lg:flex-row">
         <img
           className="w-full max-w-sm lg:w-[474px] lg:h-[598.74px] h-auto"
