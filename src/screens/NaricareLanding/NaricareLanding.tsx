@@ -313,33 +313,37 @@ export const NaricareLanding = (): JSX.Element => {
               Featured in leading publications and media outlets
             </div>
 
-            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-[123px] relative w-full lg:w-auto">
-              {mediaLogos.map((logo, index) => (
-                <img
-                  key={index}
-                  className={`relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer ${index === 0 ? 'w-32 lg:w-44 h-auto' : index === 1 ? 'w-40 lg:w-[226px] h-auto' : 'w-36 lg:w-[196px] h-auto'}`}
-                  alt={logo.alt}
-                  src={logo.src}
-                />
-              ))}
-            </div>
+            <div className="flex flex-col lg:flex-row lg:flex-wrap items-center gap-6 lg:gap-8 relative w-full lg:w-auto lg:justify-center">
+              {/* First three logos */}
+              <div className="flex items-center gap-6 lg:gap-[123px] w-full lg:w-auto justify-center">
+                {mediaLogos.map((logo, index) => (
+                  <img
+                    key={index}
+                    className={`relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer ${index === 0 ? 'w-20 lg:w-44 h-auto' : index === 1 ? 'w-24 lg:w-[226px] h-auto' : 'w-20 lg:w-[196px] h-auto'}`}
+                    alt={logo.alt}
+                    src={logo.src}
+                  />
+                ))}
+              </div>
 
-            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-[123px] relative w-full lg:w-auto">
-              <img
-                className="relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer w-40 lg:w-52 h-auto"
-                alt="Eenadu"
-                src="/eenadu.svg"
-              />
-              <img
-                className="relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer w-40 lg:w-52 h-auto"
-                alt="The Hindu"
-                src="/the-hindu.svg"
-              />
-              <img
-                className="relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer w-32 lg:w-40 h-auto"
-                alt="ETV"
-                src="/ETV.svg"
-              />
+              {/* Last three logos */}
+              <div className="flex items-center gap-6 lg:gap-[123px] w-full lg:w-auto justify-center">
+                <img
+                  className="relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer w-24 lg:w-52 h-auto"
+                  alt="Eenadu"
+                  src="/eenadu.svg"
+                />
+                <img
+                  className="relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer w-24 lg:w-52 h-auto"
+                  alt="The Hindu"
+                  src="/the-hindu.svg"
+                />
+                <img
+                  className="relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer w-20 lg:w-40 h-auto"
+                  alt="ETV"
+                  src="/ETV.svg"
+                />
+              </div>
             </div>
           </div>
         </section>
