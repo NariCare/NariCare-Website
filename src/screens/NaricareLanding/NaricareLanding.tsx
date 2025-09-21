@@ -257,8 +257,8 @@ export const NaricareLanding = (): JSX.Element => {
           <HeroSection />
           
           {/* Stats Card - Overlapping both sections */}
-          <Card className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-full max-w-4xl mx-4 lg:mx-0 bg-[#ffffff] rounded-2xl shadow-[0px_4px_4px_#00000026] z-30">
-            <CardContent className="flex flex-col lg:flex-row items-center gap-4 lg:gap-6 p-6 lg:p-0 lg:px-12 lg:py-6">
+          <Card className="stats-card absolute -bottom-16 left-1/2 transform -translate-x-1/2 w-[calc(100%-1rem)] max-w-4xl bg-[#ffffff] rounded-xl lg:rounded-2xl shadow-[0px_4px_4px_#00000026] z-30">
+            <CardContent className="stats-content flex flex-row items-center gap-3 lg:gap-6 p-4 lg:px-12 lg:py-6">
               {[
                 {
                   number: "600+",
@@ -280,31 +280,25 @@ export const NaricareLanding = (): JSX.Element => {
                 },
               ].map((stat, index) => (
                 <React.Fragment key={index}>
-                  <div className="flex w-full lg:w-[302px] items-center justify-between relative">
-                    <div className="flex flex-col flex-1 lg:w-[179px] items-start relative">
-                      <div className="relative self-stretch [font-family:'Merriweather',Helvetica] font-semibold text-black text-3xl lg:text-5xl tracking-[-0.96px] leading-tight lg:leading-[72px]">
+                  <div className="stat-item flex flex-col lg:flex-row w-full lg:w-[290px] items-center lg:items-center lg:justify-between relative">
+                    <div className="stat-text flex flex-col flex-1 lg:w-[170px] items-center lg:items-start relative">
+                      <div className="stat-number relative text-center lg:text-left [font-family:'Merriweather',Helvetica] font-semibold text-black text-2xl lg:text-5xl tracking-[-0.96px] leading-tight lg:leading-[72px]">
                         {stat.number}
                       </div>
-                      <div className="relative self-stretch [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-sm lg:text-base tracking-[-0.32px] leading-5 lg:leading-6">
+                      <div className="stat-description relative text-center lg:text-left [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-xs lg:text-base tracking-[-0.32px] leading-4 lg:leading-6">
                         {stat.description}
                       </div>
                     </div>
                     <img
-                      className="relative w-12 h-12 lg:w-14 lg:h-14 ml-4"
+                      className="stat-icon relative w-8 h-8 lg:w-12 lg:h-12 mt-1 lg:mt-0 lg:ml-3 flex-shrink-0"
                       alt={stat.alt}
                       src={stat.icon}
                     />
                   </div>
                   {index < 2 && (
                     <Separator
-                      orientation="horizontal"
-                      className="relative w-full h-px lg:hidden"
-                    />
-                  )}
-                  {index < 2 && (
-                    <Separator
                       orientation="vertical"
-                      className="relative self-stretch w-px hidden lg:block"
+                      className="stat-separator relative self-stretch w-px h-16 lg:h-auto"
                     />
                   )}
                 </React.Fragment>
@@ -313,7 +307,7 @@ export const NaricareLanding = (): JSX.Element => {
           </Card>
         </div>
         
-        <section className="flex w-full items-start justify-center pt-32 lg:pt-40 pb-12 lg:pb-24 px-4 lg:px-0 relative bg-gray-50">
+        <section className="media-section flex w-full items-start justify-center pt-40 lg:pt-40 pb-12 lg:pb-24 px-4 lg:px-0 relative bg-gray-50">
           <div className="flex-col max-w-screen-xl items-center gap-6 lg:gap-8 px-4 lg:px-12 py-0 flex-1 grow flex relative">
             <div className="relative w-fit [font-family:'Merriweather',Helvetica] font-medium text-gray-600 text-lg lg:text-2xl text-center tracking-[0] leading-6 lg:leading-[30px] px-4">
               Featured in leading publications and media outlets
