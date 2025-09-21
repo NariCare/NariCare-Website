@@ -209,6 +209,12 @@ export const MetricsSection = (): JSX.Element => {
             </p>
           </div>
         </div>
+
+        <img
+        className="absolute left-[-6%] lg:left-[-6%] top-[-5%] lg:top-[-5%] w-32 lg:w-[200px] h-auto pointer-events-none"
+        alt="Line pattern"
+        src="/line-pattern.svg"
+        />
       </div>
 
       <div className="w-full max-w-screen-xl px-4 md:px-8">
@@ -327,11 +333,6 @@ export const MetricsSection = (): JSX.Element => {
         </div>
       </div>
 
-      <img
-        className="absolute left-0 bottom-[967px] w-[250px] h-80 hidden lg:block"
-        alt="Line pattern"
-        src="/line-pattern.svg"
-      />
     </section>
   );
 };

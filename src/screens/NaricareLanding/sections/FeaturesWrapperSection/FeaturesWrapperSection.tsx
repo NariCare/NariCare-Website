@@ -67,8 +67,8 @@ export const FeaturesWrapperSection = (): JSX.Element => {
   ];
 
   return (
-    <section id="products" className="flex flex-col w-full items-center gap-16 px-0 py-24 relative bg-basewhite">
-      <div className="flex flex-col max-w-screen-xl items-start gap-8 px-8 py-0 relative w-full">
+    <section id="products" className="flex flex-col w-full items-center gap-16 px-0 pt-[3rem] pb-[6rem] relative bg-basewhite relative">
+      <div className="flex flex-col max-w-screen-xl items-start gap-8 px-8 py-0 relative w-full relative">
         <div className="flex flex-col items-center gap-8 relative w-full">
           <div className="flex flex-col max-w-screen-md items-center gap-5 relative w-full">
             <div className="flex-col gap-3 flex items-start relative w-full">
@@ -84,6 +84,13 @@ export const FeaturesWrapperSection = (): JSX.Element => {
             </p>
           </div>
         </div>
+
+        <img
+        className="absolute right-[-5%] lg:right-[-5%] top-[-25%] lg:top-[-25%] w-32 lg:w-[230px] h-auto opacity-30 lg:opacity-100 pointer-events-none"
+        alt="Line pattern"
+        src="/line-pattern.svg"
+        />
+
       </div>
 
       <div className="max-w-screen-xl items-start justify-center gap-24 px-8 py-0 w-full flex relative">
@@ -313,12 +320,6 @@ export const FeaturesWrapperSection = (): JSX.Element => {
           ))}
         </div>
       </div>
-
-      <img
-        className="absolute left-[1210px] bottom-[781px] w-[230px] h-[260px]"
-        alt="Line pattern"
-        src="/line-pattern.svg"
-      />
     </section>
   );
 };
