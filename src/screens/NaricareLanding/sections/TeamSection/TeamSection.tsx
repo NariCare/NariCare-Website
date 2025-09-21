@@ -26,7 +26,7 @@ export const TeamSection = (): JSX.Element => {
 
   const decorativeImages = [
     {
-      className: "absolute top-[468px] left-0 w-[298px] h-[408px]",
+      className: "absolute top-[39%] left-[-7%] w-[298px] h-[408px]",
       src: "/line-pattern-3.svg",
       alt: "Line pattern",
     },
