@@ -164,12 +164,15 @@ export const TestimonialWrapperSection = (): JSX.Element => {
                     </video>
                   ) : (
                     <>
-                      <div 
-                        className={`w-full h-full ${testimonial.backgroundImage} bg-cover bg-center`}
-                        style={{
-                          backgroundImage: `url(${testimonial.poster})`
-                        }}
-                      />
+                      <video
+                        className="w-full h-full object-cover"
+                        preload="metadata"
+                        muted
+                        poster={`${testimonial.videoUrl}#t=1`}
+                        style={{ pointerEvents: 'none' }}
+                      >
+                        <source src={`${testimonial.videoUrl}#t=1`} type="video/mp4" />
+                      </video>
                     </>
                   )}
 
