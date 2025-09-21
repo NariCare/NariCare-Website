@@ -154,6 +154,9 @@ export const TestimonialWrapperSection = (): JSX.Element => {
                       className="w-full h-full object-cover"
                       controls
                       autoPlay
+                      muted
+                      playsInline
+                      webkit-playsinline="true"
                       onEnded={handleVideoEnd}
                       onError={() => handleVideoError(index)}
                       poster={testimonial.poster}
@@ -168,6 +171,8 @@ export const TestimonialWrapperSection = (): JSX.Element => {
                         className="w-full h-full object-cover"
                         preload="metadata"
                         muted
+                        playsInline
+                        webkit-playsinline="true"
                         poster={`${testimonial.videoUrl}#t=1`}
                         style={{ pointerEvents: 'none' }}
                       >
