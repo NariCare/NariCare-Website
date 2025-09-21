@@ -250,21 +250,21 @@ export const PricingSection = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Decorative elements positioned relative to content container */}
+        {/* Decorative elements positioned relative to content container - hidden on mobile */}
         <img
-          className="absolute top-[-1%] left-[24%] w-[59px] h-[65px] pointer-events-none"
+          className="hidden lg:block absolute top-[-1%] left-[24%] w-[59px] h-[65px] pointer-events-none"
           alt="Hand drawn accents"
           src="/hand-drawn-accents.svg"
         />
 
         <img
-          className="absolute top-[-1%] left-[72%] w-[65px] h-[59px] pointer-events-none"
+          className="hidden lg:block absolute top-[-1%] left-[72%] w-[65px] h-[59px] pointer-events-none"
           alt="Hand drawn accents"
           src="/hand-drawn-accents-1.svg"
         />
 
         <img
-          className="absolute top-[-2%] left-[10%] w-[80%] h-[52%] pointer-events-none"
+          className="hidden lg:block absolute top-[-2%] left-[10%] w-[80%] h-[52%] pointer-events-none"
           alt="Group"
           src="/group-36699.png"
         />

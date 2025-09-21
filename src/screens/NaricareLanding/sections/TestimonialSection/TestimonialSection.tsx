@@ -8,7 +8,7 @@ export const TestimonialSection = (): JSX.Element => {
       <div className="flex flex-col max-w-screen-xl items-start gap-6 md:gap-8 px-4 md:px-8 py-0 relative w-full flex-[0_0_auto]">
         
         <img
-        className="absolute top-[-34%] lg:top-[-34%] right-[-8%] lg:right-[-8%] w-[10rem] lg:w-[150px] h-auto pointer-events-none"
+        className="absolute hidden lg:block top-[-34%] lg:top-[-34%] right-[-8%] lg:right-[-8%] w-[10rem] lg:w-[150px] h-auto pointer-events-none"
         alt="Line pattern"
         src="/line-pattern-1.svg"/>
 
@@ -42,7 +42,7 @@ export const TestimonialSection = (): JSX.Element => {
         </div>
         
         <img
-        className="absolute left-4 lg:left-[-6%] bottom-[-34%] lg:bottom-[-34%] w-32 lg:w-[200px] h-auto pointer-events-none"
+        className="absolute hidden lg:block left-4 lg:left-[-6%] bottom-[-34%] lg:bottom-[-34%] w-32 lg:w-[200px] h-auto pointer-events-none"
         alt="Line pattern"
         src="/line-pattern-1.svg"/>
 
