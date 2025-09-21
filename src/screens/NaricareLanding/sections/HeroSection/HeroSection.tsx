@@ -64,7 +64,7 @@ export const HeroSection = (): JSX.Element => {
               >
                 <img
                   className="relative h-6 w-auto"
-                  alt="App store"
+                  alt="Download NariCare breastfeeding support app from Apple App Store"
                   src="/app-store.png"
                 />
               </Button>
@@ -75,7 +75,7 @@ export const HeroSection = (): JSX.Element => {
               >
                 <img
                   className="relative h-6 w-auto"
-                  alt="Google play"
+                  alt="Download NariCare breastfeeding support app from Google Play Store"
                   src="/google-play.svg"
                 />
               </Button>
@@ -103,7 +103,7 @@ export const HeroSection = (): JSX.Element => {
           />
           <img
             className="relative w-[280px] sm:w-[350px] lg:w-[654px] h-auto object-cover rounded-2xl lg:rounded-none lg:absolute lg:top-[71px] lg:left-[123px]"
-            alt="Mother and baby"
+            alt="Happy mother successfully breastfeeding her baby with confidence and comfort - NariCare expert support"
             src="/image-13.png"
           />
         </div>

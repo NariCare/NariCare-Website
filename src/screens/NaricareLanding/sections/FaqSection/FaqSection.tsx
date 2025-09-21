@@ -18,32 +18,55 @@ export const FaqSection = (): JSX.Element => {
     {
       id: "item-2",
       question: "Can I change my plan later?",
-      answer: "",
+      answer: "Yes, you can upgrade or downgrade your plan at any time. Changes will take effect at your next billing cycle.",
     },
     {
       id: "item-3",
       question: "What is your cancellation policy?",
-      answer: "",
+      answer: "You can cancel your subscription at any time. Your access will continue until the end of your current billing period.",
     },
     {
       id: "item-4",
       question: "How does NariCare work?",
-      answer: "",
+      answer: "NariCare provides 24/7 expert breastfeeding support through AI-powered guidance and certified lactation consultants. We offer personalized advice, track your progress, and provide unlimited text support.",
     },
     {
       id: "item-5",
       question: "Is my data safe?",
-      answer: "",
+      answer: "Yes, we use industry-standard encryption and security measures to protect your personal information. Your data is stored securely and we comply with all privacy regulations.",
     },
     {
       id: "item-6",
       question: "Will NariCare share my data with third parties?",
-      answer: "",
+      answer: "No, we never share your personal data with third parties. Your privacy is our top priority and your information is kept strictly confidential.",
     },
   ];
 
+  // FAQ Schema for SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.filter(faq => faq.answer).map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
-    <section className="gap-8 md:gap-16 px-0 py-12 lg:py-16 bg-basewhite flex flex-col items-center relative self-stretch w-full flex-[0_0_auto]">
+    <>
+      {/* FAQ Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema)
+        }}
+      />
+      
+      <section className="gap-8 md:gap-16 px-0 py-12 lg:py-16 bg-basewhite flex flex-col items-center relative self-stretch w-full flex-[0_0_auto]">
       <div className="flex flex-col max-w-screen-xl items-start gap-6 md:gap-8 px-4 md:px-8 py-0 relative w-full flex-[0_0_auto]">
         <div className="flex flex-col items-center gap-6 md:gap-8 relative self-stretch w-full flex-[0_0_auto]">
           <div className="flex flex-col max-w-screen-md items-center gap-4 md:gap-5 relative w-full flex-[0_0_auto]">
@@ -134,5 +157,6 @@ export const FaqSection = (): JSX.Element => {
         </div>
       </div>
     </section>
+    </>
   );
 };

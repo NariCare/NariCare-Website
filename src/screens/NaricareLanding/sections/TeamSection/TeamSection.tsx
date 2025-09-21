@@ -48,7 +48,7 @@ export const TeamSection = (): JSX.Element => {
           <div className="relative flex-shrink-0 w-full max-w-sm md:max-w-md lg:flex-1 lg:h-[560px]">
             <img
               className="w-full h-auto lg:absolute lg:top-[6px] lg:left-0 lg:w-[420px] lg:h-[558px] object-cover rounded-lg"
-              alt="Founder image"
+              alt="Gayathri Kanumuri, founder and certified lactation consultant of NariCare, smiling confidently"
               src="/image-18.png"
             />
           </div>

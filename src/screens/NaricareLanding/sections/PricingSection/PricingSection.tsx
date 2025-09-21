@@ -156,7 +156,7 @@ export const PricingSection = (): JSX.Element => {
                     <h3 className="[font-family:'Poppins',Helvetica] text-gray-600 text-lg font-semibold leading-7 mb-4 whitespace-pre-line">
                       {plan.title}
                     </h3>
-                    <div className="[font-family:'Poppins',Helvetica] font-semibold text-gray-900 text-5xl tracking-[-0.96px] leading-[60px] mb-4">
+                    <div className="[font-family:'Poppins',Helvetica] font-semibold text-gray-900 text-5xl tracking-[-0.96px] leading-[60px] mb-4" role="text" aria-label={`Price: ${plan.price}`}>
                       {plan.price}
                     </div>
                     <p className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-base leading-6">
