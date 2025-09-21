@@ -320,7 +320,7 @@ export const NaricareLanding = (): JSX.Element => {
                 {mediaLogos.map((logo, index) => (
                   <img
                     key={index}
-                    className={`relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer ${index === 0 ? 'w-20 lg:w-44 h-auto' : index === 1 ? 'w-24 lg:w-[226px] h-auto' : 'w-20 lg:w-[196px] h-auto'}`}
+                    className={`relative lg:opacity-60 lg:hover:opacity-100 lg:transition-opacity lg:duration-300 cursor-pointer ${index === 0 ? 'w-20 lg:w-44 h-auto' : index === 1 ? 'w-24 lg:w-[226px] h-auto' : 'w-20 lg:w-[196px] h-auto'}`}
                     alt={logo.alt}
                     src={logo.src}
                     loading="lazy"
@@ -331,19 +331,19 @@ export const NaricareLanding = (): JSX.Element => {
               {/* Last three logos */}
               <div className="flex items-center gap-6 lg:gap-[123px] w-full lg:w-auto justify-center">
                 <img
-                  className="relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer w-24 lg:w-52 h-auto"
+                  className="relative lg:opacity-60 lg:hover:opacity-100 lg:transition-opacity lg:duration-300 cursor-pointer w-24 lg:w-52 h-auto"
                   alt="Eenadu"
                   src="/eenadu.svg"
                   loading="lazy"
                 />
                 <img
-                  className="relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer w-24 lg:w-52 h-auto"
+                  className="relative lg:opacity-60 lg:hover:opacity-100 lg:transition-opacity lg:duration-300 cursor-pointer w-24 lg:w-52 h-auto"
                   alt="The Hindu"
                   src="/the-hindu.svg"
                   loading="lazy"
                 />
                 <img
-                  className="relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer w-20 lg:w-40 h-auto"
+                  className="relative lg:opacity-60 lg:hover:opacity-100 lg:transition-opacity lg:duration-300 cursor-pointer w-20 lg:w-40 h-auto"
                   alt="ETV"
                   src="/ETV.svg"
                   loading="lazy"
