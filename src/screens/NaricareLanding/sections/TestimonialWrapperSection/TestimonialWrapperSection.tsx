@@ -29,6 +29,7 @@ export const TestimonialWrapperSection = (): JSX.Element => {
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const [playingVideo, setPlayingVideo] = useState<number | null>(null);
 
   // Auto-rotate testimonials every 5 seconds with fade transition
   useEffect(() => {
@@ -52,34 +53,67 @@ export const TestimonialWrapperSection = (): JSX.Element => {
       }, 300); // Wait 300ms for fade out to complete
     }
   };
+
+  const handleVideoPlay = (index: number) => {
+    const testimonial = testimonialCards[index];
+    
+    // Try to play inline first, fallback to new tab if it fails
+    try {
+      setPlayingVideo(index);
+    } catch (error) {
+      // Direct fallback to opening in new tab
+      window.open(testimonial.videoUrl, '_blank');
+    }
+  };
+
+  const handleVideoEnd = () => {
+    setPlayingVideo(null);
+  };
+
+  const handleVideoError = (index: number) => {
+    setPlayingVideo(null);
+    // Fallback: Open video in new tab
+    const testimonial = testimonialCards[index];
+    if (testimonial.videoUrl) {
+      window.open(testimonial.videoUrl, '_blank');
+    }
+  };
   const testimonialCards = [
     {
+      videoUrl: "https://naricare.com/wp-content/uploads/2024/07/Video-501.mp4",
+      poster: "/image-23.png",
       backgroundImage: "bg-[url(/image-23.png)]",
-      title:
-        "Preterm Baby to Breastfeeding Success: How This Professor Mom Did It in 10 Days",
+      title: "Preterm Baby to Breastfeeding Success: How This Professor Mom Did It in 10 Days",
       name: "Sanjana",
       hasPlayButton: true,
+      hasVideo: true,
     },
     {
+      videoUrl: "https://naricare.com/wp-content/uploads/2024/07/Video-812.mp4",
+      poster: "/image-23-1.png",
       backgroundImage: "bg-[url(/image-23-1.png)]",
       title: "How She Ditched 480ml Daily Formula in Just 40 Days",
       name: "Shagun",
       hasPlayButton: true,
+      hasVideo: true,
     },
     {
+      videoUrl: "https://naricare.com/wp-content/uploads/2024/07/Video-998.mp4",
+      poster: "/image-23-2.png",
       backgroundImage: "bg-[url(/image-23-2.png)]",
-      title:
-        "From Breast Rejection and 800ml of Formula daily to Exclusive Breastfeeding",
+      title: "From Breast Rejection and 800ml of Formula daily to Exclusive Breastfeeding",
       name: "Priti",
       hasPlayButton: true,
+      hasVideo: true,
     },
     {
+      videoUrl: "https://naricare.com/wp-content/uploads/2024/07/Video-164.mp4",
+      poster: "/image-23-3.png",
       backgroundImage: "bg-[url(/image-23-3.png)]",
-      title:
-        "2-Month-Old on 700ml Formula daily Gets Exclusively Breastfed in 30 Days",
-      name: "Sravya",
+      title: "How She Fixed Supply Issues and Achieved Exclusive Breastfeeding",
+      name: "Rochini Paidisetty",
       hasPlayButton: true,
-      isPartial: true,
+      hasVideo: true,
     },
   ];
 
@@ -112,33 +146,65 @@ export const TestimonialWrapperSection = (): JSX.Element => {
             {testimonialCards.map((testimonial, index) => (
               <Card
                 key={index}
-                className={`relative w-[280px] lg:w-[360px] h-[400px] lg:h-[480px] flex-shrink-0 ${testimonial.backgroundImage} bg-cover bg-center border-0 overflow-hidden`}
+                className={`relative w-[280px] lg:w-[360px] h-[400px] lg:h-[480px] flex-shrink-0 border-0 overflow-hidden`}
               >
                 <CardContent className="p-0 h-full relative">
-                  {testimonial.hasPlayButton && (
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 lg:w-14 lg:h-14 backdrop-blur-md backdrop-brightness-100 bg-white/20 hover:bg-white/30 rounded-full border-0"
+                  {testimonial.hasVideo && playingVideo === index ? (
+                    <video
+                      className="w-full h-full object-cover"
+                      controls
+                      autoPlay
+                      onEnded={handleVideoEnd}
+                      onError={() => handleVideoError(index)}
+                      poster={testimonial.poster}
+                      preload="metadata"
                     >
-                      <PlayIcon className="w-5 h-5 lg:w-6 lg:h-6 text-white fill-white" />
-                    </Button>
+                      <source src={testimonial.videoUrl} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <>
+                      <div 
+                        className={`w-full h-full ${testimonial.backgroundImage} bg-cover bg-center`}
+                        style={{
+                          backgroundImage: `url(${testimonial.poster})`
+                        }}
+                      />
+                    </>
                   )}
 
-                  <div className="flex flex-col w-full items-center justify-center pt-16 lg:pt-24 pb-4 lg:pb-6 px-4 lg:px-6 absolute left-0 bottom-0 bg-gradient-to-t from-black/40 to-transparent">
-                    <div className="flex flex-col items-start gap-2 lg:gap-3 px-3 lg:px-5 py-4 lg:py-6 w-full bg-white/30 border border-white/20 backdrop-blur-md rounded-lg">
-                      <p className="[font-family:'Poppins',Helvetica] font-semibold text-white text-sm lg:text-base tracking-[0] leading-5 lg:leading-[30px]">
-                        &quot;{testimonial.title}&quot;
-                      </p>
+                  {playingVideo !== index && (
+                    <div className="flex flex-col w-full items-center justify-center pt-16 lg:pt-24 pb-4 lg:pb-6 px-4 lg:px-6 absolute left-0 bottom-0 bg-gradient-to-t from-black/40 to-transparent">
+                      <div className="flex flex-col items-start gap-2 lg:gap-3 px-3 lg:px-5 py-4 lg:py-6 w-full bg-white/30 border border-white/20 backdrop-blur-md rounded-lg relative">
+                        <p className="[font-family:'Poppins',Helvetica] font-semibold text-white text-sm lg:text-base tracking-[0] leading-5 lg:leading-[30px]">
+                          &quot;{testimonial.title}&quot;
+                        </p>
 
-                      <div className="flex flex-col items-start gap-3 lg:gap-4 w-full">
-                        <StarRating />
-                        <h3 className="[font-family:'Poppins',Helvetica] font-semibold text-white text-xl lg:text-3xl tracking-[0] leading-6 lg:leading-[38px]">
-                          {testimonial.name}
-                        </h3>
+                        <div className="flex flex-col items-start gap-3 lg:gap-4 w-full">
+                          <div className="flex items-center justify-between w-full">
+                            <StarRating />
+                            {testimonial.hasPlayButton && (
+                              <Button
+                                variant="ghost"
+                                size="icon"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
+                                  handleVideoPlay(index);
+                                }}
+                                className="w-8 h-8 lg:w-10 lg:h-10 bg-white/20 hover:bg-white/30 rounded-full border-2 border-white/40 hover:border-white/60 transition-all duration-200 hover:scale-110 flex-shrink-0"
+                              >
+                                <PlayIcon className="w-3 h-3 lg:w-4 lg:h-4 text-white fill-white" />
+                              </Button>
+                            )}
+                          </div>
+                          <h3 className="[font-family:'Poppins',Helvetica] font-semibold text-white text-xl lg:text-3xl tracking-[0] leading-6 lg:leading-[38px]">
+                            {testimonial.name}
+                          </h3>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
