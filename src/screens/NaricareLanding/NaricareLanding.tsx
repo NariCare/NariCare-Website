@@ -76,44 +76,44 @@ export const NaricareLanding = (): JSX.Element => {
   };
 
   return (
-    <div className="bg-[#ffffff] overflow-hidden w-full relative">
-      <header className="w-full h-16 lg:h-[120px] flex relative z-10">
-        <div className="flex h-16 lg:h-[120px] flex-1 relative flex-col w-full items-center justify-center">
-          <div className="w-full max-w-[1280px] items-center justify-between px-4 lg:px-12 py-0 flex">
-            <div className="inline-flex items-center gap-4 lg:gap-10 relative flex-[0_0_auto]">
-              <div className="inline-flex items-center relative flex-[0_0_auto]">
+    <div className="naricare-app bg-[#ffffff] overflow-hidden w-full relative">
+      <header className="naricare-header w-full h-16 lg:h-[120px] flex relative z-10">
+        <div className="header-container flex h-16 lg:h-[120px] flex-1 relative flex-col w-full items-center justify-center">
+          <div className="header-content w-full max-w-[1280px] items-center justify-between px-4 lg:px-12 py-0 flex">
+            <div className="header-left inline-flex items-center gap-4 lg:gap-10 relative flex-[0_0_auto]">
+              <div className="naricare-logo inline-flex items-center relative flex-[0_0_auto]">
                 <img
-                  className="relative flex-[0_0_auto] h-8 lg:h-12 w-auto -mr-2"
+                  className="logo-icon relative flex-[0_0_auto] h-8 lg:h-12 w-auto -mr-2"
                   alt="NariCare Logo"
                   src="/logo.svg"
                 />
-                <div className="flex flex-col items-start relative" style={{ marginLeft: '-1.5rem' }}>
-                  <div className="relative [font-family:'Merriweather',Helvetica] font-medium text-lg lg:text-xl tracking-[0] leading-tight">
-                    <span className="text-[#8383ed]">Nari</span>
-                    <span className="text-[#ff9e88]">Care</span>
+                <div className="logo-text flex flex-col items-start relative" style={{ marginLeft: '-1.5rem' }}>
+                  <div className="brand-name relative [font-family:'Merriweather',Helvetica] font-medium text-lg lg:text-xl tracking-[0] leading-tight">
+                    <span className="brand-nari text-[#8383ed]">Nari</span>
+                    <span className="brand-care text-[#ff9e88]">Care</span>
                   </div>
-                  <div className="relative [font-family:'Poppins',Helvetica] font-normal text-[#8383ed] text-xs lg:text-sm tracking-[0] leading-tight">
+                  <div className="brand-tagline relative [font-family:'Poppins',Helvetica] font-normal text-[#8383ed] text-xs lg:text-sm tracking-[0] leading-tight">
                     Your breast friend
                   </div>
                 </div>
               </div>
 
-              <NavigationMenu className="hidden pt-[0.5rem] lg:block absolute top-1 left-[calc(50.00%_+_162px)]">
-                <NavigationMenuList className="inline-flex items-center gap-8">
+              <NavigationMenu className="desktop-navigation hidden pt-[0.5rem] lg:block absolute top-1 left-[calc(50.00%_+_162px)]">
+                <NavigationMenuList className="nav-list inline-flex items-center gap-8">
                   {navigationItems.map((item, index) => (
-                    <NavigationMenuItem key={index}>
+                    <NavigationMenuItem className="nav-item" key={index}>
                       {item.hasDropdown ? (
-                        <NavigationMenuTrigger className="inline-flex gap-2 flex-[0_0_auto] items-center justify-center relative bg-transparent hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent">
-                          <div className="relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-semibold text-gray-600 text-base tracking-[0] leading-6 whitespace-nowrap">
+                        <NavigationMenuTrigger className="nav-trigger inline-flex gap-2 flex-[0_0_auto] items-center justify-center relative bg-transparent hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent">
+                          <div className="nav-label relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-semibold text-gray-600 text-base tracking-[0] leading-6 whitespace-nowrap">
                             {item.label}
                           </div>
                         </NavigationMenuTrigger>
                       ) : (
                         <div 
-                          className="inline-flex gap-2 flex-[0_0_auto] items-center justify-center relative cursor-pointer"
+                          className="nav-link inline-flex gap-2 flex-[0_0_auto] items-center justify-center relative cursor-pointer"
                           onClick={() => handleNavigation(item)}
                         >
-                          <div className="relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-semibold text-gray-600 text-base tracking-[0] leading-6 whitespace-nowrap">
+                          <div className="nav-label relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-semibold text-gray-600 text-base tracking-[0] leading-6 whitespace-nowrap">
                             {item.label}
                           </div>
                         </div>
@@ -124,31 +124,32 @@ export const NaricareLanding = (): JSX.Element => {
               </NavigationMenu>
             </div>
 
-            <div className="inline-flex items-center gap-2 lg:gap-3 relative flex-[0_0_auto]">
+            <div className="header-right inline-flex items-center gap-2 lg:gap-3 relative flex-[0_0_auto]">
               {/* Mobile burger menu button */}
               <Button
                 onClick={toggleMobileMenu}
-                className="lg:hidden inline-flex h-12 w-12 items-center justify-center bg-transparent hover:bg-gray-100 rounded-md border-none shadow-none"
+                className="mobile-menu-toggle lg:hidden inline-flex h-12 w-12 items-center justify-center bg-transparent hover:bg-gray-100 rounded-md border-none shadow-none"
                 variant="ghost"
                 size="icon"
               >
                 {isMobileMenuOpen ? (
-                  <XIcon className="h-8 w-8 text-gray-600" />
+                  <XIcon className="menu-close-icon h-8 w-8 text-gray-600" />
                 ) : (
-                  <MenuIcon className="h-8 w-8 text-gray-600" />
+                  <MenuIcon className="menu-open-icon h-8 w-8 text-gray-600" />
                 )}
               </Button>
 
               {/* Contact us button - hidden on mobile, visible on desktop */}
               <Button 
                 onClick={() => window.open('https://api.whatsapp.com/send/?phone=918142144762&text&type=phone_number&app_absent=0', '_blank')}
-                className="hidden lg:inline-flex h-10 lg:h-12 gap-2 lg:gap-3 px-4 lg:px-6 py-2 lg:py-4 flex-[0_0_auto] bg-[#8383ed] rounded-[10px] overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-[10px] before:[background:linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none hover:bg-[#8383ed]">
-                <div className="relative w-fit [font-family:'Poppins',Helvetica] font-semibold text-white text-sm lg:text-base tracking-[0] leading-5 lg:leading-7 whitespace-nowrap">
+                className="contact-us-btn desktop-only hidden lg:inline-flex h-10 lg:h-12 gap-2 lg:gap-3 px-4 lg:px-6 py-2 lg:py-4 flex-[0_0_auto] bg-[#8383ed] rounded-[10px] overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-[10px] before:[background:linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none hover:bg-[#8383ed]"
+              >
+                <div className="btn-text relative w-fit [font-family:'Poppins',Helvetica] font-semibold text-white text-sm lg:text-base tracking-[0] leading-5 lg:leading-7 whitespace-nowrap">
                   Contact us
                 </div>
 
                 <img
-                  className="relative w-4 lg:w-6 h-4 lg:h-6"
+                  className="whatsapp-icon relative w-4 lg:w-6 h-4 lg:h-6"
                   alt="Whatsapp"
                   src="/whatsapp.svg"
                 />
@@ -160,65 +161,66 @@ export const NaricareLanding = (): JSX.Element => {
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-50 bg-white">
-          <div className="flex flex-col h-full">
+        <div className="mobile-menu lg:hidden fixed inset-0 z-50 bg-white">
+          <div className="mobile-menu-content flex flex-col h-full">
             {/* Mobile Header */}
-            <div className="flex items-center justify-between p-4 border-b">
-              <div className="inline-flex items-center relative flex-[0_0_auto]">
+            <div className="mobile-menu-header flex items-center justify-between p-4 border-b">
+              <div className="mobile-logo inline-flex items-center relative flex-[0_0_auto]">
                 <img
-                  className="relative flex-[0_0_auto] h-8 w-auto -mr-2"
+                  className="mobile-logo-icon relative flex-[0_0_auto] h-8 w-auto -mr-2"
                   alt="NariCare Logo"
                   src="/logo.svg"
                 />
-                <div className="flex flex-col items-start relative" style={{ marginLeft: '-1.5rem' }}>
-                  <div className="relative [font-family:'Merriweather',Helvetica] font-medium text-lg tracking-[0] leading-tight">
-                    <span className="text-[#8383ed]">Nari</span>
-                    <span className="text-[#ff9e88]">Care</span>
+                <div className="mobile-logo-text flex flex-col items-start relative" style={{ marginLeft: '-1.5rem' }}>
+                  <div className="mobile-brand-name relative [font-family:'Merriweather',Helvetica] font-medium text-lg tracking-[0] leading-tight">
+                    <span className="mobile-brand-nari text-[#8383ed]">Nari</span>
+                    <span className="mobile-brand-care text-[#ff9e88]">Care</span>
                   </div>
-                  <div className="relative [font-family:'Poppins',Helvetica] font-normal text-[#8383ed] text-xs tracking-[0] leading-tight">
+                  <div className="mobile-brand-tagline relative [font-family:'Poppins',Helvetica] font-normal text-[#8383ed] text-xs tracking-[0] leading-tight">
                     Your breast friend
                   </div>
                 </div>
               </div>
               <Button
                 onClick={toggleMobileMenu}
-                className="inline-flex h-10 w-10 items-center justify-center bg-transparent hover:bg-gray-100 rounded-md border-none shadow-none"
+                className="mobile-menu-close inline-flex h-10 w-10 items-center justify-center bg-transparent hover:bg-gray-100 rounded-md border-none shadow-none"
                 variant="ghost"
                 size="icon"
               >
-                <XIcon className="h-6 w-6 text-gray-600" />
+                <XIcon className="mobile-close-icon h-6 w-6 text-gray-600" />
               </Button>
             </div>
 
             {/* Mobile Navigation Items */}
-            <div className="flex-1 overflow-y-auto py-6">
-              <nav className="flex flex-col space-y-1 px-4">
+            <div className="mobile-nav-section flex-1 overflow-y-auto py-6">
+              <nav className="mobile-nav flex flex-col space-y-1 px-4 pt-2">
                 {navigationItems.map((item, index) => (
                   <button
                     key={index}
                     onClick={() => handleMobileNavigation(item)}
-                    className="flex items-center justify-between px-4 py-3 text-left hover:bg-gray-50 rounded-lg transition-colors"
+                    className="mobile-nav-item flex items-center justify-between px-4 py-3 text-left hover:bg-gray-50 rounded-lg transition-colors"
+                    data-nav-item={item.label.toLowerCase().replace(' ', '-')}
                   >
-                    <span className="[font-family:'Poppins',Helvetica] font-semibold text-gray-900 text-lg">
+                    <span className="mobile-nav-label [font-family:'Poppins',Helvetica] font-semibold text-gray-900 text-lg">
                       {item.label}
                     </span>
                   </button>
                 ))}
                 
                 {/* Contact us button inside menu */}
-                <div className="px-4 mt-4">
+                <div className="mobile-contact-container px-4 mt-4">
                   <Button
                     onClick={() => {
                       window.open('https://api.whatsapp.com/send/?phone=918142144762&text&type=phone_number&app_absent=0', '_blank');
                       setIsMobileMenuOpen(false);
                     }}
-                    className="w-full inline-flex h-12 gap-3 px-6 py-4 bg-[#8383ed] rounded-[10px] overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-[10px] before:[background:linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none hover:bg-[#7373dd]"
+                    className="mobile-contact-btn w-full inline-flex h-12 gap-3 px-6 py-4 bg-[#8383ed] rounded-[10px] overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-[10px] before:[background:linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none hover:bg-[#7373dd]"
                   >
-                    <span className="relative w-fit [font-family:'Poppins',Helvetica] font-semibold text-white text-base tracking-[0] leading-7 whitespace-nowrap">
+                    <span className="mobile-contact-text relative w-fit [font-family:'Poppins',Helvetica] font-semibold text-white text-base tracking-[0] leading-7 whitespace-nowrap">
                       Contact us
                     </span>
                     <img
-                      className="relative w-6 h-6"
+                      className="mobile-whatsapp-icon relative w-6 h-6"
                       alt="Whatsapp"
                       src="/whatsapp.svg"
                     />
@@ -228,19 +230,19 @@ export const NaricareLanding = (): JSX.Element => {
             </div>
 
             {/* Mobile Contact Button */}
-            <div className="p-4 border-t">
+            <div className="mobile-bottom-cta p-4 border-t">
               <Button 
                 onClick={() => {
                   window.open('https://api.whatsapp.com/send/?phone=918142144762&text&type=phone_number&app_absent=0', '_blank');
                   setIsMobileMenuOpen(false);
                 }}
-                className="w-full inline-flex h-12 gap-3 px-6 py-4 bg-[#8383ed] rounded-[10px] overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-[10px] before:[background:linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none hover:bg-[#7373dd]"
+                className="mobile-bottom-contact-btn w-full inline-flex h-12 gap-3 px-6 py-4 bg-[#8383ed] rounded-[10px] overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-[10px] before:[background:linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none hover:bg-[#7373dd]"
               >
-                <span className="relative w-fit [font-family:'Poppins',Helvetica] font-semibold text-white text-base tracking-[0] leading-7 whitespace-nowrap">
+                <span className="mobile-bottom-contact-text relative w-fit [font-family:'Poppins',Helvetica] font-semibold text-white text-base tracking-[0] leading-7 whitespace-nowrap">
                   Contact us
                 </span>
                 <img
-                  className="relative w-6 h-6"
+                  className="mobile-bottom-whatsapp-icon relative w-6 h-6"
                   alt="Whatsapp"
                   src="/whatsapp.svg"
                 />
@@ -250,7 +252,7 @@ export const NaricareLanding = (): JSX.Element => {
         </div>
       )}
 
-      <main className="flex flex-col w-full items-start relative">
+      <main className="main-content flex flex-col w-full items-start relative">
         <div className="relative w-full">
           <HeroSection />
           
