@@ -93,7 +93,40 @@ export const FeaturesWrapperSection = (): JSX.Element => {
 
       </div>
 
-      <div className="max-w-screen-xl items-start justify-center gap-24 px-8 py-0 w-full flex relative">
+      {/* Mobile Layout */}
+      <div className="max-w-screen-xl lg:hidden flex flex-col items-center px-4 py-0 w-full relative">
+        {/* Simple mom-baby image for mobile */}
+        <div className="relative w-full max-w-md mx-auto">
+          <img
+            className="w-full h-auto"
+            alt="Mom and baby"
+            src="/mom-baby.png"
+          />
+        </div>
+
+        {/* Mobile features list */}
+        <div className="flex flex-col items-center gap-8 w-full mt-12">
+          {[...leftFeatures, ...rightFeatures].map((feature, index) => (
+            <div
+              key={`mobile-feature-${index}`}
+              className="flex flex-col items-center text-center gap-4 w-full max-w-sm"
+            >
+              <img className="w-12 h-12" alt="Featured icon" src={feature.icon} />
+              <div className="flex flex-col items-center gap-2 w-full">
+                <h3 className="font-semibold text-gray-900 text-lg leading-tight">
+                  {feature.title}
+                </h3>
+                <p className="font-normal text-gray-600 text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="max-w-screen-xl items-start justify-center gap-24 px-8 py-0 w-full hidden lg:flex relative">
         <div className="flex flex-col items-start gap-12 relative flex-1">
           {leftFeatures.map((feature, index) => (
             <div
