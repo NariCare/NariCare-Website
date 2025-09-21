@@ -94,46 +94,46 @@ export const TestimonialWrapperSection = (): JSX.Element => {
   );
 
   return (
-    <section className="pt-24 pb-0 px-0 flex flex-col w-full items-center gap-16 bg-[#fffcf9]">
-      <div className="flex max-w-screen-md w-full max-w-3xl items-center gap-5 flex-col px-4">
-        <h2 className="text-center [font-family:'Merriweather',Helvetica] text-[#0f1728] text-5xl font-semibold tracking-[0] leading-normal">
+    <section className="pt-12 lg:pt-24 pb-0 px-0 flex flex-col w-full items-center gap-8 lg:gap-16 bg-[#fffcf9]">
+      <div className="flex max-w-screen-md w-full max-w-3xl items-center gap-4 lg:gap-5 flex-col px-4">
+        <h2 className="text-center [font-family:'Merriweather',Helvetica] text-[#0f1728] text-2xl lg:text-5xl font-semibold tracking-[0] leading-tight lg:leading-normal">
           Don&apos;t just take our word for it
         </h2>
 
-        <p className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-xl text-center tracking-[0] leading-[30px]">
-          Real stories from real mothers who have transformed their <br />
+        <p className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-base lg:text-xl text-center tracking-[0] leading-6 lg:leading-[30px]">
+          Real stories from real mothers who have transformed their <br className="hidden lg:block" />
           breastfeeding journey with Naricare
         </p>
       </div>
 
-      <div className="flex flex-col max-w-screen-xl items-start gap-16 px-8 py-0 w-full">
-        <div className="flex flex-col items-start gap-8 w-full">
-          <div className="flex items-start gap-8 overflow-x-auto w-full">
+      <div className="flex flex-col max-w-screen-xl items-start gap-8 lg:gap-16 px-4 lg:px-8 py-0 w-full">
+        <div className="flex flex-col items-start gap-6 lg:gap-8 w-full">
+          <div className="flex items-start gap-4 lg:gap-8 overflow-x-auto w-full">
             {testimonialCards.map((testimonial, index) => (
               <Card
                 key={index}
-                className={`relative w-[360px] h-[480px] flex-shrink-0 ${testimonial.backgroundImage} bg-cover bg-center border-0 overflow-hidden`}
+                className={`relative w-[280px] lg:w-[360px] h-[400px] lg:h-[480px] flex-shrink-0 ${testimonial.backgroundImage} bg-cover bg-center border-0 overflow-hidden`}
               >
                 <CardContent className="p-0 h-full relative">
                   {testimonial.hasPlayButton && (
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-14 h-14 backdrop-blur-md backdrop-brightness-100 bg-white/20 hover:bg-white/30 rounded-full border-0"
+                      className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 lg:w-14 lg:h-14 backdrop-blur-md backdrop-brightness-100 bg-white/20 hover:bg-white/30 rounded-full border-0"
                     >
-                      <PlayIcon className="w-6 h-6 text-white fill-white" />
+                      <PlayIcon className="w-5 h-5 lg:w-6 lg:h-6 text-white fill-white" />
                     </Button>
                   )}
 
-                  <div className="flex flex-col w-full items-center justify-center pt-24 pb-6 px-6 absolute left-0 bottom-0 bg-gradient-to-t from-black/40 to-transparent">
-                    <div className="flex flex-col items-start gap-3 px-5 py-6 w-full bg-white/30 border border-white/20 backdrop-blur-md rounded-lg">
-                      <p className="[font-family:'Poppins',Helvetica] font-semibold text-white text-base tracking-[0] leading-[30px]">
+                  <div className="flex flex-col w-full items-center justify-center pt-16 lg:pt-24 pb-4 lg:pb-6 px-4 lg:px-6 absolute left-0 bottom-0 bg-gradient-to-t from-black/40 to-transparent">
+                    <div className="flex flex-col items-start gap-2 lg:gap-3 px-3 lg:px-5 py-4 lg:py-6 w-full bg-white/30 border border-white/20 backdrop-blur-md rounded-lg">
+                      <p className="[font-family:'Poppins',Helvetica] font-semibold text-white text-sm lg:text-base tracking-[0] leading-5 lg:leading-[30px]">
                         &quot;{testimonial.title}&quot;
                       </p>
 
-                      <div className="flex flex-col items-start gap-4 w-full">
+                      <div className="flex flex-col items-start gap-3 lg:gap-4 w-full">
                         <StarRating />
-                        <h3 className="[font-family:'Poppins',Helvetica] font-semibold text-white text-3xl tracking-[0] leading-[38px]">
+                        <h3 className="[font-family:'Poppins',Helvetica] font-semibold text-white text-xl lg:text-3xl tracking-[0] leading-6 lg:leading-[38px]">
                           {testimonial.name}
                         </h3>
                       </div>
