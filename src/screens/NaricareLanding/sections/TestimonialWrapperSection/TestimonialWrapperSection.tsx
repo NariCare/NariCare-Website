@@ -82,7 +82,6 @@ export const TestimonialWrapperSection = (): JSX.Element => {
     {
       videoUrl: "/video/Video-501.mp4",
       poster: "/thumbnails/Video-501-thumb.jpg",
-      backgroundImage: "bg-[url(/thumbnails/Video-501-thumb.jpg)]",
       title: "Preterm Baby to Breastfeeding Success: How This Professor Mom Did It in 10 Days",
       name: "Sanjana",
       hasPlayButton: true,
@@ -91,7 +90,6 @@ export const TestimonialWrapperSection = (): JSX.Element => {
     {
       videoUrl: "/video/Video-812.mp4",
       poster: "/thumbnails/Video-812-thumb.jpg",
-      backgroundImage: "bg-[url(/thumbnails/Video-812-thumb.jpg)]",
       title: "How She Ditched 480ml Daily Formula in Just 40 Days",
       name: "Shagun",
       hasPlayButton: true,
@@ -100,7 +98,6 @@ export const TestimonialWrapperSection = (): JSX.Element => {
     {
       videoUrl: "/video/Video-998.mp4",
       poster: "/thumbnails/Video-998-thumb.jpg",
-      backgroundImage: "bg-[url(/thumbnails/Video-998-thumb.jpg)]",
       title: "From Breast Rejection and 800ml of Formula daily to Exclusive Breastfeeding",
       name: "Priti",
       hasPlayButton: true,
@@ -109,7 +106,6 @@ export const TestimonialWrapperSection = (): JSX.Element => {
     {
       videoUrl: "/video/Video-164.mp4",
       poster: "/thumbnails/Video-164-thumb.jpg",
-      backgroundImage: "bg-[url(/thumbnails/Video-164-thumb.jpg)]",
       title: "How She Fixed Supply Issues and Achieved Exclusive Breastfeeding",
       name: "Rochini Paidisetty",
       hasPlayButton: true,
