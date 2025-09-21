@@ -211,7 +211,7 @@ export const MetricsSection = (): JSX.Element => {
         </div>
 
         <img
-        className="absolute left-[-6%] lg:left-[-6%] top-[-5%] lg:top-[-5%] w-32 lg:w-[200px] h-auto pointer-events-none"
+        className="absolute hidden lg:block left-[-6%] lg:left-[-6%] top-[-5%] lg:top-[-5%] w-32 lg:w-[200px] h-auto pointer-events-none"
         alt="Line pattern"
         src="/line-pattern.svg"
         />
