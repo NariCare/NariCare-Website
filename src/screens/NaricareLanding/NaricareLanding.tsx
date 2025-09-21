@@ -323,6 +323,7 @@ export const NaricareLanding = (): JSX.Element => {
                     className={`relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer ${index === 0 ? 'w-20 lg:w-44 h-auto' : index === 1 ? 'w-24 lg:w-[226px] h-auto' : 'w-20 lg:w-[196px] h-auto'}`}
                     alt={logo.alt}
                     src={logo.src}
+                    loading="lazy"
                   />
                 ))}
               </div>
@@ -333,16 +334,19 @@ export const NaricareLanding = (): JSX.Element => {
                   className="relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer w-24 lg:w-52 h-auto"
                   alt="Eenadu"
                   src="/eenadu.svg"
+                  loading="lazy"
                 />
                 <img
                   className="relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer w-24 lg:w-52 h-auto"
                   alt="The Hindu"
                   src="/the-hindu.svg"
+                  loading="lazy"
                 />
                 <img
                   className="relative opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer w-20 lg:w-40 h-auto"
                   alt="ETV"
                   src="/ETV.svg"
+                  loading="lazy"
                 />
               </div>
             </div>
