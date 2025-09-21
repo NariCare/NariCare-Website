@@ -122,21 +122,34 @@ export const PricingSection = (): JSX.Element => {
                 className="w-full lg:w-96 bg-basewhite rounded-2xl border border-[#e4e7ec] shadow-shadows-shadow-lg relative flex flex-col h-full"
               >
                 {plan.isPopular && (
-                  <div className="absolute -top-8 -right-16 w-[152px] h-[54px]">
-                    <Badge
-                      variant="secondary"
-                      className="absolute -top-px -right-1.5 [font-family:'Poppins',Helvetica] font-semibold text-[#8383ed] text-sm bg-transparent border-none p-0"
-                    >
-                      Most popular!
-                    </Badge>
-                    <div className="absolute top-[21px] left-px w-14 h-5 rotate-[-30deg]">
-                      <img
-                        className="absolute w-[104.46%] h-[226.60%] top-[-63.30%] left-[-2.23%] rotate-[30deg]"
-                        alt="Vector"
-                        src="/vector-3.svg"
-                      />
+                  <>
+                    {/* Mobile popular badge */}
+                    <div className="lg:hidden absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                      <Badge
+                        variant="secondary"
+                        className="bg-[#8383ed] text-white px-3 py-1 rounded-full [font-family:'Poppins',Helvetica] font-semibold text-xs"
+                      >
+                        Most popular!
+                      </Badge>
                     </div>
-                  </div>
+                    
+                    {/* Desktop popular badge */}
+                    <div className="hidden lg:block absolute -top-8 -right-16 w-[152px] h-[54px]">
+                      <Badge
+                        variant="secondary"
+                        className="absolute -top-px -right-1.5 [font-family:'Poppins',Helvetica] font-semibold text-[#8383ed] text-sm bg-transparent border-none p-0"
+                      >
+                        Most popular!
+                      </Badge>
+                      <div className="absolute top-[21px] left-px w-14 h-5 rotate-[-30deg]">
+                        <img
+                          className="absolute w-[104.46%] h-[226.60%] top-[-63.30%] left-[-2.23%] rotate-[30deg]"
+                          alt="Vector"
+                          src="/vector-3.svg"
+                        />
+                      </div>
+                    </div>
+                  </>
                 )}
                 <CardHeader className="pt-10 pb-0 px-8">
                   <div className="text-center">
@@ -195,21 +208,34 @@ export const PricingSection = (): JSX.Element => {
                 className="w-full lg:w-96 bg-basewhite rounded-2xl border border-[#e4e7ec] shadow-shadows-shadow-lg relative flex flex-col h-full"
               >
                 {plan.isPopular && (
-                  <div className="absolute -top-8 -right-16 w-[152px] h-[54px]">
-                    <Badge
-                      variant="secondary"
-                      className="absolute -top-px -right-1.5 [font-family:'Poppins',Helvetica] font-semibold text-[#8383ed] text-sm bg-transparent border-none p-0"
-                    >
-                      Most popular!
-                    </Badge>
-                    <div className="absolute top-[21px] left-px w-14 h-5 rotate-[-30deg]">
-                      <img
-                        className="absolute w-[104.46%] h-[226.60%] top-[-63.30%] left-[-2.23%] rotate-[30deg]"
-                        alt="Vector"
-                        src="/vector-3.svg"
-                      />
+                  <>
+                    {/* Mobile popular badge */}
+                    <div className="lg:hidden absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                      <Badge
+                        variant="secondary"
+                        className="bg-[#8383ed] text-white px-3 py-1 rounded-full [font-family:'Poppins',Helvetica] font-semibold text-xs"
+                      >
+                        Most popular!
+                      </Badge>
                     </div>
-                  </div>
+                    
+                    {/* Desktop popular badge */}
+                    <div className="hidden lg:block absolute -top-8 -right-16 w-[152px] h-[54px]">
+                      <Badge
+                        variant="secondary"
+                        className="absolute -top-px -right-1.5 [font-family:'Poppins',Helvetica] font-semibold text-[#8383ed] text-sm bg-transparent border-none p-0"
+                      >
+                        Most popular!
+                      </Badge>
+                      <div className="absolute top-[21px] left-px w-14 h-5 rotate-[-30deg]">
+                        <img
+                          className="absolute w-[104.46%] h-[226.60%] top-[-63.30%] left-[-2.23%] rotate-[30deg]"
+                          alt="Vector"
+                          src="/vector-3.svg"
+                        />
+                      </div>
+                    </div>
+                  </>
                 )}
                 <CardHeader className="pt-10 pb-0 px-8">
                   <div className="text-center">
