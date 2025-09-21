@@ -144,31 +144,31 @@ export const TestimonialWrapperSection = (): JSX.Element => {
             ))}
           </div>
 
-          <div className="flex items-start gap-8">
+          <div className="flex items-start gap-4 lg:gap-8">
             <Button
               variant="outline"
               size="icon"
-              className="w-14 h-14 rounded-full border-[#e4e7ec] hover:bg-gray-50"
+              className="w-12 h-12 lg:w-14 lg:h-14 rounded-full border-[#e4e7ec] hover:bg-gray-50"
             >
-              <ChevronLeftIcon className="w-6 h-6" />
+              <ChevronLeftIcon className="w-5 h-5 lg:w-6 lg:h-6" />
             </Button>
 
             <Button
               variant="outline"
               size="icon"
-              className="w-14 h-14 rounded-full border-[#e4e7ec] hover:bg-gray-50"
+              className="w-12 h-12 lg:w-14 lg:h-14 rounded-full border-[#e4e7ec] hover:bg-gray-50"
             >
-              <ChevronRightIcon className="w-6 h-6" />
+              <ChevronRightIcon className="w-5 h-5 lg:w-6 lg:h-6" />
             </Button>
           </div>
         </div>
       </div>
 
-      <div className="pt-0 pb-24 px-0 flex flex-col w-full items-center gap-16 bg-[#fffcf9]">
-        <div className="flex flex-col max-w-screen-xl items-start gap-8 px-8 py-0 w-full">
-          <div className="flex flex-col items-center gap-10 w-full">
-            <div className={`flex flex-col max-w-screen-lg items-center gap-8 w-full transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-              <blockquote className="[font-family:'Poppins',Helvetica] text-[#475467] text-2xl tracking-[-0.48px] leading-[44px] font-medium text-center">
+      <div className="pt-0 pb-12 lg:pb-24 px-0 flex flex-col w-full items-center gap-8 lg:gap-16 bg-[#fffcf9]">
+        <div className="flex flex-col max-w-screen-xl items-start gap-6 lg:gap-8 px-4 lg:px-8 py-0 w-full">
+          <div className="flex flex-col items-center gap-6 lg:gap-10 w-full">
+            <div className={`flex flex-col max-w-screen-lg items-center gap-6 lg:gap-8 w-full transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+              <blockquote className="[font-family:'Poppins',Helvetica] text-[#475467] text-lg lg:text-2xl tracking-[-0.36px] lg:tracking-[-0.48px] leading-7 lg:leading-[44px] font-medium text-center">
                 {testimonials[currentTestimonial].text}
               </blockquote>
 

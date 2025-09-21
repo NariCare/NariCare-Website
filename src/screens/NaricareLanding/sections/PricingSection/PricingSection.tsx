@@ -98,15 +98,15 @@ const privatePlans = [
 
 export const PricingSection = (): JSX.Element => {
   return (
-    <section id="pricing" className="w-full bg-[#f7f5ff] py-24 px-8 relative">
-      <div className="max-w-screen-xl mx-auto flex flex-col gap-16 relative">
-        <div className="flex flex-col items-center gap-8">
+    <section id="pricing" className="w-full bg-[#f7f5ff] py-12 lg:py-24 px-4 lg:px-8 relative">
+      <div className="max-w-screen-xl mx-auto flex flex-col gap-8 lg:gap-16 relative">
+        <div className="flex flex-col items-center gap-6 lg:gap-8">
           <div className="max-w-screen-md text-center">
-            <h2 className="[font-family:'Merriweather',Helvetica] text-[#0f1728] text-5xl font-semibold leading-normal mb-5">
+            <h2 className="[font-family:'Merriweather',Helvetica] text-[#0f1728] text-2xl lg:text-5xl font-semibold leading-tight lg:leading-normal mb-4 lg:mb-5">
               Our Breastfeeding Group <br />
               Support Programs
             </h2>
-            <p className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-xl leading-[30px]">
+            <p className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-base lg:text-xl leading-6 lg:leading-[30px]">
               Select the program that best fits your needs. Both plans include
               our core features with varying levels of expert access and
               support.
@@ -115,11 +115,11 @@ export const PricingSection = (): JSX.Element => {
         </div>
 
         <div className="flex justify-center">
-          <div className="flex gap-8">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 w-full lg:w-auto">
             {groupSupportPlans.map((plan, index) => (
               <Card
                 key={index}
-                className="w-96 bg-basewhite rounded-2xl border border-[#e4e7ec] shadow-shadows-shadow-lg relative flex flex-col h-full"
+                className="w-full lg:w-96 bg-basewhite rounded-2xl border border-[#e4e7ec] shadow-shadows-shadow-lg relative flex flex-col h-full"
               >
                 {plan.isPopular && (
                   <div className="absolute -top-8 -right-16 w-[152px] h-[54px]">
@@ -177,9 +177,9 @@ export const PricingSection = (): JSX.Element => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-col items-center gap-6 lg:gap-8">
           <div className="max-w-screen-md text-center">
-            <h2 className="[font-family:'Merriweather',Helvetica] text-[#0f1728] text-5xl font-semibold leading-normal">
+            <h2 className="[font-family:'Merriweather',Helvetica] text-[#0f1728] text-2xl lg:text-5xl font-semibold leading-tight lg:leading-normal">
               Our Private & Personalized
               <br />
               Breastfeeding and Postpartum Wellness Programs
@@ -188,11 +188,11 @@ export const PricingSection = (): JSX.Element => {
         </div>
 
         <div className="flex justify-center">
-          <div className="flex gap-8">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 w-full lg:w-auto">
             {privatePlans.map((plan, index) => (
               <Card
                 key={index}
-                className="w-96 bg-basewhite rounded-2xl border border-[#e4e7ec] shadow-shadows-shadow-lg relative flex flex-col h-full"
+                className="w-full lg:w-96 bg-basewhite rounded-2xl border border-[#e4e7ec] shadow-shadows-shadow-lg relative flex flex-col h-full"
               >
                 {plan.isPopular && (
                   <div className="absolute -top-8 -right-16 w-[152px] h-[54px]">

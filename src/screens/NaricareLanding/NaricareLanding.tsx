@@ -307,7 +307,7 @@ export const NaricareLanding = (): JSX.Element => {
           </Card>
         </div>
         
-        <section className="media-section flex w-full items-start justify-center pt-40 lg:pt-40 pb-12 lg:pb-24 px-4 lg:px-0 relative bg-gray-50">
+        <section className="media-section flex w-full items-start justify-center pt-28 lg:pt-40 pb-12 lg:pb-24 px-4 lg:px-0 relative bg-gray-50">
           <div className="flex-col max-w-screen-xl items-center gap-6 lg:gap-8 px-4 lg:px-12 py-0 flex-1 grow flex relative">
             <div className="relative w-fit [font-family:'Merriweather',Helvetica] font-medium text-gray-600 text-lg lg:text-2xl text-center tracking-[0] leading-6 lg:leading-[30px] px-4">
               Featured in leading publications and media outlets
