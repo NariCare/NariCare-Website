@@ -44,7 +44,7 @@ export const TeamSection = (): JSX.Element => {
           Meet the founder
         </h2>
 
-        <div className="max-w-screen-xl items-center gap-8 md:gap-12 lg:gap-16 px-4 md:px-8 py-0 w-full flex flex-col lg:flex-row">
+        <div className="max-w-screen-xl items-center gap-8 md:gap-12 lg:gap-16 px-4 md:px-8 py-0 w-full flex flex-col lg:flex-row relative">
           <div className="relative flex-shrink-0 w-full max-w-sm md:max-w-md lg:flex-1 lg:h-[560px]">
             <img
               className="w-full h-auto lg:absolute lg:top-[6px] lg:left-0 lg:w-[420px] lg:h-[558px] object-cover rounded-lg"
@@ -99,16 +99,17 @@ export const TeamSection = (): JSX.Element => {
               </div>
             </div>
           </div>
-        </div>
 
-        {decorativeImages.map((image, index) => (
-          <img
-            key={index}
-            className={`${image.className} hidden lg:block`}
-            alt={image.alt}
-            src={image.src}
-          />
-        ))}
+          {/* Decorative elements positioned relative to content block */}
+          {decorativeImages.map((image, index) => (
+            <img
+              key={index}
+              className={`${image.className.replace('absolute top-[468px] left-0', 'absolute top-[60%] left-[-15%]').replace('absolute top-0 left-[1229px]', 'absolute top-[-10%] right-[-15%]')} hidden lg:block`}
+              alt={image.alt}
+              src={image.src}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
