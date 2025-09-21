@@ -4,13 +4,14 @@ import { Button } from "../../../../components/ui/button";
 export const TestimonialSection = (): JSX.Element => {
   return (
     <section className="flex flex-col w-full items-center gap-8 md:gap-16 px-0 py-12 md:py-24 relative bg-[#f6f4ff]">
-      <img
-        className="absolute top-0 right-[-113px] w-[182px] h-[148px] hidden lg:block"
-        alt="Line pattern"
-        src="/line-pattern-1.svg"
-      />
 
       <div className="flex flex-col max-w-screen-xl items-start gap-6 md:gap-8 px-4 md:px-8 py-0 relative w-full flex-[0_0_auto]">
+        
+        <img
+        className="absolute top-[-34%] lg:top-[-34%] right-[-8%] lg:right-[-8%] w-[10rem] lg:w-[150px] h-auto pointer-events-none"
+        alt="Line pattern"
+        src="/line-pattern-1.svg"/>
+
         <div className="flex flex-col items-center gap-6 md:gap-10 relative self-stretch w-full flex-[0_0_auto]">
           <div className="flex flex-col items-center gap-6 md:gap-8 relative self-stretch w-full flex-[0_0_auto]">
             <h2 className="[font-family:'Merriweather',Helvetica] text-gray-900 text-2xl md:text-3xl lg:text-[44px] tracking-[-0.32px] md:tracking-[-0.66px] lg:tracking-[-0.88px] leading-tight md:leading-[48px] lg:leading-[60px] relative self-stretch mt-[-1.00px] font-medium text-center">
@@ -39,13 +40,13 @@ export const TestimonialSection = (): JSX.Element => {
             </div>
           </div>
         </div>
-      </div>
-
-      <img
-        className="absolute left-0 bottom-[-265px] w-[251px] h-24 hidden lg:block"
+        
+        <img
+        className="absolute left-4 lg:left-[-6%] bottom-[-34%] lg:bottom-[-34%] w-32 lg:w-[200px] h-auto pointer-events-none"
         alt="Line pattern"
-        src="/line-pattern-1.svg"
-      />
+        src="/line-pattern-1.svg"/>
+
+      </div>
     </section>
   );
 };
