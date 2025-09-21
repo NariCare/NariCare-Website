@@ -83,11 +83,11 @@ export const NaricareLanding = (): JSX.Element => {
             <div className="header-left inline-flex items-center gap-4 lg:gap-10 relative flex-[0_0_auto]">
               <div className="naricare-logo inline-flex items-center relative flex-[0_0_auto]">
                 <img
-                  className="logo-icon relative flex-[0_0_auto] h-8 lg:h-12 w-auto -mr-2"
+                  className="logo-icon relative flex-[0_0_auto] h-8 lg:h-12 w-auto -mr-1 lg:-mr-2"
                   alt="NariCare Logo"
                   src="/logo.svg"
                 />
-                <div className="logo-text flex flex-col items-start relative" style={{ marginLeft: '-1.5rem' }}>
+                <div className="logo-text flex flex-col items-start relative -ml-4 lg:-ml-6">
                   <div className="brand-name relative [font-family:'Merriweather',Helvetica] font-medium text-lg lg:text-xl tracking-[0] leading-tight">
                     <span className="brand-nari text-[#8383ed]">Nari</span>
                     <span className="brand-care text-[#ff9e88]">Care</span>
@@ -167,11 +167,11 @@ export const NaricareLanding = (): JSX.Element => {
             <div className="mobile-menu-header flex items-center justify-between p-4 border-b">
               <div className="mobile-logo inline-flex items-center relative flex-[0_0_auto]">
                 <img
-                  className="mobile-logo-icon relative flex-[0_0_auto] h-8 w-auto -mr-2"
+                  className="mobile-logo-icon relative flex-[0_0_auto] h-8 w-auto -mr-1"
                   alt="NariCare Logo"
                   src="/logo.svg"
                 />
-                <div className="mobile-logo-text flex flex-col items-start relative" style={{ marginLeft: '-1.5rem' }}>
+                <div className="mobile-logo-text flex flex-col items-start relative -ml-4">
                   <div className="mobile-brand-name relative [font-family:'Merriweather',Helvetica] font-medium text-lg tracking-[0] leading-tight">
                     <span className="mobile-brand-nari text-[#8383ed]">Nari</span>
                     <span className="mobile-brand-care text-[#ff9e88]">Care</span>
