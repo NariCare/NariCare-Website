@@ -4,6 +4,7 @@ import { BlogArticle, getCategoryById, getRecentArticles } from '../../data/blog
 import { ContentRenderer } from './ContentRenderer';
 import { Button } from '../ui/button';
 import { SEO } from '../SEO';
+import { ShareButtons } from '../ShareButtons';
 
 interface ArticlePageProps {
   article: BlogArticle;
@@ -128,6 +129,15 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({ article }) => {
         <article className="bg-white rounded-lg shadow-sm p-8 mb-8">
           <ContentRenderer sections={article.content.sections} />
         </article>
+
+        {/* Share Section */}
+        <div className="mb-8">
+          <ShareButtons
+            url={`/blog/${article.id}`}
+            title={article.title}
+            description={article.summary}
+          />
+        </div>
 
         {/* Related Articles */}
         {recentArticles.length > 0 && (

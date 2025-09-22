@@ -238,7 +238,7 @@ export const NaricareLanding = (): JSX.Element => {
             </div>
 
             {/* Mobile Contact Button */}
-            <div className="mobile-bottom-cta p-4 border-t">
+            <div className="mobile-bottom-cta p-4 border-t hidden">
               <Button 
                 onClick={() => {
                   window.open('https://api.whatsapp.com/send/?phone=918142144762&text&type=phone_number&app_absent=0', '_blank');
