@@ -2,6 +2,7 @@ import { ChevronDownIcon, MenuIcon, XIcon } from "lucide-react";
 import React, { useState } from "react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
+import { SEO } from "../../components/SEO";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -77,6 +78,13 @@ export const NaricareLanding = (): JSX.Element => {
 
   return (
     <div className="naricare-app bg-[#ffffff] overflow-hidden w-full relative">
+      <SEO
+        title="NariCare - Overcome Breastfeeding Challenges with Confidence"
+        description="Expert care + smart AI that remembers your story, tracks what matters, and answers your 3AM questions. See your baby thrive with real data, not guesswork."
+        canonical="/"
+        type="website"
+        image="/image-24.png"
+      />
       <header className="naricare-header w-full h-16 lg:h-[120px] flex relative z-10">
         <div className="header-container flex h-16 lg:h-[120px] flex-1 relative flex-col w-full items-center justify-center">
           <div className="header-content w-full max-w-[1280px] items-center justify-between px-4 lg:px-12 py-0 flex">
