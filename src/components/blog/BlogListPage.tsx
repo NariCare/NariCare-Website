@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Filter, Clock, User, ArrowRight } from 'lucide-react';
+import { Search, Filter, Clock, User, ArrowRight, ArrowLeft } from 'lucide-react';
 import { blogArticles, blogCategories, getCategoryById } from '../../data/blogData';
 import { Button } from '../ui/button';
 import { SEO } from '../SEO';
@@ -30,6 +30,25 @@ export const BlogListPage: React.FC = () => {
         type="website"
         image="/image-24.png"
       />
+      {/* Navigation Header */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <Button
+              variant="ghost"
+              onClick={() => {
+                window.history.pushState({}, '', '/');
+                window.dispatchEvent(new PopStateEvent('popstate'));
+              }}
+              className="text-[#8383ed] hover:text-[#7373dd] hover:bg-purple-50 border border-[#8383ed]/20 hover:border-[#8383ed]/40"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Home
+            </Button>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="bg-[#8383ed] text-white py-16">
         <div className="max-w-6xl mx-auto px-4">

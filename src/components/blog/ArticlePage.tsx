@@ -42,16 +42,33 @@ export const ArticlePage: React.FC<ArticlePageProps> = ({ article }) => {
         image={`/image-24.png`}
       />
       {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-4xl mx-auto px-4 py-6">
-          <Button
-            variant="ghost"
-            onClick={() => window.history.back()}
-            className="mb-4 text-purple-600 hover:text-purple-700"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Blog
-          </Button>
+      <header className="bg-white border-b border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 py-4">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex gap-3">
+              <Button
+                variant="ghost"
+                onClick={() => {
+                  window.history.pushState({}, '', '/');
+                  window.dispatchEvent(new PopStateEvent('popstate'));
+                }}
+                className="text-[#8383ed] hover:text-[#7373dd] hover:bg-purple-50 border border-[#8383ed]/20 hover:border-[#8383ed]/40"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Back to Home
+              </Button>
+              <Button
+                variant="ghost"
+                onClick={() => {
+                  window.history.pushState({}, '', '/blog');
+                  window.dispatchEvent(new PopStateEvent('popstate'));
+                }}
+                className="text-[#8383ed] hover:text-[#7373dd] hover:bg-purple-50 border border-[#8383ed]/20 hover:border-[#8383ed]/40"
+              >
+                Back to Blog
+              </Button>
+            </div>
+          </div>
 
           <div className="mb-4">
             <span
