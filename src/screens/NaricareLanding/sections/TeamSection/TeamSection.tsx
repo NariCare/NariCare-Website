@@ -47,7 +47,7 @@ export const TeamSection = (): JSX.Element => {
         <div className="max-w-screen-xl items-center gap-8 md:gap-12 lg:gap-16 px-4 md:px-8 py-0 w-full flex flex-col lg:flex-row relative">
           <div className="relative flex-shrink-0 w-full max-w-sm md:max-w-md lg:flex-1 lg:h-[560px]">
             <img
-              className="w-full h-auto lg:absolute lg:top-[6px] lg:left-0 lg:w-[420px] lg:h-[558px] object-cover rounded-lg"
+              className="w-full h-auto lg:absolute lg:top-[6px] lg:left-0 lg:w-[420px] lg:h-[558px] object-cover"
               alt="Gayathri Kanumuri, founder and certified lactation consultant of NariCare, smiling confidently"
               src="/image-18.png"
               loading="lazy"
