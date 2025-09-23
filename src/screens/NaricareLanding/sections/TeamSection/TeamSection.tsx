@@ -31,7 +31,7 @@ export const TeamSection = (): JSX.Element => {
       alt: "Line pattern",
     },
     {
-      className: "absolute top-0 left-[1229px] w-[211px] h-[204px]",
+      className: "absolute top-[-54%] right-[-11%] w-[298px] h-[299px]",
       src: "/line-pattern-3.svg",
       alt: "Line pattern",
     },
