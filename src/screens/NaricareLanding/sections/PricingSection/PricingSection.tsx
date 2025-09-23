@@ -97,6 +97,13 @@ const privatePlans = [
 ];
 
 export const PricingSection = (): JSX.Element => {
+  const handleGetStarted = (plan: any) => {
+    if (plan.price === "₹2499") {
+      window.open("https://app.naricare.com", "_blank");
+    } else {
+      window.open("https://api.whatsapp.com/send/?phone=918142144762&text&type=phone_number&app_absent=0", "_blank");
+    }
+  };
   return (
     <section id="pricing" className="w-full bg-[#f7f5ff] py-12 lg:py-16 px-4 lg:px-8 relative">
       <div className="max-w-screen-xl mx-auto flex flex-col gap-8 lg:gap-16 relative">
@@ -179,7 +186,10 @@ export const PricingSection = (): JSX.Element => {
                       </div>
                     ))}
                   </div>
-                  <Button className="w-full h-auto bg-[#8383ed] hover:bg-[#7373dd] text-basewhite px-[18px] py-3 rounded-lg shadow-shadows-shadow-xs-skeuomorphic mt-auto">
+                  <Button 
+                    onClick={() => handleGetStarted(plan)}
+                    className="w-full h-auto bg-[#8383ed] hover:bg-[#7373dd] text-basewhite px-[18px] py-3 rounded-lg shadow-shadows-shadow-xs-skeuomorphic mt-auto"
+                  >
                     <span className="[font-family:'Poppins',Helvetica] font-semibold text-base tracking-[0] leading-6">
                       Get started
                     </span>
@@ -265,7 +275,10 @@ export const PricingSection = (): JSX.Element => {
                       </div>
                     ))}
                   </div>
-                  <Button className="w-full h-auto bg-[#8383ed] hover:bg-[#7373dd] text-basewhite px-[18px] py-3 rounded-lg shadow-shadows-shadow-xs-skeuomorphic mt-auto">
+                  <Button 
+                    onClick={() => handleGetStarted(plan)}
+                    className="w-full h-auto bg-[#8383ed] hover:bg-[#7373dd] text-basewhite px-[18px] py-3 rounded-lg shadow-shadows-shadow-xs-skeuomorphic mt-auto"
+                  >
                     <span className="[font-family:'Poppins',Helvetica] font-semibold text-base tracking-[0] leading-6">
                       Get started
                     </span>
