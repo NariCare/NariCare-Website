@@ -2,7 +2,7 @@ import React from "react";
 
 const tableData = [
   {
-    category: "How does it make you feel?",
+    category: "How it feels",
     naricare: {
       icon: "check",
       text: "Like your mom-friend who's also a lactation expert",
@@ -54,7 +54,7 @@ const tableData = [
     naricare: {
       icon: "check",
       text: "Knows your journey, celebrates progress",
-      highlights: ["journey, celebrates progress"],
+      highlights: ["Knows your journey", "celebrates progress"],
     },
     google: {
       icon: "x",
@@ -86,7 +86,7 @@ const tableData = [
     naricare: {
       icon: "check",
       text: "Spots issues early and guides next steps",
-      highlights: ["Spots issues"],
+      highlights: ["Spots issues early"],
     },
     google: {
       icon: "x",
@@ -190,7 +190,7 @@ export const MetricsSection = (): JSX.Element => {
   };
 
   return (
-    <section className="flex flex-col w-full items-center justify-center gap-8 md:gap-16 px-0 py-12 md:py-24 relative bg-basewhite">
+    <section className="flex flex-col w-full items-center justify-center gap-6 md:gap-16 px-0 py-8 md:py-24 relative bg-basewhite">
       <div className="flex flex-col max-w-screen-xl items-start gap-6 md:gap-8 px-4 md:px-8 py-0 relative w-full">
         <div className="flex flex-col items-center gap-6 md:gap-8 relative self-stretch w-full">
           <div className="inline-flex max-w-screen-md items-center gap-4 md:gap-5 flex-col relative">
@@ -249,9 +249,9 @@ export const MetricsSection = (): JSX.Element => {
                 {tableData.map((row, index) => (
                   <div
                     key={index}
-                    className={`flex h-[90px] items-center justify-center gap-6 px-6 py-4 relative self-stretch w-full bg-[#ffffff] border-r ${index === tableData.length - 1 ? "" : "border-b border-[#d7d7d7]"}`}
+                    className={`flex h-[70px] md:h-[90px] items-center justify-center gap-3 md:gap-6 px-3 md:px-6 py-2 md:py-4 relative self-stretch w-full bg-[#ffffff] border-r ${index === tableData.length - 1 ? "" : "border-b border-[#d7d7d7]"}`}
                   >
-                    <div className="relative flex items-center justify-center flex-1 [font-family:'Poppins',Helvetica] font-medium text-[#4b4b4b] text-sm md:text-base tracking-[0] leading-[20px] md:leading-[28.8px]">
+                    <div className="relative flex items-center justify-start flex-1 [font-family:'Poppins',Helvetica] font-medium text-[#4b4b4b] text-sm md:text-base tracking-[0] leading-[20px] md:leading-[28.8px]">
                       {row.category}
                     </div>
                   </div>
@@ -262,7 +262,7 @@ export const MetricsSection = (): JSX.Element => {
                 {tableData.map((row, index) => (
                   <div
                     key={index}
-                    className={`flex items-center justify-center gap-6 px-6 py-4 relative self-stretch w-full bg-[#ffffff] border-r min-h-[90px] ${index === tableData.length - 1 ? "" : "border-b border-[#d7d7d7]"}`}
+                    className={`flex items-center justify-center gap-3 md:gap-6 px-3 md:px-6 py-2 md:py-4 relative self-stretch w-full bg-[#ffffff] border-r min-h-[70px] md:min-h-[90px] ${index === tableData.length - 1 ? "" : "border-b border-[#d7d7d7]"}`}
                   >
                     <div className="flex items-start gap-6 relative flex-1 grow">
                       <div className="inline-flex items-center gap-2.5 pt-2 pb-0 px-0 relative flex-[0_0_auto]">
@@ -289,7 +289,7 @@ export const MetricsSection = (): JSX.Element => {
                 {tableData.map((row, index) => (
                   <div
                     key={index}
-                    className={`flex h-[90px] items-center justify-center gap-6 px-6 py-4 relative self-stretch w-full bg-[#ffffff] border-r ${index === tableData.length - 1 ? "" : "border-b border-[#d7d7d7]"}`}
+                    className={`flex h-[70px] md:h-[90px] items-center justify-center gap-3 md:gap-6 px-3 md:px-6 py-2 md:py-4 relative self-stretch w-full bg-[#ffffff] border-r ${index === tableData.length - 1 ? "" : "border-b border-[#d7d7d7]"}`}
                   >
                     <div className="flex items-start gap-6 relative flex-1 grow">
                       <div className="inline-flex items-center gap-2.5 pt-2 pb-0 px-0 relative flex-[0_0_auto]">
@@ -311,7 +311,7 @@ export const MetricsSection = (): JSX.Element => {
                 {tableData.map((row, index) => (
                   <div
                     key={index}
-                    className={`flex h-[90px] items-center justify-center gap-6 px-6 py-4 relative self-stretch w-full bg-[#ffffff] ${index === tableData.length - 1 ? "border-0 border-none" : "border-b border-[#d7d7d7]"}`}
+                    className={`flex h-[70px] md:h-[90px] items-center justify-center gap-3 md:gap-6 px-3 md:px-6 py-2 md:py-4 relative self-stretch w-full bg-[#ffffff] ${index === tableData.length - 1 ? "border-0 border-none" : "border-b border-[#d7d7d7]"}`}
                   >
                     <div className="flex items-start gap-6 relative flex-1 grow">
                       <div className="inline-flex items-center gap-2.5 pt-2 pb-0 px-0 relative flex-[0_0_auto]">
