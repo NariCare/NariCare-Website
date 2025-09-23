@@ -42,6 +42,7 @@ export interface BlogArticle {
   readTime: number;
   difficulty: 'beginner' | 'intermediate' | 'advanced';
   featured?: boolean;
+  image?: string;
   content: {
     sections: ContentSection[];
   };
@@ -105,7 +106,7 @@ export const blogArticles: BlogArticle[] = [
     updatedAt: "2024-01-15T00:00:00Z",
     readTime: 4,
     difficulty: "beginner",
-    featured: true,
+    featured: false,
     content: {
       sections: [
         {
@@ -139,6 +140,7 @@ export const blogArticles: BlogArticle[] = [
     readTime: 6,
     difficulty: "intermediate",
     featured: true,
+    image: "/blog-breastfeeding-after-c-section.jpg",
     content: {
       sections: [
         {
@@ -211,6 +213,7 @@ export const blogArticles: BlogArticle[] = [
     readTime: 5,
     difficulty: "beginner",
     featured: true,
+    image: "/blog-baby-getting-enough-milk.jpg",
     content: {
       sections: [
         {
@@ -439,7 +442,7 @@ export const blogArticles: BlogArticle[] = [
     updatedAt: "2024-01-09T00:00:00Z",
     readTime: 4,
     difficulty: "beginner",
-    featured: true,
+    featured: false,
     content: {
       sections: [
         {
@@ -487,6 +490,7 @@ export const blogArticles: BlogArticle[] = [
     readTime: 5,
     difficulty: "beginner",
     featured: true,
+    image: "/blog-good-latch-breastfeeding.jpg",
     content: {
       sections: [
         {
@@ -834,7 +838,7 @@ export const blogArticles: BlogArticle[] = [
     updatedAt: "2024-01-02T00:00:00Z",
     readTime: 3,
     difficulty: "beginner",
-    featured: true,
+    featured: false,
     content: {
       sections: [
         {

@@ -43,8 +43,8 @@ export const BlogSection = (): JSX.Element => {
                 <CardContent className="p-0 w-full">
                   <img
                     className="relative w-full h-48 md:h-60 object-cover rounded-lg"
-                    alt="Blog post image"
-                    src={`/image-24${index === 0 ? '' : `-${index}`}.png`}
+                    alt={post.title}
+                    src={post.image || `/image-24${index === 0 ? '' : `-${index}`}.png`}
                     loading="lazy"
                   />
 
