@@ -268,8 +268,8 @@ export const NaricareLanding = (): JSX.Element => {
           <HeroSection />
           
           {/* Stats Card - Overlapping both sections */}
-          <Card className="stats-card absolute -bottom-16 left-1/2 transform -translate-x-1/2 w-[calc(100%-1rem)] max-w-4xl bg-[#ffffff] rounded-xl lg:rounded-2xl shadow-[0px_4px_4px_#00000026] z-30">
-            <CardContent className="stats-content flex flex-row items-center gap-3 lg:gap-6 p-4 lg:px-12 lg:py-6">
+          <Card className="stats-card absolute -bottom-16 left-1/2 transform -translate-x-1/2 w-[calc(100%-1rem)] max-w-6xl bg-[#ffffff] rounded-xl lg:rounded-2xl shadow-[0px_4px_4px_#00000026] z-30">
+            <CardContent className="stats-content flex flex-row items-center gap-3 lg:gap-12 p-4 lg:px-16 lg:py-8">
               {[
                 {
                   number: "600+",
@@ -291,8 +291,8 @@ export const NaricareLanding = (): JSX.Element => {
                 },
               ].map((stat, index) => (
                 <React.Fragment key={index}>
-                  <div className="stat-item flex flex-col lg:flex-row w-full lg:w-[290px] items-center lg:items-center lg:justify-between relative">
-                    <div className="stat-text flex flex-col flex-1 lg:w-[170px] items-center lg:items-start relative">
+                  <div className="stat-item flex flex-col lg:flex-row w-full lg:w-[380px] items-center lg:items-center lg:justify-between relative">
+                    <div className="stat-text flex flex-col flex-1 lg:w-[230px] items-center lg:items-start relative">
                       <div className="stat-number relative text-center lg:text-left [font-family:'Merriweather',Helvetica] font-semibold text-black text-2xl lg:text-5xl tracking-[-0.96px] leading-tight lg:leading-[72px]">
                         {stat.number}
                       </div>
