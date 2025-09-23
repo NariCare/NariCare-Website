@@ -88,7 +88,7 @@ export const NaricareLanding = (): JSX.Element => {
         type="website"
         image="/image-24.png"
       />
-      <header className="naricare-header w-full h-16 lg:h-[120px] flex relative z-10">
+      <header className="naricare-header w-full h-16 lg:h-[120px] flex relative z-10 bg-[#8383ED]">
         <div className="header-container flex h-16 lg:h-[120px] flex-1 relative flex-col w-full items-center justify-center">
           <div className="header-content w-full max-w-[1280px] items-center justify-between px-4 lg:px-12 py-0 flex">
             <div className="header-left inline-flex items-center gap-4 lg:gap-10 relative flex-[0_0_auto]">
@@ -100,10 +100,10 @@ export const NaricareLanding = (): JSX.Element => {
                 />
                 <div className="logo-text flex flex-col items-start relative -ml-4 lg:-ml-6">
                   <div className="brand-name relative [font-family:'Merriweather',Helvetica] font-medium text-lg lg:text-xl tracking-[0] leading-tight">
-                    <span className="brand-nari text-[#8383ed]">Nari</span>
+                    <span className="brand-nari text-white">Nari</span>
                     <span className="brand-care text-[#ff9e88]">Care</span>
                   </div>
-                  <div className="brand-tagline relative [font-family:'Poppins',Helvetica] font-normal text-[#8383ed] text-xs lg:text-sm tracking-[0] leading-tight">
+                  <div className="brand-tagline relative [font-family:'Poppins',Helvetica] font-normal text-white text-xs lg:text-sm tracking-[0] leading-tight">
                     Your breast friend
                   </div>
                 </div>
@@ -115,7 +115,7 @@ export const NaricareLanding = (): JSX.Element => {
                     <NavigationMenuItem className="nav-item" key={index}>
                       {item.hasDropdown ? (
                         <NavigationMenuTrigger className="nav-trigger inline-flex gap-2 flex-[0_0_auto] items-center justify-center relative bg-transparent hover:bg-transparent focus:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent">
-                          <div className="nav-label relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-semibold text-gray-600 text-base tracking-[0] leading-6 whitespace-nowrap">
+                          <div className="nav-label relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-semibold text-white text-base tracking-[0] leading-6 whitespace-nowrap">
                             {item.label}
                           </div>
                         </NavigationMenuTrigger>
@@ -124,7 +124,7 @@ export const NaricareLanding = (): JSX.Element => {
                           className="nav-link inline-flex gap-2 flex-[0_0_auto] items-center justify-center relative cursor-pointer"
                           onClick={() => handleNavigation(item)}
                         >
-                          <div className="nav-label relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-semibold text-gray-600 text-base tracking-[0] leading-6 whitespace-nowrap">
+                          <div className="nav-label relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-semibold text-white text-base tracking-[0] leading-6 whitespace-nowrap">
                             {item.label}
                           </div>
                         </div>
@@ -153,9 +153,9 @@ export const NaricareLanding = (): JSX.Element => {
               {/* Contact us button - hidden on mobile, visible on desktop */}
               <Button 
                 onClick={() => window.open('https://api.whatsapp.com/send/?phone=918142144762&text&type=phone_number&app_absent=0', '_blank')}
-                className="contact-us-btn desktop-only hidden lg:inline-flex h-10 lg:h-12 gap-2 lg:gap-3 px-4 lg:px-6 py-2 lg:py-4 flex-[0_0_auto] bg-[#8383ed] rounded-[10px] overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-[10px] before:[background:linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none hover:bg-[#8383ed]"
+                className="contact-us-btn desktop-only hidden lg:inline-flex h-10 lg:h-12 gap-2 lg:gap-3 px-4 lg:px-6 py-2 lg:py-4 flex-[0_0_auto] bg-white rounded-[10px] overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative hover:bg-gray-50"
               >
-                <div className="btn-text relative w-fit [font-family:'Poppins',Helvetica] font-semibold text-white text-sm lg:text-base tracking-[0] leading-5 lg:leading-7 whitespace-nowrap">
+                <div className="btn-text relative w-fit [font-family:'Poppins',Helvetica] font-semibold text-[#8383ed] text-sm lg:text-base tracking-[0] leading-5 lg:leading-7 whitespace-nowrap">
                   Contact us
                 </div>
 
