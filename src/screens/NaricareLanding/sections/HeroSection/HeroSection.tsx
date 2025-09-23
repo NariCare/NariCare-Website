@@ -62,6 +62,7 @@ export const HeroSection = (): JSX.Element => {
 
             <div className="flex flex-row gap-3 w-full sm:w-auto">
               <Button
+                onClick={() => window.open("https://app.naricare.com?source=app-store", "_blank")}
                 variant="outline"
                 className="flex flex-1 sm:w-[158px] h-12 gap-1.5 px-3 sm:px-[18px] py-3 bg-[#ffffff] rounded-lg overflow-hidden border border-solid border-[#8383ed] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative hover:bg-gray-50"
               >
@@ -73,6 +74,7 @@ export const HeroSection = (): JSX.Element => {
               </Button>
 
               <Button
+                onClick={() => window.open("https://app.naricare.com?source=play-store", "_blank")}
                 variant="outline"
                 className="flex flex-1 sm:w-[158px] h-12 gap-1.5 px-3 sm:px-[18px] py-3 bg-[#ffffff] rounded-lg overflow-hidden border border-solid border-[#8383ed] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative hover:bg-gray-50"
               >

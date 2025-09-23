@@ -44,6 +44,15 @@ const appStoreButtons = [
 ];
 
 export const NewsletterCtaSection = (): JSX.Element => {
+  const handleAppStoreClick = (index: number) => {
+    if (index === 0) {
+      // App Store button
+      window.open("https://app.naricare.com?source=app-store", "_blank");
+    } else {
+      // Play Store button
+      window.open("https://app.naricare.com?source=play-store", "_blank");
+    }
+  };
   return (
     <section className="flex items-center justify-center min-h-[300px] md:h-[440px] py-12 lg:py-16 relative w-full bg-gray-50 overflow-hidden">
       <div className="flex flex-col max-w-screen-xl items-center gap-8 md:gap-16 px-4 md:px-8 py-0 relative w-full">
@@ -77,6 +86,7 @@ export const NewsletterCtaSection = (): JSX.Element => {
           {appStoreButtons.map((button, index) => (
             <Button
               key={`app-store-${index}`}
+              onClick={() => handleAppStoreClick(index)}
               variant="outline"
               className={`flex flex-1 sm:${button.width} h-12 gap-1.5 px-3 md:px-[18px] py-3 bg-[#ffffff] rounded-lg overflow-hidden border border-solid border-[#8383ed] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative hover:bg-gray-50 h-auto`}
             >
