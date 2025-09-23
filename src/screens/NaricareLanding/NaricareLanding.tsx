@@ -1,5 +1,5 @@
 import { ChevronDownIcon, MenuIcon, XIcon } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { SEO } from "../../components/SEO";
@@ -69,6 +69,7 @@ const mediaLogos = [
 
 export const NaricareLanding = (): JSX.Element => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -79,6 +80,17 @@ export const NaricareLanding = (): JSX.Element => {
     setIsMobileMenuOpen(false); // Close menu after navigation
   };
 
+  // Handle scroll for header animation
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 100); // Trigger animation after scrolling 100px
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="naricare-app bg-[#ffffff] overflow-hidden lg:overflow-visible w-full relative">
       <SEO
@@ -88,28 +100,28 @@ export const NaricareLanding = (): JSX.Element => {
         type="website"
         image="/image-24.png"
       />
-      <header className="naricare-header w-full h-16 lg:h-[120px] flex relative lg:sticky lg:top-0 z-50 bg-[#8383ED]">
-        <div className="header-container flex h-16 lg:h-[120px] flex-1 relative flex-col w-full items-center justify-center">
+      <header className={`naricare-header w-full flex relative lg:sticky lg:top-0 z-50 bg-[#8383ED] transition-all duration-300 ease-in-out ${isScrolled ? 'h-16 lg:h-16' : 'h-16 lg:h-[120px]'}`}>
+        <div className={`header-container flex flex-1 relative flex-col w-full items-center justify-center transition-all duration-300 ease-in-out ${isScrolled ? 'h-16 lg:h-16' : 'h-16 lg:h-[120px]'}`}>
           <div className="header-content w-full max-w-[1280px] items-center justify-between px-4 lg:px-12 py-0 flex">
-            <div className="header-left inline-flex items-center gap-4 lg:gap-10 relative flex-[0_0_auto]">
+            <div className={`header-left inline-flex items-center relative flex-[0_0_auto] transition-all duration-300 ease-in-out ${isScrolled ? 'gap-3 lg:gap-6' : 'gap-4 lg:gap-10'}`}>
               <div className="naricare-logo inline-flex items-center relative flex-[0_0_auto]">
                 <img
-                  className="logo-icon relative flex-[0_0_auto] h-8 lg:h-12 w-auto -mr-1 lg:-mr-2"
+                  className={`logo-icon relative flex-[0_0_auto] w-auto -mr-1 lg:-mr-2 transition-all duration-300 ease-in-out ${isScrolled ? 'h-6 lg:h-8' : 'h-8 lg:h-12'}`}
                   alt="NariCare Logo"
                   src="/logo.svg"
                 />
-                <div className="logo-text flex flex-col items-start relative -ml-4 lg:-ml-6">
-                  <div className="brand-name relative [font-family:'Merriweather',Helvetica] font-medium text-lg lg:text-xl tracking-[0] leading-tight">
+                <div className={`logo-text flex flex-col items-start relative transition-all duration-300 ease-in-out ${isScrolled ? '-ml-3 lg:-ml-4' : '-ml-4 lg:-ml-6'}`}>
+                  <div className={`brand-name relative [font-family:'Merriweather',Helvetica] font-medium tracking-[0] leading-tight transition-all duration-300 ease-in-out ${isScrolled ? 'text-sm lg:text-base' : 'text-lg lg:text-xl'}`}>
                     <span className="brand-nari text-white">Nari</span>
                     <span className="brand-care text-[#ff9e88]">Care</span>
                   </div>
-                  <div className="brand-tagline relative [font-family:'Poppins',Helvetica] font-normal text-white text-xs lg:text-sm tracking-[0] leading-tight">
+                  <div className={`brand-tagline relative [font-family:'Poppins',Helvetica] font-normal text-white tracking-[0] leading-tight transition-all duration-300 ease-in-out ${isScrolled ? 'text-[10px] lg:text-xs' : 'text-xs lg:text-sm'}`}>
                     Your breast friend
                   </div>
                 </div>
               </div>
 
-              <NavigationMenu className="desktop-navigation hidden pt-[0.5rem] lg:block absolute top-1 left-[calc(50.00%_+_162px)]">
+              <NavigationMenu className={`desktop-navigation hidden lg:block absolute transition-all duration-300 ease-in-out ${isScrolled ? 'pt-[0.25rem] top-0 left-[calc(50.00%_+_120px)]' : 'pt-[0.5rem] top-1 left-[calc(50.00%_+_162px)]'}`}>
                 <NavigationMenuList className="nav-list inline-flex items-center gap-8">
                   {navigationItems.map((item, index) => (
                     <NavigationMenuItem className="nav-item" key={index}>
@@ -153,14 +165,14 @@ export const NaricareLanding = (): JSX.Element => {
               {/* Contact us button - hidden on mobile, visible on desktop */}
               <Button 
                 onClick={() => window.open('https://api.whatsapp.com/send/?phone=918142144762&text&type=phone_number&app_absent=0', '_blank')}
-                className="contact-us-btn desktop-only hidden lg:inline-flex h-10 lg:h-12 gap-2 lg:gap-3 px-4 lg:px-6 py-2 lg:py-4 flex-[0_0_auto] bg-white rounded-[10px] overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative hover:bg-gray-50"
+                className={`contact-us-btn desktop-only hidden lg:inline-flex flex-[0_0_auto] bg-white rounded-[10px] overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic items-center justify-center relative hover:bg-gray-50 transition-all duration-300 ease-in-out ${isScrolled ? 'h-8 lg:h-10 gap-1 lg:gap-2 px-3 lg:px-4 py-1 lg:py-2' : 'h-10 lg:h-12 gap-2 lg:gap-3 px-4 lg:px-6 py-2 lg:py-4'}`}
               >
-                <div className="btn-text relative w-fit [font-family:'Poppins',Helvetica] font-semibold text-[#8383ed] text-sm lg:text-base tracking-[0] leading-5 lg:leading-7 whitespace-nowrap">
+                <div className={`btn-text relative w-fit [font-family:'Poppins',Helvetica] font-semibold text-[#8383ed] tracking-[0] whitespace-nowrap transition-all duration-300 ease-in-out ${isScrolled ? 'text-xs lg:text-sm leading-4 lg:leading-5' : 'text-sm lg:text-base leading-5 lg:leading-7'}`}>
                   Contact us
                 </div>
 
                 <img
-                  className="whatsapp-icon relative w-4 lg:w-6 h-4 lg:h-6"
+                  className={`whatsapp-icon relative transition-all duration-300 ease-in-out ${isScrolled ? 'w-3 lg:w-4 h-3 lg:h-4' : 'w-4 lg:w-6 h-4 lg:h-6'}`}
                   alt="Whatsapp"
                   src="/whatsapp.svg"
                 />
