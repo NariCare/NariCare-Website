@@ -2,6 +2,12 @@ import React from "react";
 import { Button } from "../../../../components/ui/button";
 
 export const TestimonialSection = (): JSX.Element => {
+  const handleDiscoverMore = () => {
+    const pricingElement = document.getElementById('pricing');
+    if (pricingElement) {
+      pricingElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
   return (
     <section className="flex flex-col w-full items-center gap-8 md:gap-16 px-0 py-12 lg:py-16 relative bg-[#f6f4ff]">
 
@@ -30,7 +36,10 @@ export const TestimonialSection = (): JSX.Element => {
             </h2>
 
             <div className="flex flex-col items-center gap-4 relative self-stretch w-full flex-[0_0_auto]">
-              <Button className="inline-flex items-center justify-center gap-1.5 px-[18px] py-3 relative flex-[0_0_auto] bg-[#8383ed] rounded-lg overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-lg before:[background:linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none h-auto hover:bg-[#7575e6]">
+              <Button 
+                onClick={handleDiscoverMore}
+                className="inline-flex items-center justify-center gap-1.5 px-[18px] py-3 relative flex-[0_0_auto] bg-[#8383ed] rounded-lg overflow-hidden border-[none] shadow-shadows-shadow-xs-skeuomorphic before:content-[''] before:absolute before:inset-0 before:p-0.5 before:rounded-lg before:[background:linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0)_100%)] before:[-webkit-mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] before:[-webkit-mask-composite:xor] before:[mask-composite:exclude] before:z-[1] before:pointer-events-none h-auto hover:bg-[#7575e6]"
+              >
                 <div className="inline-flex items-center justify-center px-0.5 py-0 relative flex-[0_0_auto]">
                   <div className="relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-semibold text-basewhite text-base tracking-[0] leading-6 whitespace-nowrap">
                     Discover more
