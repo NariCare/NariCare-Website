@@ -402,7 +402,7 @@ export const NaricareLanding = (): JSX.Element => {
         <PricingSection />
         <BlogSection />
         <section 
-          className="relative w-full flex-[0_0_auto] py-20 overflow-hidden flex items-center justify-center"
+          className="relative w-full flex-[0_0_auto] py-12 overflow-hidden flex items-center justify-center"
           style={{
             backgroundColor: '#FFFCF9'
           }}
