@@ -3,12 +3,12 @@ import { Badge } from "../../../../components/ui/badge";
 
 export const FooterSection = (): JSX.Element => {
   const quickLinks = [
-    { label: "Home" },
-    { label: "About us" },
-    { label: "Features", hasNewBadge: true },
-    { label: "Pricing" },
-    { label: "Our experts" },
-    { label: "Contact" },
+    { label: "Home", action: "scroll", target: "top" },
+    { label: "Programs", action: "scroll", target: "programs" },
+    { label: "App", hasNewBadge: true, action: "external", url: "https://app.naricare.com" },
+    { label: "Resources", action: "external", url: "https://naricare.com/blog" },
+    { label: "FAQs", action: "scroll", target: "faq" },
+    { label: "Contact Us", action: "whatsapp" },
   ];
 
   const supportLinks = [
@@ -30,7 +30,7 @@ export const FooterSection = (): JSX.Element => {
   const contactInfo = [
     { icon: "/frame-1.svg", text: "support@naricare.com", type: "email" },
     { icon: "/frame-2.svg", text: "+918142144762", type: "phone" },
-    { icon: "/frame.svg", text: "Bengaluru, India", type: "location" },
+    { icon: "/frame.svg", text: "Visakhapatnam, India", type: "location" },
   ];
 
   const legalLinks = [
@@ -44,6 +44,30 @@ export const FooterSection = (): JSX.Element => {
     if (contact.type === "email") {
       window.open(`mailto:${contact.text}`, '_blank');
     } else if (contact.type === "phone") {
+      window.open('https://api.whatsapp.com/send/?phone=918142144762&text&type=phone_number&app_absent=0', '_blank');
+    }
+  };
+
+  const handleQuickLinkClick = (link: any) => {
+    if (link.action === "scroll") {
+      if (link.target === "top") {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (link.target === "programs") {
+        // Scroll to Programs section (PricingSection)
+        const element = document.getElementById('pricing');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      } else if (link.target === "faq") {
+        // Scroll to FAQ section
+        const element = document.getElementById('faq') || document.querySelector('[data-section="faq"]');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    } else if (link.action === "external" && link.url) {
+      window.open(link.url, '_blank');
+    } else if (link.action === "whatsapp") {
       window.open('https://api.whatsapp.com/send/?phone=918142144762&text&type=phone_number&app_absent=0', '_blank');
     }
   };
@@ -62,8 +86,8 @@ export const FooterSection = (): JSX.Element => {
 
               <div className="flex flex-col items-start gap-6 md:gap-8 relative self-stretch w-full flex-[0_0_auto]">
                 <p className="relative self-stretch mt-[-1.00px] [font-family:'Poppins',Helvetica] font-medium text-[#ffffff] text-sm md:text-base tracking-[0] leading-5 md:leading-6">
-                  Empowering mothers with expert guidance, AI support, and
-                  community care for a successful breastfeeding journey.
+                  Empowering mothers with expert guidance, AI support, 
+                  and a caring community for a confident and successful breastfeeding journey.
                 </p>
 
                 <div className="inline-flex items-center gap-4 md:gap-6 relative flex-[0_0_auto]">
@@ -92,12 +116,12 @@ export const FooterSection = (): JSX.Element => {
                       className="inline-flex items-center gap-2 relative flex-[0_0_auto]"
                     >
                       <div className="inline-flex gap-2 flex-[0_0_auto] items-center justify-center relative">
-                        <a
-                          href="#"
-                          className="relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-medium text-[#ffffff] text-sm md:text-base tracking-[0] leading-5 md:leading-6 whitespace-nowrap hover:text-[#e0e2ec] transition-colors"
+                        <button
+                          onClick={() => handleQuickLinkClick(link)}
+                          className="relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-medium text-[#ffffff] text-sm md:text-base tracking-[0] leading-5 md:leading-6 whitespace-nowrap hover:text-[#e0e2ec] transition-colors cursor-pointer bg-transparent border-none text-left p-0"
                         >
                           {link.label}
-                        </a>
+                        </button>
                       </div>
 
                       {link.hasNewBadge && (

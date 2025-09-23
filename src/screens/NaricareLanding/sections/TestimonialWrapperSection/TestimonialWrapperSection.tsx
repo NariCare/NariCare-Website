@@ -45,6 +45,9 @@ export const TestimonialWrapperSection = (): JSX.Element => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const [playingVideo, setPlayingVideo] = useState<number | null>(null);
+  const [expandedTestimonials, setExpandedTestimonials] = useState<boolean[]>(
+    new Array(testimonials.length).fill(false)
+  );
 
   // Auto-rotate testimonials every 5 seconds with fade transition
   useEffect(() => {
@@ -92,6 +95,29 @@ export const TestimonialWrapperSection = (): JSX.Element => {
     if (testimonial.videoUrl) {
       window.open(testimonial.videoUrl, '_blank');
     }
+  };
+
+  const truncateText = (text: string, maxLength: number = 1292): string => {
+    if (text.length <= maxLength) return text;
+    
+    // Find the last space before the maxLength to avoid cutting words
+    const truncatedText = text.substring(0, maxLength);
+    const lastSpaceIndex = truncatedText.lastIndexOf(' ');
+    
+    return lastSpaceIndex > 0 ? truncatedText.substring(0, lastSpaceIndex) + '...' : truncatedText + '...';
+  };
+
+  const toggleTestimonialExpansion = (index: number) => {
+    setExpandedTestimonials(prev => {
+      const newExpanded = [...prev];
+      newExpanded[index] = !newExpanded[index];
+      return newExpanded;
+    });
+  };
+
+  const getDisplayText = (text: string, index: number): string => {
+    if (text.length <= 1292) return text;
+    return expandedTestimonials[index] ? text : truncateText(text);
   };
   const testimonialCards = [
     {
@@ -252,9 +278,21 @@ export const TestimonialWrapperSection = (): JSX.Element => {
         <div className="flex flex-col max-w-screen-xl items-start gap-6 lg:gap-8 px-4 lg:px-8 py-0 w-full">
           <div className="flex flex-col items-center gap-6 lg:gap-10 w-full">
             <div className={`flex flex-col max-w-screen-lg items-center gap-6 lg:gap-8 w-full transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-              <blockquote className="[font-family:'Poppins',Helvetica] text-[#475467] text-lg lg:text-2xl tracking-[-0.36px] lg:tracking-[-0.48px] leading-7 lg:leading-[44px] font-medium text-center whitespace-pre-line">
-                {testimonials[currentTestimonial].text}
-              </blockquote>
+              <div className="flex flex-col items-center gap-4 w-full">
+                <blockquote className="[font-family:'Poppins',Helvetica] text-[#475467] text-lg lg:text-2xl tracking-[-0.36px] lg:tracking-[-0.48px] leading-7 lg:leading-[44px] font-medium text-center whitespace-pre-line">
+                  {getDisplayText(testimonials[currentTestimonial].text, currentTestimonial)}
+                </blockquote>
+                
+                {testimonials[currentTestimonial].text.length > 1292 && (
+                  <Button
+                    variant="ghost"
+                    onClick={() => toggleTestimonialExpansion(currentTestimonial)}
+                    className="text-[#8383ed] hover:text-[#7373dd] hover:bg-[#8383ed]/10 font-medium text-base lg:text-lg underline underline-offset-2 px-2 py-1 h-auto"
+                  >
+                    {expandedTestimonials[currentTestimonial] ? 'Read less' : 'Read more'}
+                  </Button>
+                )}
+              </div>
 
               <div className="flex flex-col items-center gap-4 w-full">
                 <div className="flex flex-col items-center gap-4 w-full">

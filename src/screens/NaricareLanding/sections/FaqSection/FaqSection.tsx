@@ -70,7 +70,7 @@ export const FaqSection = (): JSX.Element => {
         }}
       />
       
-      <section className="gap-8 md:gap-16 px-0 py-12 lg:py-16 bg-basewhite flex flex-col items-center relative self-stretch w-full flex-[0_0_auto]">
+      <section id="faq" className="gap-8 md:gap-16 px-0 py-12 lg:py-16 bg-basewhite flex flex-col items-center relative self-stretch w-full flex-[0_0_auto]">
       <div className="flex flex-col max-w-screen-xl items-start gap-6 md:gap-8 px-4 md:px-8 py-0 relative w-full flex-[0_0_auto]">
         <div className="flex flex-col items-center gap-6 md:gap-8 relative self-stretch w-full flex-[0_0_auto]">
           <div className="flex flex-col max-w-screen-md items-center gap-4 md:gap-5 relative w-full flex-[0_0_auto]">
