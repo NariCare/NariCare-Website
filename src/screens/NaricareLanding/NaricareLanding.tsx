@@ -82,14 +82,27 @@ export const NaricareLanding = (): JSX.Element => {
 
   // Handle scroll for header animation
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 100); // Trigger animation after scrolling 100px
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollTop = window.scrollY;
+          // Add hysteresis to prevent flickering
+          if (!isScrolled && scrollTop > 120) {
+            setIsScrolled(true);
+          } else if (isScrolled && scrollTop < 80) {
+            setIsScrolled(false);
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isScrolled]);
 
   return (
     <div className="naricare-app bg-[#ffffff] overflow-hidden lg:overflow-visible w-full relative">
