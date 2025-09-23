@@ -51,16 +51,19 @@ const mediaLogos = [
     src: "/the-better-india.svg",
     alt: "The better india",
     className: "w-44 h-[132px]",
+    url: "https://thebetterindia.com/367629/techie-starts-naricare-to-support-new-mother-in-breastfeeding-postpartum-journey-health/",
   },
   {
     src: "/the-times-of-india.svg",
     alt: "The times of india",
     className: "w-[226px] h-20",
+    url: "https://timesofindia.indiatimes.com/city/visakhapatnam/vizag-startup-aims-to-improve-breastfeeding-rates/articleshow/112331584.cms",
   },
   {
     src: "/yourstory.svg",
     alt: "Yourstory",
     className: "w-[196px] h-[99.18px]",
+    url: "https://yourstory.com/herstory/2024/09/visakhapatnam-startup-nari-care-helping-women-in-their-breastfeeding-journey",
   },
 ];
 
@@ -326,30 +329,51 @@ export const NaricareLanding = (): JSX.Element => {
               {/* First three logos */}
               <div className="flex items-center gap-6 lg:gap-[123px] w-full lg:w-auto justify-center">
                 {mediaLogos.map((logo, index) => (
-                  <img
+                  <a
                     key={index}
-                    className={`relative lg:opacity-60 lg:hover:opacity-100 lg:transition-opacity lg:duration-300 cursor-pointer ${index === 0 ? 'w-20 lg:w-44 h-auto' : index === 1 ? 'w-24 lg:w-[226px] h-auto' : 'w-20 lg:w-[196px] h-auto'}`}
-                    alt={logo.alt}
-                    src={logo.src}
-                    loading="lazy"
-                  />
+                    href={logo.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <img
+                      className={`relative lg:opacity-60 lg:hover:opacity-100 lg:transition-opacity lg:duration-300 cursor-pointer ${index === 0 ? 'w-20 lg:w-44 h-auto' : index === 1 ? 'w-24 lg:w-[226px] h-auto' : 'w-20 lg:w-[196px] h-auto'}`}
+                      alt={logo.alt}
+                      src={logo.src}
+                      loading="lazy"
+                    />
+                  </a>
                 ))}
               </div>
 
               {/* Last three logos */}
               <div className="flex items-center gap-6 lg:gap-[123px] w-full lg:w-auto justify-center">
-                <img
-                  className="relative lg:opacity-60 lg:hover:opacity-100 lg:transition-opacity lg:duration-300 cursor-pointer w-24 lg:w-52 h-auto"
-                  alt="Eenadu"
-                  src="/eenadu.svg"
-                  loading="lazy"
-                />
-                <img
-                  className="relative lg:opacity-60 lg:hover:opacity-100 lg:transition-opacity lg:duration-300 cursor-pointer w-24 lg:w-52 h-auto"
-                  alt="The Hindu"
-                  src="/the-hindu.svg"
-                  loading="lazy"
-                />
+                <a
+                  href="https://www.eenadu.net/telugu-news/women/visakha-woman-gayatri-devi-kanumuri-naricare-startup/6205/124099841"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <img
+                    className="relative lg:opacity-60 lg:hover:opacity-100 lg:transition-opacity lg:duration-300 cursor-pointer w-24 lg:w-52 h-auto"
+                    alt="Eenadu"
+                    src="/eenadu.svg"
+                    loading="lazy"
+                  />
+                </a>
+                <a
+                  href="https://www.thehindu.com/sci-tech/health/visakhapatnam-based-startup-naricare-seeks-to-empower-women-in-their-breastfeeding-journey/article68553254.ece"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <img
+                    className="relative lg:opacity-60 lg:hover:opacity-100 lg:transition-opacity lg:duration-300 cursor-pointer w-24 lg:w-52 h-auto"
+                    alt="The Hindu"
+                    src="/the-hindu.svg"
+                    loading="lazy"
+                  />
+                </a>
                 <img
                   className="relative lg:opacity-60 lg:hover:opacity-100 lg:transition-opacity lg:duration-300 cursor-pointer w-20 lg:w-40 h-auto"
                   alt="ETV"

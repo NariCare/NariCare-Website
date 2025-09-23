@@ -11,34 +11,38 @@ export const FaqSection = (): JSX.Element => {
   const faqData = [
     {
       id: "item-1",
-      question: "Is there a free trial available?",
-      answer:
-        "Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+      question: "Which program is better for me?",
+      answer: "It depends on what stage you're in and the type of support you'd like.\n\n**Choose a Group Support Program if:**\n• You're looking for a more budget-friendly option.\n• You'd like an initial one-to-one consultation, followed by ongoing text support in a supportive group of moms with similar questions.\n\n**Choose a Private Program if:**\n• You're a first-time mom who wants regular, hands-on guidance at each stage.\n• You prefer a dedicated lactation consultant available to you in a private chat.\n• You want extra support beyond breastfeeding, such as postpartum nutrition, yoga, core rehab, sleep coaching, and mental wellness care.\n• You'd like longer-term, one-to-one follow-ups so you feel fully supported throughout your journey.",
     },
     {
       id: "item-2",
-      question: "Can I change my plan later?",
-      answer: "Yes, you can upgrade or downgrade your plan at any time. Changes will take effect at your next billing cycle.",
+      question: "Are you anti-formula?",
+      answer: "Not at all. At NariCare, we believe every mother and baby are unique, and feeding choices are deeply personal. We fully respect and support every mother's decision. Our focus is on helping those who wish to breastfeed whether exclusively or partially by giving them the right education, tools, and guidance to do so with confidence.",
     },
     {
       id: "item-3",
-      question: "What is your cancellation policy?",
-      answer: "You can cancel your subscription at any time. Your access will continue until the end of your current billing period.",
+      question: "What is the NariCare app, and how does it help mothers?",
+      answer: "The NariCare app is like having a digital lactation consultant in your pocket. It helps you track your baby's feeds, diapers, and growth, while also giving you instant, evidence-based answers to common breastfeeding and postpartum questions. You can even connect with experts for personalized care, all in one place.",
     },
     {
       id: "item-4",
-      question: "How does NariCare work?",
-      answer: "NariCare provides 24/7 expert breastfeeding support through AI-powered guidance and certified lactation consultants. We offer personalized advice, track your progress, and provide unlimited text support.",
+      question: "How do I track my baby's feeds, diapers, and weight in the app?",
+      answer: "The app includes simple logs where you can record every feed whether breast, expressed milk, or formula along with wet and dirty diapers and your baby's weight. These records help you and your consultant spot patterns and ensure your baby is thriving.",
     },
     {
       id: "item-5",
-      question: "Is my data safe?",
-      answer: "Yes, we use industry-standard encryption and security measures to protect your personal information. Your data is stored securely and we comply with all privacy regulations.",
+      question: "How does the AI-powered guidance work?",
+      answer: "Our AI guidance is trained on trusted, evidence-based breastfeeding knowledge. It provides personalized, expert-backed answers any time of the day or night. Think of it as a first line of support that helps you feel confident between consultations.",
     },
     {
       id: "item-6",
-      question: "Will NariCare share my data with third parties?",
-      answer: "No, we never share your personal data with third parties. Your privacy is our top priority and your information is kept strictly confidential.",
+      question: "Can I book a consultation with a lactation expert through the app?",
+      answer: "Yes. With just a few taps, you can schedule a one-to-one consultation with a certified lactation consultant, nutritionist, sleep coach, or mental wellness expert—directly through the app.",
+    },
+    {
+      id: "item-7",
+      question: "Is my data private and secure?",
+      answer: "Absolutely. Your personal information and your baby's health data are kept private and protected. We only share information with your consultant if you choose to connect with them, and never without your consent.",
     },
   ];
 
@@ -75,10 +79,10 @@ export const FaqSection = (): JSX.Element => {
             </h2>
 
             <p className="[font-family:'Poppins',Helvetica] font-normal text-gray-600 text-base md:text-lg lg:text-xl text-center tracking-[0] leading-6 md:leading-7 lg:leading-[30px] relative self-stretch px-4">
-              Answers to common questions about how NariCare works and
+              Learn about our programs, app features, and
               <span className="hidden md:inline"><br /></span>
               <span className="md:hidden"> </span>
-              your data privacy.
+              how we support your breastfeeding journey.
             </p>
           </div>
         </div>
@@ -107,8 +111,17 @@ export const FaqSection = (): JSX.Element => {
                 </AccordionTrigger>
                 {faq.answer && (
                   <AccordionContent className="pt-2">
-                    <div className="relative self-stretch [font-family:'Poppins',Helvetica] font-normal text-gray-600 text-sm md:text-base tracking-[0] leading-5 md:leading-6">
-                      {faq.answer}
+                    <div className="relative self-stretch [font-family:'Poppins',Helvetica] font-normal text-gray-600 text-sm md:text-base tracking-[0] leading-5 md:leading-6 whitespace-pre-line">
+                      {faq.answer.split(/(\*\*.*?\*\*)/).map((part, index) => {
+                        if (part.startsWith('**') && part.endsWith('**')) {
+                          return (
+                            <strong key={index} className="font-semibold text-gray-800">
+                              {part.slice(2, -2)}
+                            </strong>
+                          );
+                        }
+                        return part;
+                      })}
                     </div>
                   </AccordionContent>
                 )}
