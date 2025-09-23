@@ -402,15 +402,15 @@ export const NaricareLanding = (): JSX.Element => {
         <PricingSection />
         <BlogSection />
         <section 
-          className="relative w-full flex-[0_0_auto] py-16 overflow-hidden flex items-center justify-center"
+          className="relative w-full flex-[0_0_auto] py-20 overflow-hidden flex items-center justify-center"
           style={{
             backgroundColor: '#FFFCF9'
           }}
         >
           <div className="max-w-screen-xl w-full px-4 lg:px-8">
-            <div className="relative overflow-hidden whitespace-nowrap">
+            <div className="relative overflow-hidden whitespace-nowrap h-24 lg:h-32 flex items-center">
               <div 
-                className="animate-scroll-left inline-flex text-6xl lg:text-8xl font-bold text-gray-800 opacity-80"
+                className="animate-scroll-left inline-flex text-6xl lg:text-8xl font-bold text-gray-800 opacity-80 items-center"
                 style={{
                   animation: 'scroll-left 40s linear infinite'
                 }}
