@@ -104,7 +104,7 @@ export const HeroSection = (): JSX.Element => {
             src="/line-pattern-3.svg"
           />
           <img
-            className="relative w-[280px] sm:w-[350px] lg:w-[654px] h-auto object-cover rounded-2xl lg:rounded-none lg:absolute lg:top-[71px] lg:left-[123px]"
+            className="relative w-[280px] sm:w-[350px] lg:w-[654px] h-auto object-cover rounded-2xl lg:rounded-none lg:absolute lg:bottom-[-3%] lg:left-[-10%]"
             alt="Happy mother successfully breastfeeding her baby with confidence and comfort - NariCare expert support"
             src="/image-13.png"
           />
