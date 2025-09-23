@@ -221,7 +221,7 @@ export const MetricsSection = (): JSX.Element => {
         <div className="overflow-x-auto">
           <div className="inline-flex flex-col items-start relative min-w-[800px]">
             <div className="inline-flex items-start relative bg-[linear-gradient(351deg,rgba(227,226,255,1)_0%,rgba(246,237,255,1)_56%)]">
-              <div className="flex w-[287px] h-[130px] items-center justify-center gap-6 p-6 relative bg-[#ffffff] border-r border-b border-[#d7d7d7]" />
+              <div className="flex w-[200px] md:w-[287px] h-[130px] items-center justify-center gap-6 p-6 relative bg-[#ffffff] border-r border-b border-[#d7d7d7]" />
 
               <img
                 className="relative w-[319px] h-[130px]"
@@ -245,11 +245,11 @@ export const MetricsSection = (): JSX.Element => {
             </div>
 
             <div className="flex items-start relative self-stretch w-full">
-              <div className="flex flex-col w-[287px] items-start relative">
+              <div className="flex flex-col w-[200px] md:w-[287px] items-start relative">
                 {tableData.map((row, index) => (
                   <div
                     key={index}
-                    className={`flex h-[70px] md:h-[90px] items-center justify-center gap-3 md:gap-6 px-3 md:px-6 py-2 md:py-4 relative self-stretch w-full bg-[#ffffff] border-r ${index === tableData.length - 1 ? "" : "border-b border-[#d7d7d7]"}`}
+                    className={`flex h-[55px] md:h-[90px] items-center justify-center gap-0 md:gap-6 px-0.5 md:px-6 py-1 md:py-4 relative self-stretch w-full bg-[#ffffff] border-r ${index === tableData.length - 1 ? "" : "border-b border-[#d7d7d7]"}`}
                   >
                     <div className="relative flex items-center justify-start flex-1 [font-family:'Poppins',Helvetica] font-medium text-[#4b4b4b] text-sm md:text-base tracking-[0] leading-[20px] md:leading-[28.8px]">
                       {row.category}
@@ -262,7 +262,7 @@ export const MetricsSection = (): JSX.Element => {
                 {tableData.map((row, index) => (
                   <div
                     key={index}
-                    className={`flex items-center justify-center gap-3 md:gap-6 px-3 md:px-6 py-2 md:py-4 relative self-stretch w-full bg-[#ffffff] border-r min-h-[70px] md:min-h-[90px] ${index === tableData.length - 1 ? "" : "border-b border-[#d7d7d7]"}`}
+                    className={`flex items-center justify-center gap-2 md:gap-6 px-2 md:px-6 py-1 md:py-4 relative self-stretch w-full bg-[#ffffff] border-r min-h-[55px] md:min-h-[90px] ${index === tableData.length - 1 ? "" : "border-b border-[#d7d7d7]"}`}
                   >
                     <div className="flex items-start gap-6 relative flex-1 grow">
                       <div className="inline-flex items-center gap-2.5 pt-2 pb-0 px-0 relative flex-[0_0_auto]">
@@ -289,7 +289,7 @@ export const MetricsSection = (): JSX.Element => {
                 {tableData.map((row, index) => (
                   <div
                     key={index}
-                    className={`flex h-[70px] md:h-[90px] items-center justify-center gap-3 md:gap-6 px-3 md:px-6 py-2 md:py-4 relative self-stretch w-full bg-[#ffffff] border-r ${index === tableData.length - 1 ? "" : "border-b border-[#d7d7d7]"}`}
+                    className={`flex h-[55px] md:h-[90px] items-center justify-center gap-2 md:gap-6 px-2 md:px-6 py-1 md:py-4 relative self-stretch w-full bg-[#ffffff] border-r ${index === tableData.length - 1 ? "" : "border-b border-[#d7d7d7]"}`}
                   >
                     <div className="flex items-start gap-6 relative flex-1 grow">
                       <div className="inline-flex items-center gap-2.5 pt-2 pb-0 px-0 relative flex-[0_0_auto]">
@@ -311,7 +311,7 @@ export const MetricsSection = (): JSX.Element => {
                 {tableData.map((row, index) => (
                   <div
                     key={index}
-                    className={`flex h-[70px] md:h-[90px] items-center justify-center gap-3 md:gap-6 px-3 md:px-6 py-2 md:py-4 relative self-stretch w-full bg-[#ffffff] ${index === tableData.length - 1 ? "border-0 border-none" : "border-b border-[#d7d7d7]"}`}
+                    className={`flex h-[55px] md:h-[90px] items-center justify-center gap-2 md:gap-6 px-2 md:px-6 py-1 md:py-4 relative self-stretch w-full bg-[#ffffff] ${index === tableData.length - 1 ? "border-0 border-none" : "border-b border-[#d7d7d7]"}`}
                   >
                     <div className="flex items-start gap-6 relative flex-1 grow">
                       <div className="inline-flex items-center gap-2.5 pt-2 pb-0 px-0 relative flex-[0_0_auto]">
