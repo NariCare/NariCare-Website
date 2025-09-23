@@ -26,20 +26,22 @@ export const HeroSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="flex flex-col w-full items-center justify-center gap-8 lg:gap-16 pt-8 lg:pt-16 pb-16 lg:pb-24 px-4 lg:px-0 relative bg-[#fffcf8]">
+    <section className="flex flex-col w-full items-center justify-center gap-8 lg:gap-16 pt-8 lg:pt-8 pb-16 lg:pb-24 px-4 lg:px-0 relative bg-[#fffcf8]">
       <div className="flex flex-col lg:flex-row max-w-screen-xl items-center justify-center gap-8 lg:gap-16 px-4 lg:px-8 py-0 w-full relative">
         <div className="flex flex-col w-full lg:min-w-[480px] items-start gap-6 lg:gap-[42px] pl-0 pr-0 lg:pr-8 py-0 relative flex-1 grow">
           <div className="flex items-start gap-4 self-stretch w-full flex-col relative flex-[0_0_auto]">
-            <h1 className="self-stretch [font-family:'Merriweather',Helvetica] text-gray-900 text-3xl sm:text-4xl lg:text-[54px] leading-tight lg:leading-[54px] relative font-semibold tracking-[0]">
-              <span className="text-[#0f1728]">Overcome </span>
-              <span className="text-[#8383ed]">breastfeeding </span>
-              <span className="text-[#0f1728]">challenges with confidence</span>
+            <h1 className="w-full lg:w-[800px] [font-family:'Merriweather',Helvetica] text-gray-900 text-3xl sm:text-4xl lg:text-[54px] leading-tight lg:leading-[54px] relative font-semibold tracking-[0]">
+              <span className="text-[#0f1728]">When </span>
+              <span className="text-[#8383ed]">breastfeeding</span>
+              <br className="hidden lg:block" />
+              <span className="text-[#0f1728] whitespace-nowrap">feels hard, or you just</span>
+              <br className="hidden lg:block" />
+              <span className="text-[#0f1728] whitespace-nowrap">want to be prepared…</span>
             </h1>
 
             <p className="relative [font-family:'Poppins',Helvetica] font-normal text-[#475466] text-lg lg:text-xl tracking-[0] leading-relaxed lg:leading-[30px]">
-              Expert care + smart AI that remembers your story, tracks what
-              matters, and answers your 3AM questions. See your baby thrive with
-              real data, not guesswork.
+              You don’t have to do it alone. NariCare gives you expert care, guidance, 
+              and support - so you feel ready before birth and fully supported after.
             </p>
           </div>
 
