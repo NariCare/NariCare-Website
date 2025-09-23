@@ -33,10 +33,11 @@ export const HeroSection = (): JSX.Element => {
             <h1 className="w-full lg:w-[800px] [font-family:'Merriweather',Helvetica] text-gray-900 text-3xl sm:text-4xl lg:text-[54px] leading-tight lg:leading-[54px] relative font-semibold tracking-[0]">
               <span className="text-[#0f1728]">When </span>
               <span className="text-[#8383ed]">breastfeeding</span>
+              <span className="lg:hidden"> </span>
               <br className="hidden lg:block" />
-              <span className="text-[#0f1728] whitespace-nowrap">feels hard, or you just</span>
+              <span className="text-[#0f1728] lg:whitespace-nowrap">feels hard, or you just</span>
               <br className="hidden lg:block" />
-              <span className="text-[#0f1728] whitespace-nowrap">want to be prepared…</span>
+              <span className="text-[#0f1728] lg:whitespace-nowrap">want to be prepared…</span>
             </h1>
 
             <p className="relative [font-family:'Poppins',Helvetica] font-normal text-[#475466] text-lg lg:text-xl tracking-[0] leading-relaxed lg:leading-[30px]">
