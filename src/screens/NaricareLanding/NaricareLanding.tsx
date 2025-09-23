@@ -80,7 +80,7 @@ export const NaricareLanding = (): JSX.Element => {
   };
 
   return (
-    <div className="naricare-app bg-[#ffffff] overflow-hidden w-full relative">
+    <div className="naricare-app bg-[#ffffff] overflow-hidden lg:overflow-visible w-full relative">
       <SEO
         title="NariCare - Overcome Breastfeeding Challenges with Confidence"
         description="Expert care + smart AI that remembers your story, tracks what matters, and answers your 3AM questions. See your baby thrive with real data, not guesswork."
@@ -88,7 +88,7 @@ export const NaricareLanding = (): JSX.Element => {
         type="website"
         image="/image-24.png"
       />
-      <header className="naricare-header w-full h-16 lg:h-[120px] flex relative z-10 bg-[#8383ED]">
+      <header className="naricare-header w-full h-16 lg:h-[120px] flex relative lg:sticky lg:top-0 z-50 bg-[#8383ED]">
         <div className="header-container flex h-16 lg:h-[120px] flex-1 relative flex-col w-full items-center justify-center">
           <div className="header-content w-full max-w-[1280px] items-center justify-between px-4 lg:px-12 py-0 flex">
             <div className="header-left inline-flex items-center gap-4 lg:gap-10 relative flex-[0_0_auto]">
@@ -144,9 +144,9 @@ export const NaricareLanding = (): JSX.Element => {
                 size="icon"
               >
                 {isMobileMenuOpen ? (
-                  <XIcon className="menu-close-icon h-8 w-8 text-gray-600" />
+                  <XIcon className="menu-close-icon h-8 w-8 text-white" />
                 ) : (
-                  <MenuIcon className="menu-open-icon h-8 w-8 text-gray-600" />
+                  <MenuIcon className="menu-open-icon h-8 w-8 text-white" />
                 )}
               </Button>
 
