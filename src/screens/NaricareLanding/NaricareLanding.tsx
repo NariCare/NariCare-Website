@@ -374,12 +374,19 @@ export const NaricareLanding = (): JSX.Element => {
                     loading="lazy"
                   />
                 </a>
-                <img
-                  className="relative lg:opacity-60 lg:hover:opacity-100 lg:transition-opacity lg:duration-300 cursor-pointer w-20 lg:w-40 h-auto"
-                  alt="ETV"
-                  src="/ETV.svg"
-                  loading="lazy"
-                />
+                <a
+                  href="https://www.youtube.com/watch?v=jILsBvsDkTg&list=PLuMdb4fZMghzl_Z1omvwgTY7ceqBUIXYa&index=887&pp=iAQB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <img
+                    className="relative lg:opacity-60 lg:hover:opacity-100 lg:transition-opacity lg:duration-300 cursor-pointer w-20 lg:w-40 h-auto"
+                    alt="ETV"
+                    src="/ETV.svg"
+                    loading="lazy"
+                  />
+                </a>
               </div>
             </div>
           </div>
