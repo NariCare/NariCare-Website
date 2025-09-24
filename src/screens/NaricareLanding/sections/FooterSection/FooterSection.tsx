@@ -15,15 +15,14 @@ export const FooterSection = (): JSX.Element => {
   ];
 
   const socialIcons = [
-    { src: "/social-icon.svg", alt: "Social icon" },
-    { src: "/social-icon-3.svg", alt: "Social icon" },
-    { src: "/social-icon-1.svg", alt: "Social icon" },
-    { src: "/social-icon-2.svg", alt: "Social icon" },
+    { src: "/social-icon-3.svg", alt: "Facebook", url: "https://www.facebook.com/trynaricare/" },
+    { src: "/social-icon-1.svg", alt: "LinkedIn", url: "https://www.linkedin.com/company/NariCare" },
+    { src: "/social-icon-2.svg", alt: "Instagram", url: "https://www.instagram.com/trynaricare/" },
   ];
 
   const contactInfo = [
     { icon: "/frame-1.svg", text: "support@naricare.com", type: "email" },
-    { icon: "/frame-2.svg", text: "+918142144762", type: "phone" },
+    { icon: "/whatsapp.svg", text: "+918142144762", type: "phone" },
     { icon: "/frame.svg", text: "Visakhapatnam, India", type: "location" },
   ];
 
@@ -85,12 +84,19 @@ export const FooterSection = (): JSX.Element => {
 
                 <div className="inline-flex items-center gap-4 md:gap-6 relative flex-[0_0_auto]">
                   {socialIcons.map((icon, index) => (
-                    <img
+                    <a
                       key={`social-${index}`}
-                      className="relative w-5 h-5 md:w-6 md:h-6"
-                      alt={icon.alt}
-                      src={icon.src}
-                    />
+                      href={icon.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative w-5 h-5 md:w-6 md:h-6 hover:opacity-80 transition-opacity"
+                    >
+                      <img
+                        className="w-full h-full"
+                        alt={icon.alt}
+                        src={icon.src}
+                      />
+                    </a>
                   ))}
                 </div>
               </div>
@@ -167,7 +173,7 @@ export const FooterSection = (): JSX.Element => {
                         onClick={() => handleContactClick(contact)}
                       >
                         <img
-                          className="relative w-4 h-4 md:w-5 md:h-5"
+                          className={`relative w-4 h-4 md:w-5 md:h-5 ${contact.icon === '/whatsapp.svg' ? 'filter grayscale' : ''}`}
                           alt="Contact icon"
                           src={contact.icon}
                         />
