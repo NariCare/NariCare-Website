@@ -299,7 +299,7 @@ export const MetricsSection = (): JSX.Element => {
                           className="w-5 h-5 md:w-6 md:h-6" 
                         />
                       </div>
-                      <div className="relative flex items-center justify-center flex-1 mt-[-1.00px] [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-sm md:text-base tracking-[0] leading-[20px] md:leading-[28.8px]">
+                      <div className="relative flex items-center justify-start flex-1 mt-[-1.00px] [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-sm md:text-base tracking-[0] leading-[20px] md:leading-[28.8px]">
                         {row.google.text}
                       </div>
                     </div>
@@ -321,7 +321,7 @@ export const MetricsSection = (): JSX.Element => {
                           className="w-5 h-5 md:w-6 md:h-6" 
                         />
                       </div>
-                      <div className="relative flex items-center justify-center flex-1 mt-[-1.00px] [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-sm md:text-base tracking-[0] leading-[20px] md:leading-[28.8px]">
+                      <div className="relative flex items-center justify-start flex-1 mt-[-1.00px] [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-sm md:text-base tracking-[0] leading-[20px] md:leading-[28.8px]">
                         {row.consults.text}
                       </div>
                     </div>
