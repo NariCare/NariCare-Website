@@ -221,7 +221,7 @@ export const MetricsSection = (): JSX.Element => {
         <div className="overflow-x-auto">
           <div className="inline-flex flex-col items-start relative min-w-[800px]">
             <div className="inline-flex items-start relative bg-[linear-gradient(351deg,rgba(227,226,255,1)_0%,rgba(246,237,255,1)_56%)]">
-              <div className="flex w-[200px] md:w-[287px] h-[130px] items-center justify-center gap-6 p-6 relative bg-[#ffffff] border-r border-b border-[#d7d7d7]" />
+              <div className="flex w-[160px] md:w-[287px] h-[130px] items-center justify-center gap-6 p-6 relative bg-[#ffffff] border-r border-b border-[#d7d7d7]" />
 
               <img
                 className="relative w-[319px] h-[130px]"
@@ -245,7 +245,7 @@ export const MetricsSection = (): JSX.Element => {
             </div>
 
             <div className="flex items-start relative self-stretch w-full">
-              <div className="flex flex-col w-[200px] md:w-[287px] items-start relative">
+              <div className="flex flex-col w-[160px] md:w-[287px] items-start relative">
                 {tableData.map((row, index) => (
                   <div
                     key={index}
