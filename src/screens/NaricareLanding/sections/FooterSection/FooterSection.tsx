@@ -6,18 +6,12 @@ export const FooterSection = (): JSX.Element => {
     { label: "Home", action: "scroll", target: "top" },
     { label: "Programs", action: "scroll", target: "programs" },
     { label: "App", hasNewBadge: true, action: "external", url: "https://app.naricare.com" },
-    { label: "Resources", action: "external", url: "https://naricare.com/blog" },
-    { label: "FAQs", action: "scroll", target: "faq" },
-    { label: "Contact Us", action: "whatsapp" },
   ];
 
   const supportLinks = [
-    { label: "Help centre" },
-    { label: "Knowledge base" },
-    { label: "Community" },
-    { label: "Expert consultation" },
-    { label: "AI Chatbot" },
-    { label: "24/7 Support" },
+    { label: "Resources", action: "external", url: "https://naricare.com/blog" },
+    { label: "FAQs", action: "scroll", target: "faq" },
+    { label: "Contact Us", action: "whatsapp" },
   ];
 
   const socialIcons = [
@@ -36,7 +30,6 @@ export const FooterSection = (): JSX.Element => {
   const legalLinks = [
     { label: "Privacy policy" },
     { label: "Terms & Conditions" },
-    { label: "Cookies" },
     { label: "Refund Policy" },
   ];
 
@@ -148,12 +141,12 @@ export const FooterSection = (): JSX.Element => {
                       className="inline-flex items-center gap-2 relative flex-[0_0_auto]"
                     >
                       <div className="inline-flex gap-2 flex-[0_0_auto] items-center justify-center relative">
-                        <a
-                          href="#"
-                          className="relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-medium text-[#ffffff] text-sm md:text-base tracking-[0] leading-5 md:leading-6 whitespace-nowrap hover:text-[#e0e2ec] transition-colors"
+                        <button
+                          onClick={() => handleQuickLinkClick(link)}
+                          className="relative w-fit mt-[-1.00px] [font-family:'Poppins',Helvetica] font-medium text-[#ffffff] text-sm md:text-base tracking-[0] leading-5 md:leading-6 whitespace-nowrap hover:text-[#e0e2ec] transition-colors cursor-pointer bg-transparent border-none text-left p-0"
                         >
                           {link.label}
-                        </a>
+                        </button>
                       </div>
                     </li>
                   ))}
@@ -188,15 +181,8 @@ export const FooterSection = (): JSX.Element => {
                 </div>
 
                 <div className="flex flex-col items-start gap-4 relative self-stretch w-full flex-[0_0_auto]">
-                  <h3 className="self-stretch [font-family:'Poppins',Helvetica] text-[#e0e2ec] text-sm leading-5 relative mt-[-1.00px] font-semibold tracking-[0]">
-                    Emergency support
-                  </h3>
-
                   <p className="relative self-stretch [font-family:'Poppins',Helvetica] font-normal text-[#ffffff] text-sm md:text-base tracking-[0] leading-5 md:leading-6">
-                    For urgent breastfeeding concerns, our experts are available
-                    <span className="hidden md:inline"><br /></span>
-                    <span className="md:hidden"> </span>
-                    24/7 through the app.
+                    Trusted by 600+ mothers | 25+ years combined lactation experience
                   </p>
                 </div>
               </div>
