@@ -221,15 +221,15 @@ export const MetricsSection = (): JSX.Element => {
         <div className="overflow-x-auto">
           <div className="inline-flex flex-col items-start relative min-w-[800px]">
             <div className="inline-flex items-start relative bg-[linear-gradient(351deg,rgba(227,226,255,1)_0%,rgba(246,237,255,1)_56%)]">
-              <div className="flex w-[160px] md:w-[287px] h-[130px] items-center justify-center gap-6 p-6 relative bg-[#ffffff] border-r border-b border-[#d7d7d7]" />
+              <div className="flex w-[140px] md:w-[287px] h-[130px] items-center justify-center gap-6 p-6 relative bg-[#ffffff] border-r border-b border-[#d7d7d7]" />
 
               <img
-                className="relative w-[319px] h-[130px]"
+                className="relative w-[280px] md:w-[319px] h-[130px]"
                 alt="Property cell"
                 src="/property-cell.svg"
               />
 
-              <div className="flex w-80 h-[130px] items-center justify-center gap-6 p-6 relative border-r border-b border-[#d7d7d7] bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(66,133,244,0.2)_100%)]">
+              <div className="flex w-[260px] md:w-80 h-[130px] items-center justify-center gap-6 p-6 relative border-r border-b border-[#d7d7d7] bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(66,133,244,0.2)_100%)]">
                 <img
                   className="relative w-[124px] h-[42px] object-cover"
                   alt="Image"
@@ -237,7 +237,7 @@ export const MetricsSection = (): JSX.Element => {
                 />
               </div>
 
-              <div className="flex w-80 h-[130px] items-center justify-center gap-6 p-6 relative border-b border-[#d7d7d7] bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(252,255,213,1)_100%)]">
+              <div className="flex w-[260px] md:w-80 h-[130px] items-center justify-center gap-6 p-6 relative border-b border-[#d7d7d7] bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(252,255,213,1)_100%)]">
                 <div className="relative flex items-center justify-center flex-1 [font-family:'Poppins',Helvetica] font-normal text-[#353535] text-lg md:text-xl text-center tracking-[0.60px] leading-6 md:leading-8">
                   One-time consults
                 </div>
@@ -245,7 +245,7 @@ export const MetricsSection = (): JSX.Element => {
             </div>
 
             <div className="flex items-start relative self-stretch w-full">
-              <div className="flex flex-col w-[160px] md:w-[287px] items-start relative">
+              <div className="flex flex-col w-[140px] md:w-[287px] items-start relative">
                 {tableData.map((row, index) => (
                   <div
                     key={index}
@@ -258,7 +258,7 @@ export const MetricsSection = (): JSX.Element => {
                 ))}
               </div>
 
-              <div className="flex flex-col w-[319px] items-start relative">
+              <div className="flex flex-col w-[280px] md:w-[319px] items-start relative">
                 {tableData.map((row, index) => (
                   <div
                     key={index}
@@ -285,7 +285,7 @@ export const MetricsSection = (): JSX.Element => {
                 ))}
               </div>
 
-              <div className="flex flex-col w-80 items-start relative">
+              <div className="flex flex-col w-[260px] md:w-80 items-start relative">
                 {tableData.map((row, index) => (
                   <div
                     key={index}
@@ -307,7 +307,7 @@ export const MetricsSection = (): JSX.Element => {
                 ))}
               </div>
 
-              <div className="flex flex-col w-80 items-start relative">
+              <div className="flex flex-col w-[260px] md:w-80 items-start relative">
                 {tableData.map((row, index) => (
                   <div
                     key={index}
