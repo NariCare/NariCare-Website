@@ -98,11 +98,7 @@ const privatePlans = [
 
 export const PricingSection = (): JSX.Element => {
   const handleGetStarted = (plan: any) => {
-    if (plan.price === "₹2499") {
-      window.open("https://app.naricare.com", "_blank");
-    } else {
-      window.open("https://api.whatsapp.com/send/?phone=918142144762&text&type=phone_number&app_absent=0", "_blank");
-    }
+    window.open("https://api.whatsapp.com/send/?phone=918142144762&text&type=phone_number&app_absent=0", "_blank");
   };
   return (
     <section id="pricing" className="w-full bg-[#f7f5ff] py-12 lg:py-16 px-4 lg:px-8 relative">
