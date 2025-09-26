@@ -23,18 +23,11 @@
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <link rel="apple-touch-icon" href="/logo.svg" />
     
-    <!-- DNS prefetch for faster connections -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    
     <!-- Critical Image Preloads -->
     <link rel="preload" as="image" href="/image-13.png" fetchpriority="high" />
     <link rel="preload" as="image" href="/mothers-supported.svg" />
     <link rel="preload" as="image" href="/years-experience.svg" />
     <link rel="preload" as="image" href="/support-available.svg" />
-    
-    <!-- Resource hints for better mobile performance -->
-    <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width" />
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="NariCare - Breastfeed Confidently and Pain-Free" />
@@ -111,30 +104,6 @@
     
     <style>
       @import url("https://fonts.googleapis.com/css?family=Merriweather:500,600|Poppins:500,400,600|Inter:var(--text-lg-semibold-font-weight),var(--text-xl-regular-font-weight),var(--display-sm-semibold-font-weight),var(--text-md-medium-font-weight),var(--text-md-semibold-font-weight)");
-      
-      /* Critical CSS for image loading optimization */
-      img {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-      }
-      
-      /* Faster image decoding */
-      .hero-image {
-        content-visibility: auto;
-        contain-intrinsic-size: 654px 436px;
-      }
-      
-      /* Reduce layout shift with aspect ratios */
-      .aspect-ratio-hero {
-        aspect-ratio: 654 / 436;
-      }
-      
-      /* Optimize for mobile connections */
-      @media (max-width: 768px) and (max-resolution: 1.5dppx) {
-        img {
-          image-rendering: auto;
-        }
-      }
     </style>
     <link href="tailwind.css" rel="stylesheet" />
   </head>
