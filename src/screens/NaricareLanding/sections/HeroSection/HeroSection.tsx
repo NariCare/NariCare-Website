@@ -42,7 +42,7 @@ export const HeroSection = (): JSX.Element => {
 
             <p className="relative [font-family:'Poppins',Helvetica] font-normal text-[#475466] text-lg lg:text-xl tracking-[0] leading-relaxed lg:leading-[30px]">
               You don’t have to do it alone. NariCare gives you expert care, guidance, 
-              and support - so you feel ready before birth and fully supported after.
+              and support so you feel ready before birth and fully supported after.
             </p>
           </div>
 
@@ -87,14 +87,14 @@ export const HeroSection = (): JSX.Element => {
             </div>
           </div>
 
-          <div className="flex flex-col w-full max-w-[407px] items-start gap-4 relative">
+          <div className="flex flex-row md:flex-col w-full max-w-[407px] items-center md:items-start gap-3 md:gap-4 relative">
             <img
-              className="relative w-[150px] h-[50px] object-cover"
+              className="relative w-[100px] md:w-[150px] h-[33px] md:h-[50px] object-cover flex-shrink-0"
               alt="Nsrcel"
               src="/nsrcel.svg"
             />
 
-            <p className="relative self-stretch [font-family:'Poppins',Helvetica] font-normal text-[#475466] text-lg lg:text-xl tracking-[0] leading-relaxed lg:leading-[30px]">
+            <p className="relative flex-1 md:self-stretch [font-family:'Poppins',Helvetica] font-normal text-[#475466] text-sm md:text-lg lg:text-xl tracking-[0] leading-relaxed lg:leading-[30px]">
               Top 15 startups incubated at IIMB NSRCEL
             </p>
           </div>
