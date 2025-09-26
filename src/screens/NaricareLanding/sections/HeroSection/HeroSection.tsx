@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 import { Separator } from "../../../../components/ui/separator";
+import { OptimizedImage } from "../../../../components/OptimizedImage";
 
 export const HeroSection = (): JSX.Element => {
   const statsData = [
@@ -106,15 +107,16 @@ export const HeroSection = (): JSX.Element => {
             alt="Line pattern"
             src="/line-pattern-3.svg"
           />
-          <img
+          <OptimizedImage
             className="relative w-[280px] sm:w-[350px] lg:w-[654px] h-auto object-cover rounded-2xl lg:rounded-none lg:absolute lg:bottom-[-3%] lg:left-[-10%]"
             alt="Happy mother successfully breastfeeding her baby with confidence and comfort - NariCare expert support"
             src="/image-13.png"
+            srcSet="/image-13.png 654w"
+            sizes="(max-width: 640px) 280px, (max-width: 1024px) 350px, 654px"
             loading="eager"
             fetchPriority="high"
-            decoding="async"
-            width="654"
-            height="436"
+            width={654}
+            height={436}
           />
         </div>
       </div>
