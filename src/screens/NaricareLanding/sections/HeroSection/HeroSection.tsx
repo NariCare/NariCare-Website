@@ -27,7 +27,7 @@ export const HeroSection = (): JSX.Element => {
 
   return (
     <section className="flex flex-col w-full items-center justify-center gap-8 lg:gap-16 pt-8 lg:pt-8 pb-16 lg:pb-24 px-4 lg:px-0 relative bg-[#fffcf8]">
-      <div className="flex flex-col lg:flex-row max-w-screen-xl items-center justify-center gap-8 lg:gap-16 px-4 lg:px-8 py-0 w-full relative">
+      <div className="flex flex-col lg:flex-row max-w-screen-xl items-center justify-center gap-0 lg:gap-16 px-4 lg:px-8 py-0 w-full relative">
         <div className="flex flex-col w-full lg:min-w-[480px] items-start gap-6 lg:gap-[42px] pl-0 pr-0 lg:pr-8 py-0 relative flex-1 grow">
           <div className="flex items-start gap-4 self-stretch w-full flex-col relative flex-[0_0_auto]">
             <h1 className="w-full lg:w-[800px] [font-family:'Merriweather',Helvetica] text-gray-900 text-3xl sm:text-4xl lg:text-[54px] leading-relaxed lg:leading-[64px] relative font-semibold tracking-[0]">
@@ -35,7 +35,7 @@ export const HeroSection = (): JSX.Element => {
               <span className="text-[#8383ed]">breastfeeding</span>
               <span className="lg:hidden"> </span>
               <br className="hidden lg:block" />
-              <span className="text-[#0f1728] lg:whitespace-nowrap">feels hard, or you just</span>
+              <span className="text-[#0f1728] lg:whitespace-nowrap">feels hard, or you just </span>
               <br className="hidden lg:block" />
               <span className="text-[#0f1728] lg:whitespace-nowrap">want to be prepared…</span>
             </h1>

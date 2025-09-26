@@ -293,8 +293,8 @@ export const NaricareLanding = (): JSX.Element => {
           <HeroSection />
           
           {/* Stats Card - Overlapping both sections */}
-          <Card className="stats-card absolute -bottom-16 left-1/2 transform -translate-x-1/2 w-[calc(100%-1rem)] max-w-6xl bg-[#ffffff] rounded-xl lg:rounded-2xl shadow-[0px_4px_4px_#00000026] z-30">
-            <CardContent className="stats-content flex flex-row items-center gap-3 lg:gap-12 p-4 lg:px-16 lg:py-8">
+          <Card className="stats-card absolute -bottom-28 md:-bottom-16 left-1/2 transform -translate-x-1/2 w-[calc(100%-3rem)] md:w-[calc(100%-1rem)] max-w-xs md:max-w-6xl bg-[#ffffff] rounded-xl lg:rounded-2xl shadow-[0px_4px_4px_#00000026] z-30">
+            <CardContent className="stats-content flex flex-col md:flex-row items-center justify-center gap-4 md:gap-3 lg:gap-12 p-4 md:p-4 lg:px-16 lg:py-8">
               {[
                 {
                   number: "600+",
@@ -316,26 +316,26 @@ export const NaricareLanding = (): JSX.Element => {
                 },
               ].map((stat, index) => (
                 <React.Fragment key={index}>
-                  <div className="stat-item flex flex-col lg:flex-row w-full lg:w-[380px] items-center lg:items-center lg:justify-between relative">
-                    <div className="stat-text flex flex-col flex-1 lg:w-[230px] items-center lg:items-start relative">
-                      <div className="stat-number relative text-center lg:text-left [font-family:'Merriweather',Helvetica] font-semibold text-black text-2xl lg:text-5xl tracking-[-0.96px] leading-tight lg:leading-[72px]">
-                        {stat.number}
-                      </div>
-                      <div className="stat-description relative text-center lg:text-left [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-xs lg:text-base tracking-[-0.32px] leading-4 lg:leading-6">
-                        {stat.description}
-                      </div>
-                    </div>
+                  <div className="stat-item flex flex-row w-auto md:w-full lg:w-[380px] items-center justify-center md:justify-between relative">
                     <img
-                      className="stat-icon relative w-8 h-8 lg:w-12 lg:h-12 mt-1 lg:mt-0 lg:ml-3 flex-shrink-0"
+                      className="stat-icon relative w-8 h-8 lg:w-12 lg:h-12 mr-4 md:ml-3 md:mr-0 flex-shrink-0 md:order-2"
                       alt={stat.alt}
                       src={stat.icon}
                       loading="lazy"
                     />
+                    <div className="stat-text flex flex-col flex-1 lg:w-[230px] items-start relative md:order-1">
+                      <div className="stat-number relative text-left [font-family:'Merriweather',Helvetica] font-semibold text-black text-2xl lg:text-5xl tracking-[-0.96px] leading-tight lg:leading-[72px]">
+                        {stat.number}
+                      </div>
+                      <div className="stat-description relative text-left [font-family:'Poppins',Helvetica] font-normal text-[#475467] text-xs lg:text-base tracking-[-0.32px] leading-4 lg:leading-6">
+                        {stat.description}
+                      </div>
+                    </div>
                   </div>
                   {index < 2 && (
                     <Separator
                       orientation="vertical"
-                      className="stat-separator relative self-stretch w-px h-16 lg:h-auto"
+                      className="stat-separator relative self-stretch w-px h-16 lg:h-auto hidden md:block"
                     />
                   )}
                 </React.Fragment>
@@ -344,7 +344,7 @@ export const NaricareLanding = (): JSX.Element => {
           </Card>
         </div>
         
-        <section className="media-section flex w-full items-start justify-center pt-28 lg:pt-28 pb-12 lg:pb-12 px-4 lg:px-0 relative bg-gray-50">
+        <section className="media-section flex w-full items-start justify-center pt-40 lg:pt-28 pb-12 lg:pb-12 px-4 lg:px-0 relative bg-gray-50">
           <div className="flex-col max-w-screen-xl items-center gap-6 lg:gap-8 px-4 lg:px-12 py-0 flex-1 grow flex relative">
             <div className="relative w-fit [font-family:'Merriweather',Helvetica] font-medium text-gray-600 text-lg lg:text-2xl text-center tracking-[0] leading-6 lg:leading-[30px] px-4">
               Featured in leading publications and media outlets
