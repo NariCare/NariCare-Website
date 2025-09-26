@@ -294,8 +294,9 @@ export const NaricareLanding = (): JSX.Element => {
           
           {/* Stats Card - Overlapping both sections */}
           <Card className="stats-card absolute -bottom-28 md:-bottom-16 left-1/2 transform -translate-x-1/2 w-[calc(100%-3rem)] md:w-[calc(100%-1rem)] max-w-xs md:max-w-6xl bg-[#ffffff] rounded-xl lg:rounded-2xl shadow-[0px_4px_4px_#00000026] z-30">
-            <CardContent className="stats-content flex flex-col md:flex-row items-center justify-center gap-4 md:gap-3 lg:gap-12 p-4 md:p-4 lg:px-16 lg:py-8">
-              {[
+            <CardContent className="stats-content flex items-center justify-center gap-4 md:gap-3 lg:gap-12 p-4 md:p-4 lg:px-16 lg:py-8">
+              <div className="grid grid-cols-1 gap-4 md:contents">
+                {[
                 {
                   number: "600+",
                   description: "Mothers supported",
@@ -316,14 +317,16 @@ export const NaricareLanding = (): JSX.Element => {
                 },
               ].map((stat, index) => (
                 <React.Fragment key={index}>
-                  <div className="stat-item flex flex-row w-auto md:w-full lg:w-[380px] items-center justify-center md:justify-between relative">
-                    <img
-                      className="stat-icon relative w-8 h-8 lg:w-12 lg:h-12 mr-4 md:ml-3 md:mr-0 flex-shrink-0 md:order-2"
-                      alt={stat.alt}
-                      src={stat.icon}
-                      loading="lazy"
-                    />
-                    <div className="stat-text flex flex-col flex-1 lg:w-[230px] items-start relative md:order-1">
+                  <div className="stat-item grid grid-cols-[32px_1fr] md:flex md:flex-row w-auto md:w-full lg:w-[380px] items-center gap-4 md:gap-0 md:justify-between relative">
+                    <div className="stat-icon-container w-8 h-8 lg:w-12 lg:h-12 md:ml-3 flex-shrink-0 md:order-2 flex items-center justify-center">
+                      <img
+                        className="w-8 h-8 lg:w-12 lg:h-12 rounded-full"
+                        alt={stat.alt}
+                        src={stat.icon}
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="stat-text flex flex-col flex-1 lg:w-[230px] items-start justify-center md:order-1">
                       <div className="stat-number relative text-left [font-family:'Merriweather',Helvetica] font-semibold text-black text-2xl lg:text-5xl tracking-[-0.96px] leading-tight lg:leading-[72px]">
                         {stat.number}
                       </div>
@@ -340,6 +343,7 @@ export const NaricareLanding = (): JSX.Element => {
                   )}
                 </React.Fragment>
               ))}
+              </div>
             </CardContent>
           </Card>
         </div>
