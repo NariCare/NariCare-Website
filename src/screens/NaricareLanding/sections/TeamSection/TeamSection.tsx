@@ -51,6 +51,9 @@ export const TeamSection = (): JSX.Element => {
               alt="Gayathri Kanumuri, founder and certified lactation consultant of NariCare, smiling confidently"
               src="/image-18.png"
               loading="lazy"
+              decoding="async"
+              width="420"
+              height="558"
             />
           </div>
 

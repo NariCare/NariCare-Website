@@ -17,6 +17,10 @@ export const FeaturesSection = (): JSX.Element => {
           className="w-full h-auto max-w-sm md:max-w-md lg:w-[576px] lg:h-[576px] object-cover"
           alt="Image"
           src="/image-22.png"
+          loading="lazy"
+          decoding="async"
+          width="576"
+          height="576"
         />
 
         <div className="flex flex-col items-start gap-6 md:gap-8 flex-1 grow">

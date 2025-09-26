@@ -30,6 +30,10 @@ export const MainContentSection = (): JSX.Element => {
           className="w-full max-w-sm lg:w-[474px] lg:h-[480px] h-auto object-cover"
           alt="Mask group"
           src="/mask-group.png"
+          loading="lazy"
+          decoding="async"
+          width="474"
+          height="480"
         />
 
         <div className="flex flex-col w-full lg:w-[696px] gap-6 lg:gap-8 lg:mr-[-32.00px] items-start">

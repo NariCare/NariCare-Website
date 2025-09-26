@@ -110,6 +110,11 @@ export const HeroSection = (): JSX.Element => {
             className="relative w-[280px] sm:w-[350px] lg:w-[654px] h-auto object-cover rounded-2xl lg:rounded-none lg:absolute lg:bottom-[-3%] lg:left-[-10%]"
             alt="Happy mother successfully breastfeeding her baby with confidence and comfort - NariCare expert support"
             src="/image-13.png"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            width="654"
+            height="436"
           />
         </div>
       </div>
